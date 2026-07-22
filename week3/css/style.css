@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+img {
+    display: block;
+}
+
+.img_container {
+    
+}
+
+.img_display {
+    float: left;
+    width: 25%;
+
+}
+
+
+.img_display img {
+    width: 100%;
+    height: 500px;
+}

@@ -1,0 +1,31 @@
+.container h1 {
+    text-align: center;
+    color: #fff;
+    background-color: #a90000;
+    padding: 10px;
+    font-style: italic;
+}
+
+.card {
+    background-color: #0d5bd9;
+    width: 25%;
+    float: left;
+}
+.card img {
+    width: 100%;
+}
+.card h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.card p {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.clear-fix {
+    clear:both;
+}
