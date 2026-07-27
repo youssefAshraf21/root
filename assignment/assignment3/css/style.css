@@ -1,0 +1,121 @@
+body {
+    font-family: "Exo", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    height: 200vh;
+}
+
+
+span,
+a {
+    display:inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.navbar {
+    background-color: #f5f3ff;
+    border-bottom: 1px solid #ddd6fe;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 18px;
+    text-align: center;
+
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    width: 25px;
+    height: 25px;
+    background-color: #8b5cf6;
+    border-radius:10px;
+    padding: 8px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+.logo h3 {
+    margin-left: 10px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.menuItems {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menuItems ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuItems ul li {
+    margin-left: 26px;
+}
+
+.menuItems ul li a {
+    position: relative;
+    color: rgb(34, 34, 34);
+    font-family: "Exo", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.menuItems ul li a::after {
+    content: "";
+    position: absolute;
+    left:0;
+    width: 0;
+    background-color: #8b5cf6;
+    height: 2px;
+    bottom: -4px;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -ms-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+}
+
+.menuItems ul li a:hover::after {
+    width: 100%;
+}
+
+.menuItems ul li a:hover {
+    color: #8b5cf6;
+}
