@@ -8,10 +8,9 @@ body {
     height: 200vh;
 }
 
-
 span,
 a {
-    display:inline-block;
+    display: inline-block;
 }
 
 a {
@@ -23,48 +22,52 @@ img {
 }
 
 .navbar {
-    background-color: #f5f3ff;
-    border-bottom: 1px solid #ddd6fe;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 999;
     width: 100%;
+    z-index: 999;
+    background-color: #f5f3ff;
+    border-bottom: 1px solid #ddd6fe;
 }
 
 .container {
-    max-width: 1000px;
+    width: 65%;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.navbar .container {
     display: flex;
-    padding: 10px 18px;
-    text-align: center;
-
-
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logoImg {
     width: 25px;
     height: 25px;
-    background-color: #8b5cf6;
-    border-radius:10px;
     padding: 8px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    -ms-border-radius:10px;
-    -o-border-radius:10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #8b5cf6;
+    border-radius: 10px;
 }
 
 .logo h3 {
-    margin-left: 10px;
-    color: #000000;
+    margin: 0;
     font-size: 24px;
     font-weight: 600;
+    color: #000;
 }
 
 .menuItems {
@@ -72,18 +75,15 @@ img {
     align-items: center;
     margin-left: auto;
 }
-
 .menuItems ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .menuItems ul li {
     margin-left: 26px;
 }
-
 .menuItems ul li a {
     position: relative;
     color: rgb(34, 34, 34);
@@ -96,11 +96,10 @@ img {
     -ms-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
 }
-
 .menuItems ul li a::after {
     content: "";
     position: absolute;
-    left:0;
+    left: 0;
     width: 0;
     background-color: #8b5cf6;
     height: 2px;
@@ -111,11 +110,32 @@ img {
     -ms-transition: width 0.3s ease;
     -o-transition: width 0.3s ease;
 }
-
 .menuItems ul li a:hover::after {
     width: 100%;
 }
-
 .menuItems ul li a:hover {
     color: #8b5cf6;
+}
+
+.hero {
+    margin-top: 200px;
+}
+
+.hero .container {
+    align-items: center;
+}
+
+.heroImg {
+    width: 40%;
+    border: 1px solid #8b5cf6;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.heroContent {
+    width: 50%;
 }
