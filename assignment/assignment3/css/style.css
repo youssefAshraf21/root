@@ -869,7 +869,11 @@ tbody tr {
     height: 55px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.reviewer_img {
     border: 2px solid #6d28d9;
+
 }
 
 
