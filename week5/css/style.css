@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.hero_section {
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.cards_gallery {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card_content {
+  padding: 20px;
+}
+.card_content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cards_gallery .card {
+  width: calc((100% / 4)- 20px);
+  background-color: rgb(141, 79, 180);
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  .cards_gallery .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .cards_gallery .card {
+    width: calc((100%/2) - 20px); 
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .cards_gallery .card {
+    width: calc((100%/3) - 20px);
+  }
+}
+@media screen and (min-width: 1201px) {
+  .cards_gallery .card {
+    width: calc((100%/4) - 20px);
+  }
+}
+
+
+.parent {
+    height: 100vh;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-areas: 
+    "red red red red   blue blue blue blue blue blue yellow yellow"
+    "green green green green aqua aqua aqua black black black yellow yellow";
+}
+
+.red {
+    background-color: red;
+    grid-area: red;
+}
+.blue {
+    background-color: blue;
+    grid-area: blue;
+}
+.yellow {
+    background-color: yellow;
+    grid-area: yellow;
+}
+.aqua {
+    background-color: aqua;
+    grid-area: aqua;
+}
+.green {
+    background-color: green;
+    grid-area: green;
+}
+.black {
+    background-color: black;
+    grid-area: blackذذ;
+}
