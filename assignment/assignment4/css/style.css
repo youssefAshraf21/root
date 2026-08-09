@@ -646,6 +646,9 @@ img {
 
 .articles_right {
     width: 35%;
+    position: sticky;
+    top: 35px;
+    align-self: flex-start;
 }
 
 .inside_first_article_header {
