@@ -879,6 +879,42 @@ img {
     padding: 20px;
     height: 100vh;
     border-bottom: 5px solid black;
+    position: relative;
+}
+
+/* squares style  */
+
+.square1 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    background-color: rgb(255, 0, 0, 0.1);
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -ms-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+}
+.square2 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
 }
 
 
