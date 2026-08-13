@@ -850,3 +850,116 @@
     }
 
 }
+
+
+/* =========================================================
+   MOBILE OVERFLOW FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Prevent elements from becoming wider than screen */
+
+    .container,
+    .nav,
+    .navbar_elements,
+    .hero,
+    .articles_content,
+    .authors_cards,
+    .rebellion_content,
+    .footer_content {
+        max-width: 100%;
+    }
+
+
+    /* Hero */
+
+    .hero_shape1 {
+        left: 10px;
+    }
+
+    .hero_shape2 {
+        left: auto;
+        right: 20px;
+    }
+
+    .hero_shape3 {
+        right: 10px;
+    }
+
+
+    /* Articles */
+
+    .inside_article_left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .inside_article_left img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .article,
+    .article2,
+    .article3 {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Prevent text from creating horizontal overflow */
+
+    .inside_article_right,
+    .inside_article_right2,
+    .inside_article_right3 {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .inside_article_right h2,
+    .inside_article_right2 h2,
+    .inside_article_right3 h2 {
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+
+    /* Authors */
+
+    .card_1,
+    .card_2,
+    .card_3 {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Rebellion */
+
+    .rebellion_left,
+    .rebellion_right {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Footer */
+
+    .left_content,
+    .middle_content,
+    .right_content {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+}
