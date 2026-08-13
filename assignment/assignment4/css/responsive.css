@@ -1,0 +1,852 @@
+
+
+
+/* 992px */
+
+@media (max-width: 992px) {
+
+
+    .container {
+        width: 90%;
+    }
+
+
+    /*navbar*/
+
+    .nav {
+        width: 90%;
+    }
+
+    .navbar_elements {
+        padding: 5px 20px;
+    }
+
+    .nav_links ul {
+        gap: 12px;
+    }
+
+    .nav_links ul li {
+        gap: 5px;
+    }
+
+    .nav_links ul li a {
+        font-size: 12px;
+    }
+
+    .nav_links ul li img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .nav_btn button {
+        padding: 8px 10px;
+    }
+
+    .nav_btn button a {
+        font-size: 11px;
+    }
+
+
+    /*hero*/
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero_content {
+        width: 50%;
+    }
+
+    .hero_img {
+        width: 50%;
+        height: 350px;
+    }
+
+    .hero_header h1 {
+        font-size: 50px;
+    }
+
+    .hero_header p {
+        font-size: 18px;
+    }
+
+    .hero_buttons {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn1,
+    .btn2 {
+        padding: 16px 25px;
+        font-size: 15px;
+    }
+
+
+    /*articles*/
+
+    .articles_content {
+        gap: 25px;
+    }
+
+    .articles_left {
+        width: 60%;
+    }
+
+    .articles_right {
+        width: 40%;
+    }
+
+    .article,
+    .article2,
+    .article3 {
+        flex-direction: column;
+    }
+
+    .inside_article_left {
+        width: 100%;
+    }
+
+    .inside_article_right,
+    .inside_article_right2,
+    .inside_article_right3 {
+        width: 100%;
+    }
+
+    .article_information {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    /*authors*/
+
+    .authors {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .authors_cards {
+        flex-wrap: wrap;
+    }
+
+    .card_1,
+    .card_2,
+    .card_3 {
+        flex: 1 1 45%;
+    }
+
+
+    /*rebellion*/
+
+    .rebellion_content {
+        gap: 30px;
+    }
+
+    .rebellion_left {
+        width: 50%;
+    }
+
+    .rebellion_right {
+        width: 50%;
+    }
+
+
+    /* FOOTER*/
+
+    .footer_content {
+        gap: 30px;
+    }
+
+    .left_content {
+        width: 35%;
+    }
+
+    .middle_content {
+        width: 25%;
+    }
+
+    .right_content {
+        width: 40%;
+    }
+
+}
+
+
+/*768px*/
+
+@media (max-width: 768px) {
+
+
+
+    .container {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+    /*navbar*/
+
+    .nav {
+        width: calc(100% - 30px);
+        top: 15px;
+    }
+
+    .navbar_elements {
+        padding: 8px 15px;
+    }
+
+
+    /* Hide  navigation */
+
+    .nav_links {
+        display: none;
+    }
+
+
+    /* Hide subscribe button */
+
+    .nav_btn {
+        display: none;
+    }
+
+
+    /* Show hamburger icon*/
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        font-size: 25px;
+
+        transition: transform 0.3s ease;
+    }
+
+
+    /* Hamburger hover */
+
+    .hamburger:hover {
+        transform: translate(3px, 3px);
+    }
+
+
+    /*hero*/
+
+    .hero_section {
+        margin-top: 100px;
+        padding-bottom: 40px;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    .hero_content {
+        width: 100%;
+    }
+
+    .hero_img {
+        width: 100%;
+        height: 350px;
+        margin-top: 50px;
+    }
+
+    .hero_header h1 {
+        font-size: 48px;
+        line-height: 1;
+    }
+
+    .hero_header p {
+        width: 100%;
+        font-size: 17px;
+    }
+
+    .hero_header p br {
+        display: none;
+    }
+
+    .hero_buttons {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 15px;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 100%;
+        padding: 16px;
+    }
+
+
+    /*articles*/
+
+    .articles_section {
+        padding: 20px 0;
+    }
+
+    .articles_content {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .articles_left {
+        width: 100%;
+    }
+
+    .articles_right {
+        width: 100%;
+
+        /* Remove sticky */
+
+        position: static;
+
+        margin-top: 50px;
+    }
+
+    .articles_left_header {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .articles_left_header h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+
+    /* article cards */
+
+    .article,
+    .article2,
+    .article3 {
+        display: block;
+
+        width: 100%;
+
+        padding: 18px;
+
+        margin-bottom: 35px;
+    }
+
+    .inside_article_left {
+        display: block;
+
+        width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .inside_article_right,
+    .inside_article_right2,
+    .inside_article_right3 {
+        display: block;
+
+        width: 100%;
+    }
+
+    .inside_article_right h2,
+    .inside_article_right2 h2,
+    .inside_article_right3 h2 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    .inside_article_right p,
+    .inside_article_right2 p,
+    .inside_article_right3 p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .article_information {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: flex-start;
+
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+    .article_information p {
+        font-size: 11px;
+    }
+
+    .article_likes {
+        margin-right: 0;
+    }
+
+
+    /* Right articles */
+
+    .first_article_right,
+    .second_article_right {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    /*authors*/
+
+    .authors {
+        height: auto;
+        min-height: 100vh;
+
+        padding: 50px 0;
+    }
+
+    .authors_header {
+        padding: 30px 0;
+    }
+
+    .authors_header h2 {
+        font-size: 36px;
+    }
+
+    .authors_header p {
+        font-size: 16px;
+    }
+
+    .authors_cards {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 25px;
+    }
+
+    .card_1,
+    .card_2,
+    .card_3 {
+        flex: 1 1 45%;
+    }
+
+    .card_descreption p {
+        width: 100%;
+    }
+
+
+    /*rebellion*/
+
+    .rebellion .container {
+        padding: 70px 0;
+    }
+
+    .rebellion_header h2 {
+        font-size: 40px;
+    }
+
+    .rebellion_header p {
+        font-size: 17px;
+    }
+
+    .rebellion_content {
+        display: block;
+
+        margin-top: 60px;
+    }
+
+    .rebellion_left,
+    .rebellion_right {
+        width: 100%;
+    }
+
+    .rebellion_right {
+        margin-top: 50px;
+    }
+
+    .rebellion_left_header h2 {
+        font-size: 32px;
+    }
+
+    .rebellion_left_header p br {
+        display: none;
+    }
+
+
+    /*footer*/
+
+    .footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer_content {
+        display: block;
+    }
+
+    .left_content,
+    .middle_content,
+    .right_content {
+        width: 100%;
+
+        margin-bottom: 50px;
+    }
+
+    .left_content_header h2 {
+        font-size: 27px;
+    }
+
+    .left_content_descreption span {
+        font-size: 16px;
+    }
+
+    .middle_content_header h2,
+    .right_content_header h2 {
+        font-size: 23px;
+    }
+
+    .form input,
+    .form button {
+        width: 100%;
+    }
+
+}
+
+
+    /*480px*/
+
+@media (max-width: 480px) {
+
+
+    .container {
+        width: calc(100% - 20px);
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    /*navbar */
+
+    .nav {
+        width: calc(100% - 20px);
+
+        top: 10px;
+    }
+
+    .navbar_elements {
+        padding: 7px 12px;
+    }
+
+
+    /* Logo */
+
+    .navbar_elements .logo h2 {
+        font-size: 19px;
+    }
+
+
+    /* Hamburger */
+
+    .hamburger {
+        font-size: 22px;
+    }
+
+    .hamburger:hover {
+        transform: translate(3px, 3px);
+    }
+
+
+    /*hero*/
+
+    .hero_section {
+        margin-top: 90px;
+    }
+
+    .hero_header h1 {
+        font-size: 39px;
+    }
+
+    .hero_header p {
+        font-size: 15px;
+
+        padding: 10px;
+
+        line-height: 1.5;
+    }
+
+    .hero_trending {
+        width: 140px;
+
+        font-size: 12px;
+    }
+
+    .hero_img {
+        width: 100%;
+
+        height: 250px;
+
+        margin-top: 40px;
+    }
+
+    .feature {
+        right: -5px;
+        top: -15px;
+
+        font-size: 12px;
+
+        padding: 8px 10px;
+    }
+
+    .btn1,
+    .btn2 {
+        width: 100%;
+
+        padding: 15px;
+
+        font-size: 15px;
+    }
+
+
+    /*articles*/
+
+    .articles_left_header h2 {
+        font-size: 28px;
+    }
+
+    .articles_trending {
+        width: 140px;
+
+        font-size: 12px;
+    }
+
+    .article,
+    .article2,
+    .article3 {
+        padding: 15px;
+    }
+
+    .inside_article_right h2,
+    .inside_article_right2 h2,
+    .inside_article_right3 h2 {
+        font-size: 18px;
+    }
+
+    .inside_article_right p,
+    .inside_article_right2 p,
+    .inside_article_right3 p {
+        font-size: 14px;
+    }
+
+    .article_information {
+        gap: 8px;
+    }
+
+    .article_information p {
+        font-size: 10px;
+    }
+
+
+    /* Right side articles */
+
+    .first_article_right,
+    .second_article_right {
+        padding: 15px;
+    }
+
+    .right_01 h3,
+    .right_02 h3,
+    .right_03 h3 {
+        font-size: 15px;
+    }
+
+    .right_information_01 p,
+    .right_information_02 p,
+    .right_information_03 p {
+        font-size: 11px;
+    }
+
+
+    /*authors*/
+
+    .authors {
+        padding: 40px 0;
+    }
+
+    .authors_header {
+        padding: 20px 0;
+    }
+
+    .authors_header h2 {
+        font-size: 28px;
+    }
+
+    .authors_header p {
+        font-size: 15px;
+    }
+
+    .authors_header p br {
+        display: none;
+    }
+
+    .authors_cards {
+        display: block;
+    }
+
+    .card_1,
+    .card_2,
+    .card_3 {
+        width: 100%;
+
+        margin-bottom: 30px;
+
+        padding: 25px 15px;
+    }
+
+    .card_header h3 {
+        font-size: 25px;
+    }
+
+    .card_descreption p {
+        width: 100%;
+
+        font-size: 14px;
+    }
+
+    .card_descreption p br {
+        display: none;
+    }
+
+    .card_footer {
+        flex-wrap: wrap;
+    }
+
+
+
+    /*  squares */
+
+    .square1 {
+        left: 10px;
+        bottom: 20px;
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .square2 {
+        right: 10px;
+        top: 20px;
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /*rebbellion */
+
+    .rebellion .container {
+        padding: 50px 0;
+    }
+
+    .rebellion_header h2 {
+        font-size: 30px;
+    }
+
+    .rebellion_header p {
+        font-size: 15px;
+    }
+
+    .rebellion_header p::after {
+        width: 110px;
+        height: 7px;
+
+        margin: 15px auto 30px;
+    }
+
+    .rebellion_content {
+        margin-top: 40px;
+    }
+
+    .rebellion_left_header {
+        margin-bottom: 30px;
+    }
+
+    .rebellion_left_header h2 {
+        font-size: 26px;
+    }
+
+    .rebellion_left_header p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .rebellion_right {
+        margin-top: 40px;
+    }
+
+
+    /*footer*/
+
+    .footer {
+        padding: 50px 0 25px;
+    }
+
+    .left_content,
+    .middle_content,
+    .right_content {
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+    .left_content_header {
+        gap: 12px;
+    }
+
+    .left_content_header i {
+        padding: 14px 20px;
+        font-size: 18px;
+    }
+
+    .left_content_header h2 {
+        font-size: 23px;
+    }
+
+    .left_content_descreption span {
+        font-size: 14px;
+    }
+
+    .middle_content_header h2,
+    .right_content_header h2 {
+        font-size: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .middle_content_links {
+        gap: 12px;
+    }
+
+    .middle_content_links a {
+        font-size: 16px;
+    }
+
+    .right_content_header span {
+        font-size: 15px;
+    }
+
+    .form form {
+        gap: 15px;
+    }
+
+    .form input {
+        padding: 15px;
+
+        font-size: 15px;
+    }
+
+    .form button {
+        padding: 15px;
+
+        font-size: 16px;
+    }
+
+}
