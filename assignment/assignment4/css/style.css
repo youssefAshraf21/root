@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 1000vh;
+    scroll-behavior: smooth;
 }
 
 
@@ -16,7 +16,6 @@ body {
     font-family: 'Exo', sans-serif;
     border: 2px solid #000000;
     border-bottom: none;
-    min-height: 200vh;
     background-color: #FAFAFA;
 }
 
@@ -109,6 +108,11 @@ img {
     border-radius: 12px;
 }
 
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .navbar_elements {
     display:flex;
@@ -1220,4 +1224,498 @@ img {
 
 .card_3:hover {
     transform: translate(-3px, -3px);
+}
+
+
+/* rebellion section style */
+
+.rebellion {
+    background-color: #f5f5f5;
+}
+
+.rebellion .container {
+    padding: 100px 0;
+}
+
+
+/* rebellion header style */
+
+
+
+
+.rebellion_header {
+    text-align: center;
+}
+
+
+.rebellion_header h2 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.rebellion_header p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+}
+
+.rebellion_header p::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 9px;
+    background-color: black;
+    margin: 20px auto 40px;
+    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+}
+
+.rebellion_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    margin-top: 100px;   
+}
+
+.rebellion_left {
+    width: 46%;
+}
+
+
+
+
+/* rebellion section style left  */
+
+
+
+ /* rebellion  header style  */
+
+.rebellion_left_header {
+    margin-bottom: 40px;
+}
+
+.rebellion_left_header h2 {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.rebellion_left_header p {
+    background-color: #ffffff;
+    padding: 15px 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0px #000;
+    transition: all 0.3s ease;
+}
+
+/* rebellion icons style  */
+
+.rebellion_left_props {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+.right_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+
+}
+
+.right_icon i {
+    background-color: #FB2C36;
+    font-size: 20px;
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;    
+}
+
+.right_icon span,
+.discord_icon span,
+.star_icon span,
+.edit_icon span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.discord_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.discord_icon i {
+    background-color: #2B7FFF;
+    font-size: 20px;
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+}
+
+
+.star_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.star_icon i {
+    background-color: #AD46FF;
+    font-size: 20px;
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+}
+
+.edit_icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+
+.edit_icon i {
+    background-color: #00C950;
+    font-size: 20px;
+    padding: 11px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; 
+}
+
+
+/* rebellion_btn style  */
+
+.rebellion_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 50px;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 30px 40px;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 7px 7px 0px #000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+.rebellion_btn:hover {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 #000;
+}
+
+
+
+/* rebellion section style right  */
+
+.rebellion_right {
+    width: 46%;
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px #000;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+
+.rebellion_right_header {
+    margin-bottom: 30px;
+}
+
+.rebellion_right_header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.comment {
+    background-color: #FEF2F2;
+    padding: 16px 16px 16px 24px;
+    border: 2px solid black;
+}
+
+.comment2 {
+    background-color: #EFF6FF;
+    padding: 16px 16px 16px 24px;
+    border: 2px solid black;
+}
+
+
+.comment3 {
+    background-color: #FAF5FF;
+    padding: 16px 16px 16px 24px;
+    border: 2px solid black;
+}
+
+.comment p,
+.comment2 p,
+.comment3 p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.person_img {
+    width: 50px;
+    height: 50px;
+}
+
+.person_img img {
+    border: 2px solid black ;
+}
+
+.person_info span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #525252;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 0;
+}
+
+
+/* footer content */
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+/* left content */
+
+.left_content {
+    width: 35%;
+}
+
+.left_content_header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.left_content_header i {
+    background-color: #fff;
+    padding: 18px 28px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left_content_header h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.left_content_descreption span {
+    display: block;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* middle content */
+
+.middle_content {
+    width: 20%;
+}
+
+.middle_content_header h2,
+.right_content_header h2 {
+    margin: 0 0 30px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.middle_content_links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    
+}
+
+.middle_content_links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+
+/* right content */
+
+.right_content {
+    width: 35%;
+}
+
+.right_content_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.right_content_header h2 {
+    margin-bottom: 30px;
+}
+
+.right_content_header span {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* form */
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 15px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form input::placeholder {
+    color: rgb(255, 255, 255,0.5);
+}
+
+.form button {
+    width: 100%;
+    padding: 18px;
+    background-color: #FFD230;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+
+/* copy right */
+
+.copy_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 4px solid #fff;
+
+    margin-top: 50px;
+    padding-top: 35px;
+}
+
+.copy_right_text span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.copy_right_links {
+    display: flex;
+    gap: 35px;
+}
+
+.copy_right_links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+
+/* hover */
+
+.middle_content_links a:hover,
+.copy_right_links a:hover {
+    color: #FFD230;
+}
+
+.form button:hover {
+    transform: translate(3px, 3px);
+    background-color: #FDC700;
+    -webkit-transform: translate(3px, 3px);
+    -moz-transform: translate(3px, 3px);
+    -ms-transform: translate(3px, 3px);
+    -o-transform: translate(3px, 3px);
 }
