@@ -852,9 +852,7 @@
 }
 
 
-/* =========================================================
-   MOBILE OVERFLOW FIX
-========================================================= */
+/* horizontal scroll fix*/
 
 @media (max-width: 768px) {
 
@@ -864,8 +862,6 @@
         max-width: 100%;
         overflow-x: hidden;
     }
-
-    /* Prevent elements from becoming wider than screen */
 
     .container,
     .nav,
@@ -917,7 +913,7 @@
     }
 
 
-    /* Prevent text from creating horizontal overflow */
+    /* horizontal overflow */
 
     .inside_article_right,
     .inside_article_right2,
