@@ -1719,3 +1719,8 @@ img {
     -ms-transform: translate(3px, 3px);
     -o-transform: translate(3px, 3px);
 }
+
+
+.hamburger {
+    display: none;
+}
