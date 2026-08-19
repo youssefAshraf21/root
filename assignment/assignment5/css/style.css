@@ -8,6 +8,30 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --main-blue: #1447E6;
+    --middle-blue:#5968FF;
+    --dark-blue: #1C398E;
+    --blue-background: #EFF6FF;
+    --main-green: #00A63E;
+    --middle-green:#00C950;
+    --green-text: #166534;
+    --green-background: #DCFCE7;
+    --gray-text: #6A7282;
+    --main-orange: #F54900;
+    --middle-orange:#FF6900;
+    --orange-background: #FFEDD4;
+    --main-red:#E7000B;
+    --middle-red: #FB2C36;
+    --red-text: #991B1B;
+    --red-background:#FEE2E2;
+    --mastard-color: #D08700;
+    --yellow-background: #FEF9C2;
+    --orange-text: #FF6900;
+}
+
+
+
 body {
     background-color: #F9FAFB;
     font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -20,4 +44,214 @@ a {
 li {
     list-style: none;
 }
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+    /* i will worlk moblie first  for first time 
+    i will try to add comments alot  */
+
+    /* header style  */
+
+.dashboard_header {
+    width: 100%;
+    background-image: linear-gradient(
+        to right,
+        #F6F8FC  0%,
+        #ffffff 40%,
+        #ffffff 60%,
+        #F4F8FD 100%
+    );
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #f0f1f3;
+    box-shadow: 3px 3px 5px #E5E7EB;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}    
+
+    /* logo style */
+
+.logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+.icon {
+        background-color: #3639ea;
+        padding: 10px 15px;
+        height: fit-content;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        box-shadow: 0 3px 5px rgb(173, 211, 230);
+}
+
+/* text of logo  */
+
+.text h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.text p {
+    font-size: 10px;
+    font-weight: 600;
+    color: #545F6E;
+}
+
+
+/* dashboard_actions style  */
+
+.dashboard_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+
+/* actions_buttons style  */
+
+.actions_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.search_button,
+.notification_button {
+    background-color: #f9f9fa;
+    border: none;
+    padding: 7px 8px;
+    border: 1px solid #dfdfe0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.notification_button {
+    position: relative;
+}
+
+.notification_button span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+/* hide the profile info for small screens  */
+
+.profile_info {
+    display: none;
+}
+
+
+/* dashboard_profile style  */
+
+.profile_image {
+    padding: 6px 10px;
+    border: 1px solid #f0f1f3;
+    box-shadow: 3px 3px 5px #E5E7EB;
+    border-radius: 15px;
+    background-color: white;
+    
+}
+
+.profile_image img {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #f0f1f3;
+    border-radius: 10px 8px;
+    -webkit-border-radius: 10px 8px;
+    -moz-border-radius: 10px 8px;
+    -ms-border-radius: 10px 8px;
+    -o-border-radius: 10px 8px;
+}
+
+/* dashboard_status style  */
+
+.dashboard_status {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #F0FDF4;
+    border: 1px solid #defbeb;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    padding: 5px 0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+
+.status_dot{
+    width: 8px;
+    height: 8px;
+    background-color: #028338e7;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.status_text {
+    color:#028337;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* status_dot animation */
+
+.status_dot {
+    background-color: black;
+    animation: colorChange 1s ease-in-out infinite alternate;
+    -webkit-animation: colorChange 1s ease-in-out infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        background-color: #0ab250;
+    }
+
+    to {
+        background-color: #45e287;
+    }
+}
+
+
+
+
 
