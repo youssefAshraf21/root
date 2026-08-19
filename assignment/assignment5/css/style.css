@@ -35,6 +35,7 @@ html {
 body {
     background-color: #F9FAFB;
     font-family: "IBM Plex Sans Arabic", sans-serif;
+    min-height: 100vh;
 }
 
 a {
@@ -61,23 +62,23 @@ img {
     /* header style  */
 
 .dashboard_header {
-    width: 100%;
-    background-image: linear-gradient(
-        to right,
-        #F6F8FC  0%,
-        #ffffff 40%,
-        #ffffff 60%,
-        #F4F8FD 100%
-    );
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #f0f1f3;
-    box-shadow: 3px 3px 5px #E5E7EB;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
+        width: 100%;
+        background-image: linear-gradient(
+            to right,
+            #F6F8FC  0%,
+            #ffffff 40%,
+            #ffffff 60%,
+            #F4F8FD 100%
+        );
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #f0f1f3;
+        box-shadow: 3px 3px 5px #E5E7EB;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
 }    
 
     /* logo style */
@@ -143,10 +144,16 @@ img {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .notification_button {
     position: relative;
+
 }
 
 .notification_button span {
@@ -166,6 +173,14 @@ img {
 }
 
 
+/* actions_buttons hover  */
+
+.search_button:hover,
+.notification_button:hover {
+    background-color: #f0f1f3;
+}
+
+
 /* hide the profile info for small screens  */
 
 .profile_info {
@@ -181,7 +196,11 @@ img {
     box-shadow: 3px 3px 5px #E5E7EB;
     border-radius: 15px;
     background-color: white;
-    
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .profile_image img {
@@ -193,6 +212,13 @@ img {
     -moz-border-radius: 10px 8px;
     -ms-border-radius: 10px 8px;
     -o-border-radius: 10px 8px;
+}
+
+
+/* dashboard_profile_img  hover  */
+
+.profile_image:hover {
+    box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.20);
 }
 
 /* dashboard_status style  */
@@ -250,6 +276,99 @@ img {
         background-color: #45e287;
     }
 }
+
+
+/* balance section style  */
+
+.current_balance,
+.spends {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    background-color: white;
+    border: 1px solid #f0f1f3;
+    box-shadow: 3px 3px 5px #E5E7EB;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.current_balance span,
+.spends span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-text);
+}
+
+.current_balance h2,
+.spends h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* balance percantage  */
+
+.percentage {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.percentage i {
+    color: var(--main-green);
+    font-size: 12px;
+}
+
+.percentage span {
+    color: var(--main-green);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.spends .percentage i,
+.spends .percentage span {
+    color: var(--main-red);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* last_transactions section style  */
+
+.last_transactions {
+    width: 100%;
+    margin-top: 20px;   
+}
+
+/* last_transactions header style  */
+
+
+
 
 
 
