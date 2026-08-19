@@ -197,40 +197,368 @@
     }
 
 
-    /* Hide  navigation */
+/* 
+    MOBILE SIDE MENU
+ */
+
+@media (max-width: 768px) {
+
+    /* 
+    NAVBAR
+     */
+
+    .nav {
+
+        width: calc(100% - 20px);
+
+        top: 10px;
+    }
+
+
+    .navbar_elements {
+
+        padding: 7px 12px;
+    }
+
+
+    /* Hide desktop links */
 
     .nav_links {
         display: none;
     }
 
 
-    /* Hide subscribe button */
+    /* Hide desktop subscribe */
 
     .nav_btn {
         display: none;
     }
 
 
-    /* Show hamburger icon*/
+    /* 
+    HAMBURGER
+     */
 
     .hamburger {
+
         display: flex;
+
         align-items: center;
+
+        justify-content: center;
+    }
+
+
+    /* Open icon */
+
+    .open_menu {
+
+        display: flex;
+
+        align-items: center;
+
         justify-content: center;
 
-        cursor: pointer;
+        color: #000000;
 
-        font-size: 25px;
+        border: 2px solid black;
+        padding: 5px;
+        box-shadow: 2px 2px 0px #000;
+
+        font-size: 24px;
+
+        text-decoration: none;
+
+        cursor: pointer;
 
         transition: transform 0.3s ease;
     }
 
 
-    /* Hamburger hover */
+    .open_menu:hover {
+        transform: translate(0, -3px);
+        -webkit-transform: translate(0, -3px);
+        -moz-transform: translate(0, -3px);
+        -ms-transform: translate(0, -3px);
+        -o-transform: translate(0, -3px);
+}
 
-    .hamburger:hover {
+
+    /* Close icon is hidden */
+
+    .close_menu {
+        display: none;
+    }
+
+
+    /* 
+    CHANGE OPEN → CLOSE
+     */
+
+    .nav:has(#mobileMenu:target) .open_menu {
+
+        display: none;
+    }
+
+
+    .nav:has(#mobileMenu:target) .close_menu {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color: #000000;
+
+        font-size: 24px;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        transition: transform 0.3s ease;
+    }
+
+
+    .nav:has(#mobileMenu:target) .close_menu:hover {
+
         transform: translate(3px, 3px);
     }
+
+
+    /* 
+    DARK OVERLAY
+     */
+
+    body:has(#mobileMenu:target)::before {
+
+        content: "";
+
+        position: fixed;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.75);
+
+        z-index: 999;
+    }
+
+
+    /* 
+    MOBILE SIDE MENU
+     */
+
+    .mobile_menu {
+
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: 58%;
+        height: 100vh;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 18px 22px;
+
+        background-color: #ffffff;
+
+        z-index: 1000;
+
+        overflow-y: auto;
+    }
+
+
+    /* Open menu */
+
+    .mobile_menu:target {
+
+        display: flex;
+    }
+
+
+    /* 
+    MOBILE MENU HEADER
+     */
+
+    .mobile_menu_header {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 10px 0;
+
+        border-top: 2px solid #000000;
+
+        border-bottom: 2px solid #000000;
+    }
+
+
+    .mobile_menu_header h2 {
+
+        margin: 0;
+
+        color: #000000;
+
+        font-family: "Exo", sans-serif;
+
+        font-size: 22px;
+
+        font-weight: 900;
+    }
+
+
+    /* 
+    CLOSE BUTTON INSIDE MENU
+     */
+
+    .mobile_close_button {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        background-color: #ffffff;
+
+        border: 2px solid #000000;
+
+        color: #000000;
+
+        font-size: 20px;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+
+    .mobile_close_button:hover {
+        background-color: #FFE2E2;
+        color: #FF7A50;
+}
+
+
+    /* 
+    MOBILE MENU LINKS
+   */
+
+    .mobile_menu_links {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 24px;
+
+        margin-top: 30px;
+    }
+
+
+    .mobile_menu_links a {
+
+        display: block;
+
+        width: 100%;
+
+        color: #000000;
+
+        font-family: "Exo", sans-serif;
+
+        font-size: 16px;
+
+        font-weight: 800;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.2s ease,
+            color 0.3s ease;
+    }
+
+
+    .mobile_menu_links a:hover {
+        color: #FF4D00;
+        transform: translate(-3px, -3px);
+        -webkit-transform: translate(-3px, -3px);
+        -moz-transform: translate(-3px, -3px);
+        -ms-transform: translate(-3px, -3px);
+        -o-transform: translate(-3px, -3px);
+}
+
+
+    /* 
+    MOBILE SUBSCRIBE
+     */
+
+    .mobile_subscribe {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        width: 100%;
+
+        margin-top: 30px;
+
+        padding: 14px 10px;
+
+        background-color: #FFD230;
+
+        border: 3px solid #000000;
+
+        box-shadow: 3px 3px 0 #000000;
+
+        color: #000000;
+
+        font-family: "Exo", sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 900;
+
+        text-decoration: none;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+
+    .mobile_subscribe:hover {
+
+        transform: translate(3px, 3px);
+
+        box-shadow: 0 0 0 #000000;
+    }
+
+    body:has(#mobileMenu:target) .navbar_elements {
+    display: none;
+}
+
+}
 
 
     /*hero*/
@@ -544,15 +872,88 @@
     }
 
 
-    /* Hamburger */
+    @media (max-width: 480px) {
 
-    .hamburger {
+
+    .nav {
+
+        width: calc(100% - 20px);
+
+        top: 10px;
+    }
+
+
+    .logo h2 {
+
+        font-size: 19px;
+    }
+
+
+    .open_menu {
+
         font-size: 22px;
     }
 
-    .hamburger:hover {
-        transform: translate(3px, 3px);
+
+    .nav:has(#mobileMenu:target) .close_menu {
+
+        font-size: 22px;
     }
+
+
+    /* Side menu */
+
+    .mobile_menu {
+
+        width: 58%;
+
+        padding: 18px 20px;
+    }
+
+
+    /* Header */
+
+    .mobile_menu_header h2 {
+
+        font-size: 20px;
+    }
+
+
+    .mobile_close_button {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 19px;
+    }
+
+
+    /* Links */
+
+    .mobile_menu_links {
+
+        gap: 23px;
+
+        margin-top: 30px;
+    }
+
+
+    .mobile_menu_links a {
+
+        font-size: 15px;
+    }
+
+
+    /* Subscribe */
+
+    .mobile_subscribe {
+
+        padding: 13px 8px;
+
+        font-size: 13px;
+    }
+
+}
 
 
     /*hero*/

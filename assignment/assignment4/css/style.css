@@ -1721,6 +1721,29 @@ img {
 }
 
 
+/* mobile menu */
+
+/* Hidden on desktop */
+
 .hamburger {
     display: none;
 }
+
+.open_menu,
+.close_menu {
+
+    color: #000000;
+
+    text-decoration: none;
+}
+
+
+/* 
+    MOBILE MENU
+ */
+
+
+.mobile_menu {
+    display: none;
+}
+
