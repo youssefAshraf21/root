@@ -852,3 +852,45 @@ img {
     }
 
 }
+
+@media (min-width: 992px) {
+
+    .current_balance {
+        padding: 30px
+    }
+
+    .spends {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    background-color: white;
+    border: 1px solid #f0f1f3;
+    box-shadow: 3px 3px 5px #E5E7EB;
+
+    }
+
+    .spends span {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .spends h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+
+    .current_balance span {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .current_balance h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+} 
