@@ -8,113 +8,192 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
     <title>مدبّر | إدارة أموالك بذكاء</title>
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="container">
-            <div class="dashboard_header">
-                <div class="logo">
-                    <div class="icon">
-                        <i class="fa-solid fa-coins" style="color: rgb(255, 255, 255);"></i>
-                    </div>
-                    <div class="text">
-                        <h1>مدبّر</h1>
-                        <p>إدارة أموالك بذكاء</p>
-                    </div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo_icon">
+                    <i class="fa-solid fa-coins"></i>
                 </div>
-                <div class="dashboard_actions">
-                    <div class="actions_buttons">
-                        <button class="search_button">
-                            <i class="fa-solid fa-magnifying-glass" style="color:#364153;"></i>
-                        </button>
-                        <button class="notification_button">
-                            <i class="fa-regular fa-bell" style="color: #364153;"></i>
-                            <span>2</span>
-                        </button>
-                    </div>
-                    <div class="dashboard_profile">
-                        <div class="profile_image">
-                            <img src="images/avatar-1.jpg" alt=" صورة الملف الشخصي">
-                        </div>
-                        <div class="profile_info">
-                            <h3>سيف أسامة</h3>
-                            <p>حساب مميز</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="dashboard_status">
-                    <span class="status_dot"></span>
-                    <span class="status_text">متصل</span>
+                <div class="logo_name">
+                    <h1>مدبّر</h1>
+                    <span>إدارة أموالك بذكاء</span>
                 </div>
             </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="balance_section" id="balance_section">
+            <div class="links">
+                <ul>
+                    <li class="active1">
+                        <a href="#">
+                            <i class="fa-solid fa-house"></i>
+                            <span>الصفحة الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            <span>المعاملات</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>الميزانيات</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <span>المدخرات</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <span>الفواتير الشهرية</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fast_methods">
+                <h3>إجراءات سريعة</h3>
+                <div class="method1">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>ارسال الأموال</span>
+                </div>
+                <div class="method2">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>أضافه الأموال</span>
+                </div>
+                <div class="method3">
+                    <i class="fa-solid fa-receipt"></i>
+                    <span>دفع فواتير</span>
+                </div>
+                <div class="method4">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>استثمار</span>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <section class="header" id="header">
             <div class="container">
-                <div class="current_balance">
-                    <span>الرصيد الحالي</span>
-                    <h2>8,450 جنية</h2>
-                    <div class="percentage">
-                        <i class="fa-solid fa-arrow-up"></i>
-                        <span>+2.5%</span>
+                <div class="dashboard_header">
+                    <div class="logo">
+                        <div class="icon">
+                            <i class="fa-solid fa-coins" style="color: rgb(255, 255, 255);"></i>
+                        </div>
+                        <div class="text">
+                            <h1>مدبّر</h1>
+                            <p>إدارة أموالك بذكاء</p>
+                        </div>
                     </div>
-                </div>
-                <div class="current_balance">
-                    <span>الدخل</span>
-                    <h2>15,000 جنية</h2>
-                    <div class="percentage">
-                        <i class="fa-solid fa-arrow-up"></i>
-                        <span>+8.2%</span>
-                    </div>
-                </div>
-                <div class="spends">
-                    <span>المصروفات</span>
-                    <h2>10,000 جنية</h2>
-                    <div class="percentage">
-                        <i class="fa-solid fa-arrow-down"></i>
-                        <span>-1.2%</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="transactions-section" id="transactions-section">
-            <div class="container">
-                <div class="last_activity">
-                    <h2>الأنشطة الحديثة</h2>
-                    <div class="new_acc">
-                        <div class="add">
-                            <div class="add_icon">
-                                <i class="fa-solid fa-user-plus" style="color: rgb(242, 2, 2);"></i>
+                    <div class="dashboard_actions">
+                        <div class="actions_buttons">
+                            <button class="search_button">
+                                <i class="fa-solid fa-magnifying-glass" style="color:#364153;"></i>
+                            </button>
+                            <button class="notification_button">
+                                <i class="fa-regular fa-bell" style="color: #364153;"></i>
+                                <span>2</span>
+                            </button>
+                        </div>
+                        <div class="dashboard_profile">
+                            <div class="profile_info">
+                                <h3>سيف أسامة</h3>
+                                <p>حساب مميز</p>
                             </div>
-                            <div>
-                                <h3>إنشاء حساب توفير جديد</h3>
-                                <span>تم إنشاء حساب توفير بنك الأهلي بنجاح</span>
+                            <div class="profile_image">
+                                <img src="images/avatar-1.jpg" alt="صورة الملف الشخصي">
                             </div>
                         </div>
                     </div>
-                </div>
-
-
-
-
-                <div class="last_transactions">
-                    <div class="last_transactions_header">
-                        <h3>المعاملات الأخيرة</h3>
-                        <div class="view_all">
-                            <span>عرض الكل </span>
-                            <i class="fa-solid fa-angle-left" style="color: rgb(242, 2, 2);"></i>
-                        </div>
+                    <div class="dashboard_status">
+                        <span class="status_dot"></span>
+                        <span class="status_text">متصل</span>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+            </section>
+            <section class="balance_section" id="balance_section">
+                <div class="container">
+                    <div class="current_balance">
+                        <span>الرصيد الحالي</span>
+                        <h2>8,450 جنية</h2>
+                        <div class="percentage">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span>+2.5%</span>
+                        </div>
+                    </div>
+                    <div class="current_balance">
+                        <span>الدخل</span>
+                        <h2>15,000 جنية</h2>
+                        <div class="percentage">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            <span>+8.2%</span>
+                        </div>
+                    </div>
+                    <div class="spends">
+                        <span>المصروفات</span>
+                        <h2>10,000 جنية</h2>
+                        <div class="percentage">
+                            <i class="fa-solid fa-arrow-down"></i>
+                            <span>-1.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="transactions-section" id="transactions-section">
+                <div class="container">
+                    <div class="last_activity">
+                        <div class="transaction_header">
+                            <h2>الأنشطة الحديثة</h2>
+                        </div>
+                        <div class="new_acc_card">
+                            <div class="right">
+                                <div class="add_icon">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title">إنشاء حساب توفير جديد</h4>
+                                    <p class="subtitle">تم إنشاء حساب توفير بنك الأهلي بنجاح</p>
+                                    <span class="time">منذ ساعة واحدة</span>
+                                </div>
+                            </div>
+                            <div class="left">
+                                <span>حساب</span>
+                            </div>
+                        </div>
+                        <div class="new_visa_card">
+                            <div class="right">
+                                <div class="visa_icon">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title">إضافة بطاقة جديدة</h4>
+                                    <p class="subtitle">تمت إضافة بطاقة Visa الجديدة ****2847</p>
+                                    <span class="time">منذ 3 ساعات</span>
+                                </div>
+                            </div>
+                            <div class="left">
+                                <span>بطاقة</span>
+                            </div>
+                        </div>
+                        <div class="show_more">
+                            <span>عرض جميع الأنشطة (23)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
