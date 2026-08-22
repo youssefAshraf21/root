@@ -519,29 +519,26 @@
 
     /* =====================================================
        TRANSACTIONS / ACTIVITY AREA
-
-       Right side  -> Recent Activity
-       Left side   -> Transactions
-
-       Because the page is RTL, the first grid item
-       appears on the right.
-       ===================================================== */
-
-    .activity_section .container {
-        display: grid;
-
-        grid-template-columns: 1fr 2fr;
-
-        gap: 20px;
-
-        align-items: start;
-    }
-
-
     /* =====================================================
        RECENT ACTIVITY
        ===================================================== */
 
+
+    .overview_grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;   /* first column -> right side_column, second -> left transactions (RTL) */
+    gap: 20px;
+    align-items: start;
+}
+
+    .transactions_panel {
+        order: 0; /* reset the mobile column-reverse trick */
+}
+
+
+
+
+    
     .last_activity {
         margin-top: 0;
 
@@ -774,4 +771,11 @@
     }
 
 }
+
+
+
+ /* tabale  */
+
+
+ /* ============ BILLS (desktop: sits beside activity) ============ */
 
