@@ -1667,6 +1667,11 @@ img {
     -o-transition: all 0.2s ease;
 }
 
+    .middle_right_content {
+    display: flex;
+    justify-content: space-around;
+    }
+
 
 /* copy right */
 

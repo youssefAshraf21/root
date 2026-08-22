@@ -126,6 +126,8 @@
     }
 
     .authors_cards {
+            display: flex;
+    flex-direction: column;
         flex-wrap: wrap;
     }
 
@@ -169,6 +171,23 @@
         width: 40%;
     }
 
+    /* footer */
+
+    .footer {
+        padding: 80px 0;
+    }
+
+    .middle_right_content {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .copy_right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }
 
 
@@ -197,26 +216,20 @@
     }
 
 
-/* 
-    MOBILE SIDE MENU
- */
+/* MOBILE SIDE MENU*/
 
 @media (max-width: 768px) {
 
-    /* 
-    NAVBAR
-     */
+    /*navbar*/
 
     .nav {
 
         width: calc(100% - 20px);
-
         top: 10px;
     }
 
 
     .navbar_elements {
-
         padding: 7px 12px;
     }
 
@@ -235,16 +248,11 @@
     }
 
 
-    /* 
-    HAMBURGER
-     */
+    /*humburger*/
 
     .hamburger {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
     }
 
@@ -252,25 +260,16 @@
     /* Open icon */
 
     .open_menu {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         color: #000000;
-
         border: 2px solid black;
         padding: 5px;
         box-shadow: 2px 2px 0px #000;
-
         font-size: 24px;
-
         text-decoration: none;
-
         cursor: pointer;
-
         transition: transform 0.3s ease;
     }
 
@@ -292,86 +291,57 @@
 
 
     /* 
-    CHANGE OPEN → CLOSE
+    change open icon to close icon
      */
 
     .nav:has(#mobileMenu:target) .open_menu {
-
         display: none;
     }
 
 
     .nav:has(#mobileMenu:target) .close_menu {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         color: #000000;
-
         font-size: 24px;
-
         text-decoration: none;
-
         cursor: pointer;
-
         transition: transform 0.3s ease;
     }
 
 
     .nav:has(#mobileMenu:target) .close_menu:hover {
-
         transform: translate(3px, 3px);
     }
 
 
-    /* 
-    DARK OVERLAY
-     */
+    /* darken background*/
 
     body:has(#mobileMenu:target)::before {
-
         content: "";
-
         position: fixed;
-
         inset: 0;
-
         width: 100%;
         height: 100%;
-
         background-color: rgba(0, 0, 0, 0.75);
-
         z-index: 999;
     }
 
 
-    /* 
-    MOBILE SIDE MENU
-     */
+    /*side menu */
 
     .mobile_menu {
-
         position: fixed;
-
         top: 0;
         right: 0;
-
         width: 58%;
         height: 100vh;
-
         display: none;
-
         flex-direction: column;
-
         padding: 18px 22px;
-
         background-color: #ffffff;
-
         z-index: 1000;
-
         overflow-y: auto;
     }
 
@@ -379,72 +349,46 @@
     /* Open menu */
 
     .mobile_menu:target {
-
         display: flex;
     }
 
 
-    /* 
-    MOBILE MENU HEADER
-     */
+    /* menu header */
 
     .mobile_menu_header {
-
         display: flex;
-
         align-items: center;
-
         justify-content: space-between;
-
         width: 100%;
-
         padding: 10px 0;
-
         border-top: 2px solid #000000;
-
         border-bottom: 2px solid #000000;
     }
 
 
     .mobile_menu_header h2 {
-
         margin: 0;
-
         color: #000000;
-
         font-family: "Exo", sans-serif;
-
         font-size: 22px;
-
         font-weight: 900;
     }
 
 
     /* 
-    CLOSE BUTTON INSIDE MENU
-     */
+    close icon */
 
     .mobile_close_button {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         width: 40px;
         height: 40px;
-
         background-color: #ffffff;
-
         border: 2px solid #000000;
-
         color: #000000;
-
         font-size: 20px;
-
         text-decoration: none;
-
         transition:
             transform 0.3s ease,
             background-color 0.3s ease;
@@ -457,42 +401,30 @@
 }
 
 
-    /* 
-    MOBILE MENU LINKS
-   */
+    /*menu links*/
 
     .mobile_menu_links {
-
         display: flex;
-
         flex-direction: column;
-
         gap: 24px;
-
         margin-top: 30px;
     }
 
 
     .mobile_menu_links a {
-
         display: block;
-
         width: 100%;
-
         color: #000000;
-
         font-family: "Exo", sans-serif;
-
         font-size: 16px;
-
         font-weight: 800;
-
         text-decoration: none;
-
-        transition:
-            transform 0.2s ease,
-            color 0.3s ease;
-    }
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+}
 
 
     .mobile_menu_links a:hover {
@@ -505,52 +437,34 @@
 }
 
 
-    /* 
-    MOBILE SUBSCRIBE
-     */
+    /*subscribe button*/
 
     .mobile_subscribe {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         gap: 8px;
-
         width: 100%;
-
         margin-top: 30px;
-
         padding: 14px 10px;
-
         background-color: #FFD230;
-
         border: 3px solid #000000;
-
         box-shadow: 3px 3px 0 #000000;
-
         color: #000000;
-
         font-family: "Exo", sans-serif;
-
         font-size: 14px;
-
         font-weight: 900;
-
         text-decoration: none;
-
-        transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-    }
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+}
 
 
     .mobile_subscribe:hover {
-
         transform: translate(3px, 3px);
-
         box-shadow: 0 0 0 #000000;
     }
 
@@ -583,33 +497,29 @@
     }
 
     .hero_header h1 {
-        font-size: 48px;
-        line-height: 1;
+        font-size: 70px;
+        line-height: 1.3;
     }
 
     .hero_header p {
-        width: 100%;
-        font-size: 17px;
-    }
-
-    .hero_header p br {
-        display: none;
+        font-size: 24px;
+        padding: 15px;
     }
 
     .hero_buttons {
         display: flex;
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 15px;
+        gap: 20px;
+        align-content: flex-end;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 450px;
     }
 
     .btn1,
     .btn2 {
-        width: 100%;
-        padding: 16px;
+        font-size: 20px;
     }
+
 
 
     /*articles*/
@@ -660,6 +570,18 @@
         padding: 18px;
 
         margin-bottom: 35px;
+    }
+
+    .article .inside_article_left {
+        width: 180px;
+    }
+
+    .article2 .inside_article_left {
+        width: 180px;
+    }
+
+    .article3 .inside_article_left  {
+        width: 180px;
     }
 
     .inside_article_left {
@@ -963,15 +885,12 @@
     }
 
     .hero_header h1 {
-        font-size: 39px;
+        font-size: 55px;
     }
 
     .hero_header p {
         font-size: 15px;
-
         padding: 10px;
-
-        line-height: 1.5;
     }
 
     .hero_trending {
@@ -999,11 +918,19 @@
 
     .btn1,
     .btn2 {
-        width: 100%;
+        width: 35%;
 
         padding: 15px;
 
         font-size: 15px;
+    }
+
+    .hero_section {
+        border: none;
+    }
+
+    .nav_and_hero {
+        border-bottom: 5px solid #000;
     }
 
 
@@ -1023,7 +950,26 @@
     .article2,
     .article3 {
         padding: 15px;
+        display: flex;
+        flex-direction: column;
     }
+
+    .inside_article_left{
+        width: 80px;
+        margin-top: 10px
+    }
+
+    .article2 .inside_article_left {
+        width: 120px;
+        margin-top: 10px
+    }
+
+
+    .article3 .inside_article_left {
+        width: 120px;
+        margin-top: 10px
+    }
+
 
     .inside_article_right h2,
     .inside_article_right2 h2,
@@ -1090,6 +1036,10 @@
 
     .authors_cards {
         display: block;
+    }
+
+    .rebellion_right {
+        padding: 25px;
     }
 
     .card_1,
@@ -1250,6 +1200,25 @@
         font-size: 16px;
     }
 
+    /* footer */
+
+    .middle_right_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .copy_right_text span {
+        font-size: 12px;
+    }
+
+    .copy_right_links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+
+
 }
 
 
@@ -1272,7 +1241,8 @@
     .authors_cards,
     .rebellion_content,
     .footer_content {
-        max-width: 100%;
+        max-width: 95%;
+        margin: auto;
     }
 
 
@@ -1290,6 +1260,9 @@
     .hero_shape3 {
         right: 10px;
     }
+
+
+
 
 
     /* Articles */
@@ -1359,4 +1332,42 @@
         min-width: 0;
     }
 
+}
+
+@media (max-width: 480px)  {
+    .copy_right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .copy_right_links {
+        display:flex;
+        justify-content: center;
+        
+    }
+
+    .copy_right_links a {
+        font-size: 12px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .rebellion {
+        padding: 10px;
+    }
+
+    .authors {
+        padding: 10px;
+    }
+
+    .articles_section {
+        padding: 10px;
+    }
+
+    .nav_and_hero {
+        padding: 10px;
+    }
 }
