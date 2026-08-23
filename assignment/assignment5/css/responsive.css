@@ -178,7 +178,6 @@
         color: var(--gray-text);
     }
 
-
     /* =====================================================
        QUICK METHODS
        ===================================================== */
@@ -525,15 +524,22 @@
 
 
     .overview_grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;   /* first column -> right side_column, second -> left transactions (RTL) */
-    gap: 20px;
-    align-items: start;
-}
+        display: grid;
+        grid-template-columns: 1fr 2fr;   /* first column -> right side_column, second -> left transactions (RTL) */
+        gap: 20px;
+        align-items: start;
+    }
 
+    .side_column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .last_activity,
+    .bills_card,
     .transactions_panel {
-        order: 0; /* reset the mobile column-reverse trick */
-}
+        order: 0; /* reset the mobile order values */
+    }
 
 
 
@@ -541,22 +547,14 @@
     
     .last_activity {
         margin-top: 0;
-
         width: 100%;
-
         padding: 20px;
-
         background-color: white;
-
         border: 1px solid #f0f1f3;
-
         box-shadow: 3px 3px 5px #E5E7EB;
-
         border-radius: 15px;
-
         display: flex;
         flex-direction: column;
-
         gap: 12px;
     }
 
@@ -724,6 +722,57 @@
         color: var(--dark-blue);
     }
 
+    /* bills  */
+
+    .service1,
+    .service2,
+    .service3,
+    .service4 {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color:  #F9FAFB;
+        padding: 10px 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .service1 .deadline,
+    .service2 .deadline,
+    .service3 .deadline,
+    .service4 .deadline {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+
+    .transactions_header_row span:nth-child(1),
+    .transactions_header_row span:nth-child(2),
+    .transactions_header_row span:nth-child(3) {
+        display: block;
+    }
+
+    .transaction_item {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        padding: 14px 15px;
+    }
+
+    .t_date,
+    .t_status,
+    .t_amount {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .label {
+        display: none; /* labels were only for a stacked mobile card; not needed in the grid row */
+    }
+
 }
 
 
@@ -737,20 +786,18 @@
         grid-template-columns: 240px 1fr;
     }
 
-
     .container {
         width: 95%;
     }
-
 
     .balance_section .container {
         gap: 20px;
     }
 
-
     .activity_section .container {
         gap: 20px;
     }
+
 
 }
 
