@@ -821,8 +821,16 @@
 
 
 
- /* tabale  */
+ /* transactions_panel style   */
 
 
- /* ============ BILLS (desktop: sits beside activity) ============ */
+.transactions_panel {
+        margin: 0;
+}
 
+
+@media (min-width: 992px) { 
+    .transactions_panel_content > :nth-child(n + 3) {
+        display: flex;
+    }
+}
