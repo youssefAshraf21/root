@@ -773,6 +773,18 @@
         display: none; /* labels were only for a stacked mobile card; not needed in the grid row */
     }
 
+    .overview_grid {
+        align-items: stretch; /* was: start */
+    }
+
+    .side_column {
+        height: 100%; /* fill the stretched grid row */
+    }
+
+    .bills_card {
+        flex: 1; /* grows to push its bottom edge down to match the table */
+    }
+
 }
 
 
@@ -833,4 +845,140 @@
     .transactions_panel_content > :nth-child(n + 3) {
         display: flex;
     }
+
+    .name {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .incom i,
+    .food i,
+    .shopping i,
+    .group i,
+    .work i,
+    .transportation i,
+    .enjoy i,
+    .health i,
+    .education i { 
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .incom span,
+    .food span,
+    .shopping span,
+    .group span,
+    .work span,
+    .transportation span,
+    .enjoy span,
+    .health span,
+    .education span {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .date_style {
+        color: #4B5563;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+
+    .complete span{
+        color: #166534;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #F0FDF4;
+        padding: 3px 8px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+
+    .pused span{
+        color: #894B00;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #FEF9C2;
+        padding: 3px 8px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+    }
+
+    .positive span,
+    .price_positive{
+        color: #00A63E;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .negative span{
+        font-size: 14px;
+        
+    }
+
+
+
+
+}
+
+
+/* bottom section  */
+
+@media (min-width: 992px) {
+
+    .bottom_grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+    }
+
+    .budget_column {
+        order: 1; /* rightmost — نظرة عامة على الميزانية */
+    }
+
+    .middle_column {
+        order: 2; /* middle — الدخل مقابل المصروفات + ملخص الحساب */
+    }
+
+    .payment_column {
+        order: 3; /* leftmost — وسائل الدفع */
+    }
+
+    .payment_card1 {
+        padding: 25px;
+        
+    }
+
+    .bottom_info {
+        padding: 15px 0px;
+    }
+    .primary {
+        left: 20px;
+    }
+
+    .primary_span {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .middle_info .dots {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .shap {
+        width: 50px;
+        height: 38px;
+    }
+
+    .shap_ineer {
+        width: 25px;
+        height: 15px;
+    }
+
 }

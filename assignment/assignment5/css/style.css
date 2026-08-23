@@ -34,7 +34,7 @@ html {
     --main-aqua: #0092B8;
     --purbule-background: #F3E8FF;
     --main-purbule: #6E11B0;
-
+    --gray-600: #4B5563;
 }
 
 
@@ -1044,6 +1044,35 @@ img {
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.view_all i {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.view_all p {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.view_all:hover p{
+    color: black;
+}
+
+.view_all:hover i{
+    color: black;
 }
 
 .view_all p, i {
@@ -1084,7 +1113,7 @@ img {
 .category,
 .date,
 .status,
-.price {
+.transactions_price {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -1107,7 +1136,7 @@ img {
     flex: 1;
 }
 
-.price {
+.transactions_price {
     flex: 1;
 }
 
@@ -1118,12 +1147,12 @@ img {
 .category > div,
 .date > div,
 .status > div,
-.price > div {
+.transactions_price > div {
     height: 40px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #f0f1f3;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 
 }
 
@@ -1250,13 +1279,13 @@ img {
 .incom {
     width: fit-content;
     background-color: var(--green-background);
-    color: var(--main-green);
+    color: var(--green-text);
     border-radius: 20px;
     padding: 2px 6px;
 }
 
 .incom i {
-    color: var(--main-green);
+    color: var(--green-text);
 }
 
 .food {
@@ -1300,7 +1329,7 @@ img {
 .work {
     width: fit-content;
     background-color: var(--green-background);
-    color: var(--main-green);
+    color: var(--green-text);
     border-radius: 20px;
     padding: 2px 6px;
     -webkit-border-radius: 20px;
@@ -1310,7 +1339,7 @@ img {
 }
 
 .work i {
-    color: var(--main-green);
+    color: var(--green-text);
 }
 
 .transportation {
@@ -1365,7 +1394,7 @@ img {
 .education {
     width: fit-content;
     background-color: var(--green-background);
-    color: var(--main-green);
+    color: var(--green-text);
     border-radius: 20px;
     padding: 2px 6px;
     -webkit-border-radius: 20px;
@@ -1375,6 +1404,377 @@ img {
 }
 
 .education i {
-    color: var(--main-green);
+    color: var(--green-text);
 }
 
+
+/* bottom section style  */
+
+/* grid layout for bottom section  */
+
+.bottom_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* order  */
+.budget_column {
+    order: 1;
+}
+
+.middle_column {
+    order: 2;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.payment_column {
+    order: 3;
+}
+
+.payment_column {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #f0f1f3;
+    box-shadow: 3px 3px 5px #E5E7EB;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.visa img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.payment_card1 {
+    width: 100%;
+    height: 190px;
+    background-color: transparent; 
+    position: relative;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 800ms;
+}
+
+.payment_card2 {
+    width: 100%;
+    height: 190px;
+    background-color: transparent; 
+    position: relative;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 800ms;
+}
+.payment_card3 {
+    width: 100%;
+    height: 190px;
+    background-color: transparent; 
+    position: relative;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 800ms;
+}
+
+
+.primary_span {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.primary {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+.shap {
+    width: 40px;
+    height: 28px;
+    background-color: rgba(216, 216, 216, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shap_ineer {
+    width: 20px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+}
+
+.top_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.middle_info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.middle_info .digits {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.middle_info .dots {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.bottom_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_name span {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.expire_date span {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.expire_date {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_name .email {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(215, 215, 215);
+    margin-top: 5px;
+}
+
+.card_name .email_example {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.expire_date .status_span {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(215, 215, 215);
+    margin-top: 5px;
+}
+
+.expire_date .verified {
+    color: var(--middle-green);
+    font-size: 14px;
+}
+
+/* flip  */
+
+.front,
+.front2,
+.front3,
+.back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+.front {
+    background-color: #372AAC;
+}
+.front2 {
+    background-color: #C60036;
+}
+.front3 {
+    background-color: #193CB8;
+}
+
+.back {
+    background-color: #0b1424;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 16px;
+    gap: 8px;
+
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.magnetic_stripe {
+    width: 100%;
+    height: 38px;
+
+    background: linear-gradient(
+        to right,
+        #050505,
+        #171717,
+        #2a2a2a
+    );
+
+    border-radius: 3px;
+
+    margin-bottom: 2px;
+}
+
+.signature_strip {
+    width: 100%;
+    height: 30px;
+
+    background-color: #f5f6f7;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    direction: ltr;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    color: #252525;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.signature_strip > span {
+    flex-shrink: 0;
+    width: 55px;
+    text-align: center;
+}
+
+.no_signature {
+    align-self: flex-start;
+
+    color: #b9bdc5;
+    font-size: 10px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.signature {
+    flex: 1;
+    height: 10px;
+
+    background-color: #d9dde0;
+
+    border-radius: 3px;
+}
+
+.cvv_box {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+
+    margin-top: 2px;
+}
+
+.cvv_box span:first-child {
+    color: #d9dce2;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.cvv_value {
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    background-color: white;
+
+    border-radius: 6px;
+
+    color: #182033;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+}
+
+.payment_card1:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.payment_card2:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.payment_card3:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
