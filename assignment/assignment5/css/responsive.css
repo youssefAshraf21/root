@@ -922,6 +922,10 @@
         
     }
 
+    .transactions_panel_content > :nth-child(n + 3) {
+        display: flex;
+    }
+
 
 
 
@@ -933,25 +937,41 @@
 @media (min-width: 992px) {
 
     .bottom_grid {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        align-items: start;
+        align-items: stretch;   /* was: start — this is why heights don't match */
+        gap: 24px;               /* controls spacing between all 3 columns evenly */
+    }
+
+     .payment_column,
+    .middle_column,
+    .budget_column {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        /* height: 100% not needed — grid stretch already equalizes these */
+    }
+    .payment_card,
+    .graph,
+    .acc_summary {
+        flex: 1 1 auto;   /* was: flex: 1 (flex-basis 0 squashes natural size) */
+        min-height: 0;
     }
 
     .budget_column {
-        order: 1; /* rightmost — نظرة عامة على الميزانية */
+        order: 1;
     }
 
     .middle_column {
-        order: 2; /* middle — الدخل مقابل المصروفات + ملخص الحساب */
+        order: 2;
     }
 
     .payment_column {
-        order: 3; /* leftmost — وسائل الدفع */
+        order: 3;
     }
 
     .payment_card1 {
         padding: 25px;
-        
     }
 
     .bottom_info {
@@ -981,4 +1001,37 @@
         height: 15px;
     }
 
+    .acc_summary {
+        margin-bottom: 0;   /* gap handles spacing now, this was mobile-only */
+    }
+
+    .acc_summary_header h3{
+        font-weight: 400;
+    }
+
+    .detailes {
+        color: #6A7282;
+    }
+
+    .current_acc_content h3 {
+        font-size: 16px;
+    }
+
+    .current_acc_content span {
+        font-weight: 400;
+    }
+
+    .acc_summary,
+    .overview {           /* ← add .overview here too */
+        margin-bottom: 0;
+    }
+
+    .payment_card,
+    .graph,
+    .acc_summary,
+    .overview {          /* ← add this */
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+    
 }
