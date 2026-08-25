@@ -106,3 +106,8 @@ img {
     background-color: black;
     grid-area: blackذذ;
 }
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
