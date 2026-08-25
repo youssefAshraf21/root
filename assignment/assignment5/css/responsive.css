@@ -1,21 +1,8 @@
-/* =========================================================
-   RESPONSIVE CSS
-   Mobile first -> Desktop
-   ========================================================= */
-
-
-/* =========================================================
-   TABLET / DESKTOP
-   ========================================================= */
+/*Mobile first -> Desktop */
 
 @media (min-width: 992px) {
 
-    /* =====================================================
-       MAIN DASHBOARD LAYOUT
-
-       Sidebar -> RIGHT
-       Main content -> LEFT
-       ===================================================== */
+    /* main dashboard layout _____  sidebar_right & main content_LEFT*/
 
     .dashboard {
         min-height: 100vh;
@@ -25,9 +12,7 @@
     }
 
 
-    /* =====================================================
-       SIDEBAR
-       ===================================================== */
+    /* sidevar*/
 
     .sidebar {
         display: block;
@@ -693,7 +678,7 @@
 
     /* =====================================================
        SHOW MORE
-       ===================================================== */
+        */
 
     .show_more {
         text-align: center;
@@ -770,27 +755,25 @@
     }
 
     .label {
-        display: none; /* labels were only for a stacked mobile card; not needed in the grid row */
+        display: none; 
     }
 
     .overview_grid {
-        align-items: stretch; /* was: start */
+        align-items: stretch; 
     }
 
     .side_column {
-        height: 100%; /* fill the stretched grid row */
+        height: 100%; 
     }
 
     .bills_card {
-        flex: 1; /* grows to push its bottom edge down to match the table */
+        flex: 1;
     }
 
 }
 
 
-/* =========================================================
-   LARGE DESKTOP
-   ========================================================= */
+/*larg*/
 
 @media (min-width: 1200px) {
 
@@ -814,9 +797,7 @@
 }
 
 
-/* =========================================================
-   EXTRA LARGE DESKTOP
-   ========================================================= */
+/*extra large*/
 
 @media (min-width: 1400px) {
 
@@ -939,22 +920,22 @@
     .bottom_grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        align-items: stretch;   /* was: start — this is why heights don't match */
-        gap: 24px;               /* controls spacing between all 3 columns evenly */
+        align-items: stretch;   
+        gap: 24px;               
     }
 
-     .payment_column,
+    .payment_column,
     .middle_column,
     .budget_column {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        /* height: 100% not needed — grid stretch already equalizes these */
+        
     }
     .payment_card,
     .graph,
     .acc_summary {
-        flex: 1 1 auto;   /* was: flex: 1 (flex-basis 0 squashes natural size) */
+        flex: 1 1 auto;   
         min-height: 0;
     }
 
@@ -1002,7 +983,7 @@
     }
 
     .acc_summary {
-        margin-bottom: 0;   /* gap handles spacing now, this was mobile-only */
+        margin-bottom: 0;   
     }
 
     .acc_summary_header h3{
@@ -1022,14 +1003,14 @@
     }
 
     .acc_summary,
-    .overview {           /* ← add .overview here too */
+    .overview {           
         margin-bottom: 0;
     }
 
     .payment_card,
     .graph,
     .acc_summary,
-    .overview {          /* ← add this */
+    .overview {         
         flex: 1 1 auto;
         min-height: 0;
     }
