@@ -11,7 +11,7 @@
     <!-- link the font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <!-- bootstarp -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- main style sheet -->
@@ -20,40 +20,71 @@
 </head>
 <body>
 
-    <header>
-            <nav class="navbar navbar-expand-lg my-navbar container">
-                <div class="container-fluid">
-                    <a class="navbar-brand logo" href="#">GameArena</a>
+    <header class="nav_and_hero h-100 ">
+            <nav class="navbar navbar-expand-lg my-navbar  px-2 py-3 fixed-top">
+                <div class="container">
+                    <div>
+                        <i class="fa-solid fa-gamepad fs-5 logo"></i>
+                        <a class="navbar-brand logo ms-2 fs-5 fw-bold" href="#">GameArena</a>
+                    </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <ul class="navbar-nav me-auto mb-lg-0 ">
                         <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="#">Home</a>
+                        <a class="nav-link active fs-6 fw-normal" aria-current="page" href="#hero_section">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">OUR GAMES</a>
+                        <a class="nav-link fs-6 fw-normal" href="#">OUR GAMES</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">What We Do</a>
+                        <a class="nav-link fs-6 fw-normal" href="#">What We Do</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Our Team</a>
+                        <a class="nav-link fs-6 fw-normal" href="#">Our Team</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link fs-6 fw-normal" href="#">Contact Us</a>
                         </li>
                         
                     </ul>
-                    <form class="d-flex align-items-center gap-3" role="search">
-                        <i class="fa-regular fa-message text-white"></i>
-                        <i class="fa-regular fa-bell text-white"></i>
-                        <button class="btn btn-outline-success" type="submit">Sign In</button>
+                    <form class="d-flex align-items-center gap-4 me-5 " role="search">
+                        <i class="fa-regular fa-bell nav_icons"></i>
+                        <i  class="fa-regular fa-message nav_icons"></i>
+                        <button class="btn sign_in_button fw-semibold px-4 py-2 fs-6 " type="submit">Sign In</button>
                     </form>
                     </div>
                 </div>
             </nav>
+            <section class="hero_section py-5 d-flex align-items-center justify-content-center">
+                <div class="container">
+                    <div class="row  gx-0 gy-5 align-items-center">
+                        <div class="col-lg-6 col-12 text-center text-lg-start">
+                            <h1 class="text-white display-2 fw-bold main_heading mb-4">THE ULTIMATE <br> <span>GAMING</span> <br>EXPERIENCE</h1>
+                            <p class="text-white-50 lh-md mb-4">Join millions of gamers worldwide in the most competitive eSports<br> tournaments. Experience next-level gaming with cutting-edge technology and <br> endless possibilities.</p>
+                            <div class="d-flex flex-column justify-content-lg-start flex-md-row justify-content-md-center flex-lg-row gap-3">
+                                <button class="btn Start_now_btn px-4 py-3 fw-semibold  w-sm-100 w-md-50">Start Gaming Now</button>
+                                <button class="btn watch_tournament_btn px-4 py-3 fw-semibold w-sm-100 w-md-50"> Watch Tournaments</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12  d-flex align-items-center justify-content-center position-relative">
+                            <div class="hero_img">
+                                <img class="img-fluid" src="img/hero-img.png" alt="gaming setup">
+                            </div>
+                            <div class="trophy px-4 py-4 rounded-3 d-flex align-items-center justify-content-center gap-3 position-absolute bottom-0 start-0">
+                                <div>
+                                    <i class="fa-solid fa-trophy fs-5"></i>
+                                </div>
+                                <div class="trophy_text">
+                                    <span class="text-white-50 ">Active Players</span>
+                                    <h3 class="text-white fw-semibold fs-5">2.5M+</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
     </header>
 
 

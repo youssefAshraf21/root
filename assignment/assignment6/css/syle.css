@@ -1,10 +1,19 @@
 body {
-    font-family: "Days One", sans-serif;
+    font-family: "Outfit", sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 :root {
     --main-background: #0B0E13;
     --main-color: #CBFE1C;
+    --border-color: #1E2939;
+    --green-border: #0ADF72;
 }
 
 .my-navbar {
@@ -19,6 +28,225 @@ body {
     color: white;
 }
 
+.my-navbar .nav-link:hover {
+    color: var(--main-color);
+}
+
 .my-navbar .nav-link.active {
     color: var(--main-color);
+}
+
+.my-navbar .navbar-brand {
+    color: var(--main-color);
+}
+
+.my-navbar {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sign_in_button {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: none;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.sign_in_button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,       
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent   
+        );
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.sign_in_button:hover::before {
+    left: 150%;
+}
+
+.sign_in_button:hover {
+    background-color: #c9fe1ce3;
+    color: black;
+}
+
+
+
+
+.nav_icons:hover {
+    color: var(--main-color);
+}
+
+.nav_icons {
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.nav_icons:hover {
+    color: var(--main-color);
+}
+
+/* hero section style  */
+
+.hero_section {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.9)
+        ),
+        url("../img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero_img {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    padding: 4px;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        var(--main-color),
+        var(--green-border)
+    );
+}
+
+.hero_img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+}
+
+
+.main_heading span {
+    color: var(--main-color);
+}
+
+.Start_now_btn{
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: none;
+    background-color: var(--main-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.Start_now_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,       
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent   
+        );
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.Start_now_btn:hover::before {
+    left: 150%;
+}
+
+.Start_now_btn:hover {
+    background-color: #c9fe1ce3;
+    color: black;
+}
+
+.watch_tournament_btn{
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.watch_tournament_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,       
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent   
+        );
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.watch_tournament_btn:hover::before {
+    left: 150%;
+}
+
+.watch_tournament_btn:hover {
+    background-color: #c9fe1ce3;
+    color: black;
+}
+
+.trophy {
+    background-color: var(--main-background);
+    border: 1px solid var(--border-color);
+}
+
+.trophy i {
+    color: var(--main-color);
+}
+
+.trophy_text span {
+    font-size: 12px;
+}
+
+@media (max-width: 991.98px) {
+    .hero_section {
+        padding-top: 100px !important;
+    }
+    .hero_section h1 {
+        font-size: 35px;
+    }
 }
