@@ -1,0 +1,24 @@
+body {
+    font-family: "Days One", sans-serif;
+}
+
+:root {
+    --main-background: #0B0E13;
+    --main-color: #CBFE1C;
+}
+
+.my-navbar {
+    background-color: var(--main-background);
+}
+
+.logo {
+    color: var(--main-color);
+}
+
+.my-navbar .nav-link {
+    color: white;
+}
+
+.my-navbar .nav-link.active {
+    color: var(--main-color);
+}
