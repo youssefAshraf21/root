@@ -250,3 +250,58 @@ img {
         font-size: 35px;
     }
 }
+
+    /* our_games section style  */
+
+    .our_games {
+        background-color: var(--main-background);
+    }
+
+    .our_games_title span {
+        color: var(--main-color);
+        letter-spacing: 3px;
+    }
+
+.section_line {
+    width: 65px;
+    height: 2px;
+    display: inline-block;
+}
+
+.section_line:first-child {
+    background: linear-gradient(to right, transparent, var(--main-color));
+}
+
+.section_line:last-child {
+    background: linear-gradient(to left, transparent, var(--main-color));
+}
+
+/* the slide show  
+
+i searched on any way to do it with bootstrap
+but it should to be done with js for this 
+reason i did it with css
+
+*/
+
+
+/* show only img1 by default in every column */
+.slide-group img { display: none; }
+.slide-group .img1 { display: block; }
+
+/* when s2 is checked, show img2 everywhere */
+#s2:checked ~ .row .img1 { display: none; }
+#s2:checked ~ .row .img2 { display: block; }
+
+/* when s3 is checked, show img3 everywhere */
+#s3:checked ~ .row .img1 { display: none; }
+#s3:checked ~ .row .img3 { display: block; }
+
+/* only show the Prev/Next pair matching the current slide */
+.nav-buttons label { display: none; }
+#s1:checked ~ .nav-buttons .state1 { display: inline-block; }
+#s2:checked ~ .nav-buttons .state2 { display: inline-block; }
+#s3:checked ~ .nav-buttons .state3 { display: inline-block; }
+
+
+

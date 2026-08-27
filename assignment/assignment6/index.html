@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <header class="nav_and_hero h-100 ">
+    <header class="nav_and_hero">
             <nav class="navbar navbar-expand-lg my-navbar  px-2 py-3 fixed-top">
                 <div class="container">
                     <div>
@@ -36,7 +36,7 @@
                         <a class="nav-link active fs-6 fw-normal" aria-current="page" href="#hero_section">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link fs-6 fw-normal" href="#">OUR GAMES</a>
+                        <a class="nav-link fs-6 fw-normal" href="#ourgames">OUR GAMES</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link fs-6 fw-normal" href="#">What We Do</a>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </nav>
-            <section class="hero_section py-5 d-flex align-items-center justify-content-center">
+            <section class="hero_section py-5 d-flex align-items-center justify-content-center" id="hero_section">
                 <div class="container">
                     <div class="row  gx-0 gy-5 align-items-center">
                         <div class="col-lg-6 col-12 text-center text-lg-start">
@@ -86,8 +86,63 @@
                 </div>
             </section>
     </header>
+    <main>
+        <section class="our_games p-5" id="ourgames">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="our_games_header text-center our_games_title d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3 mt-5">
+                                <span class="section_line"></span>
+                                <span class="fw-semibold m-0">OUR GAMES</span>
+                                <span class="section_line"></span>
+                            </div>
+                            <h2 class="text-white display-4 fw-bold">Our Latest Games</h2>
+                        </div>
+                    </div>
+                </div>
+                    <input type="radio" name="slide" id="s1" checked class="d-none">
+                    <input type="radio" name="slide" id="s2" class="d-none">
+                    <input type="radio" name="slide" id="s3" class="d-none">
 
+                    <div class="row mt-5">
+                        <div class="col-4">
+                            <div class="slide-group">
+                                <img src="./img/avatar-1.png" class="w-100 img1">
+                                <img src="img/avatar-2.png" class="w-100 img2">
+                                <img src="img/avatar-3.png" class="w-100 img3">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="slide-group">
+                                <img src="./img/avatar-4.png" class="w-100 img1">
+                                <img src="./img/avatar-5.png" class="w-100 img2">
+                                <img src="./img/avatar-6.png" class="w-100 img3">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="slide-group">
+                                <img src="./img/avatar-7.png" class="w-100 img1">
+                                <img src="./img/avatar-8.png" class="w-100 img2">
+                                <img src="./img/latest-games-3.png" class="w-100 img3">
+                            </div>
+                        </div>
+                    </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+                    <div class="d-flex justify-content-center gap-3 mt-3 nav-buttons">
+                        <label for="s3" class="btn btn-outline-light state1">Prev</label>
+                        <label for="s2" class="btn btn-outline-light state1">Next</label>
+
+                        <label for="s1" class="btn btn-outline-light state2">Prev</label>
+                        <label for="s3" class="btn btn-outline-light state2">Next</label>
+
+                        <label for="s2" class="btn btn-outline-light state3">Prev</label>
+                        <label for="s1" class="btn btn-outline-light state3">Next</label>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
