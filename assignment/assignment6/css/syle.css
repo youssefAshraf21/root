@@ -120,8 +120,8 @@ img {
 }
 
 .hero_img {
-    width: 100%;
-    max-width: 550px;
+    width: 580px;
+    height: 380px;
     position: relative;
     padding: 4px;
     border-radius: 16px;
@@ -135,7 +135,7 @@ img {
 .hero_img img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-radius: 13px;
     -webkit-border-radius: 13px;
@@ -285,23 +285,269 @@ reason i did it with css
 */
 
 
-/* show only img1 by default in every column */
-.slide-group img { display: none; }
-.slide-group .img1 { display: block; }
+/* slider*/
 
-/* when s2 is checked, show img2 everywhere */
-#s2:checked ~ .row .img1 { display: none; }
-#s2:checked ~ .row .img2 { display: block; }
+#mySlider {
+    width: 100%;
+    position: relative;
+}
 
-/* when s3 is checked, show img3 everywhere */
-#s3:checked ~ .row .img1 { display: none; }
-#s3:checked ~ .row .img3 { display: block; }
-
-/* only show the Prev/Next pair matching the current slide */
-.nav-buttons label { display: none; }
-#s1:checked ~ .nav-buttons .state1 { display: inline-block; }
-#s2:checked ~ .nav-buttons .state2 { display: inline-block; }
-#s3:checked ~ .nav-buttons .state3 { display: inline-block; }
+#mySlider .carousel-item {
+    padding: 0;
+}
 
 
 
+/* Each column */
+
+#mySlider .col-4 img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Previous&Next */
+.slider_buttons .carousel-control-prev,
+.slider_buttons .carousel-control-next {
+    position: static;
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    border-radius: 50%;
+    border: 2px solid rgb(72, 72, 72);
+    opacity: 1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.slider_buttons .carousel-control-prev:hover,
+.slider_buttons .carousel-control-next:hover {
+    border-color: var(--main-color);
+}
+
+.slider_buttons .carousel-control-prev:hover i,
+.slider_buttons .carousel-control-next:hover i {
+    color: var(--main-color);
+}
+
+/* Previous icon */
+.slider_buttons .carousel-control-prev-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Next icon */
+.slider_buttons .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+} 
+
+/* view all btn */
+
+.view_all_btn {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+.view_all_btn:hover {
+    background-color: var(--main-color);
+    color: black;
+}
+
+
+/*hover*/
+
+.slider_buttons .carousel-control-prev:hover,
+.slider_buttons .carousel-control-next:hover {
+    opacity: 0.8;
+}
+.image_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+
+.image_box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+
+.image_overlay {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid var(--main-color);
+    background-image: linear-gradient(to top, rgb(203, 254, 28,0.6) 10%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 13px;
+}
+
+.image_box:hover .image_overlay {
+    opacity: 1;
+}
+.image_box:hover img {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+.overlay_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: translatey(-100%);
+    -webkit-transform: translatey(-100%);
+    -moz-transform: translatey(-100%);
+    -ms-transform: translatey(-100%);
+    -o-transform: translatey(-100%);
+    transition: transform 0.4s ease;
+
+}
+
+
+.image_box .image_overlay .overlay_bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.image_box:hover .overlay_top {
+    transform: translateY(0);
+    top: 10px;
+    left: 10px;
+}
+
+.image_box:hover .overlay_bottom {
+    transform: translateY(0);
+    bottom: 10px;
+    left: 10px;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+
+.adventure {
+    background-color: rgba(0, 0, 0, 0.3);
+
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.adventure i {
+    color: var(--main-color);
+    font-size: 16px;
+}
+
+.overlay_top span {
+    font-size: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.overlay_bottom h3 {
+    margin: 0;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tablet*/
+
+@media (max-width: 991.98px) {
+
+    #mySlider .col-4 {
+        padding: 8px;
+    }
+
+    #mySlider .col-4 img {
+        height: 250px;
+    }
+
+}
+
+
+/* mobile*/
+
+@media (max-width: 767.98px) {
+    #mySlider .col-4 {
+        padding: 5px;
+    }
+
+    #mySlider .col-4 img {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .slider_buttons {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .slider_buttons .carousel-control-prev,
+    .slider_buttons .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider_buttons .carousel-control-prev-icon,
+    .slider_buttons .carousel-control-next-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+}
