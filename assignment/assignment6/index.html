@@ -18,14 +18,18 @@
     <link rel="stylesheet" href="css/syle.css">
     <title>Games website</title>
 </head>
-<body>
+<body
+    data-bs-spy="scroll"
+    data-bs-target="#mainNavbar"
+    data-bs-smooth-scroll="true"
+    tabindex="0">
 
     <header class="nav_and_hero">
-            <nav class="navbar navbar-expand-lg my-navbar  px-2 py-3 fixed-top">
+            <nav id="mainNavbar" class="navbar navbar-expand-lg my-navbar px-2 py-3 fixed-top">
                 <div class="container">
                     <div>
                         <i class="fa-solid fa-gamepad fs-5 logo"></i>
-                        <a class="navbar-brand logo ms-2 fs-5 fw-bold" href="#">GameArena</a>
+                        <a class="navbar-brand logo ms-2 fs-5 fw-bold" href="#home">GameArena</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,10 +46,10 @@
                         <a class="nav-link fs-6 fw-normal" href="#whatWeDo">What We Do</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link fs-6 fw-normal" href="#">Our Team</a>
+                        <a class="nav-link fs-6 fw-normal" href="#ourteam">Our Team</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link fs-6 fw-normal" href="#">Contact Us</a>
+                        <a class="nav-link fs-6 fw-normal" href="#contact">Contact Us</a>
                         </li>
                         
                     </ul>
@@ -509,7 +513,7 @@
             </div>
         </section>
 
-        <section class="our_team_section py-5">
+        <section class="our_team_section py-5" id="ourteam">
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-flex align-items-center justify-content-center">
@@ -559,7 +563,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">NOVA</h4>
                                     </div>
                                 </div>
                             </div>
@@ -579,7 +583,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">VIPER</h4>
                                     </div>
                                 </div>
                             </div>
@@ -599,7 +603,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">SAGA</h4>
                                     </div>
                                 </div>
                             </div>
@@ -619,7 +623,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">STORM</h4>
                                     </div>
                                 </div>
                             </div>
@@ -639,7 +643,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">TITAN</h4>
                                     </div>
                                 </div>
                             </div>
@@ -659,7 +663,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">PHOENIX</h4>
                                     </div>
                                 </div>
                             </div>
@@ -679,7 +683,7 @@
                                         <p class="m-0 text-secondary">World Champion 2023</p>
                                     </div>
                                     <div class="right_card_img">
-                                        <h4 class="m-0">PHANTOM</h4>
+                                        <h4 class="m-0">GHOST</h4>
                                     </div>
                                 </div>
                             </div>
@@ -688,8 +692,71 @@
                 </div>
             </div>
         </section>
-    </main>
 
+        <section class="contact_section py-5" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="our_games_header text-center our_games_title d-flex flex-column">
+                            <div class="d-flex align-items-center justify-content-center gap-3 mb-3 mt-5">
+                                <span class="section_line"></span>
+                                <span class="fw-semibold m-0">CONTACT US</span>
+                                <span class="section_line"></span>
+                            </div>
+                            <h2 class="text-white display-4 fw-bold">Get In Touch</h2>
+                            <p class="fs-5 text-secondary">Have questions or need support? We're here to help!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-md-6 col-12">
+                        <div class="contact_card_container d-flex flex-column gap-4">
+                            <div class="contact_card p-5 d-flex align-items-center justify-content-start gap-4 rounded-4">
+                                <div class="contact_icon">
+                                    <i class="fa-solid fa-location-dot fs-4 p-4 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                </div>
+                                <div class="contact_text">
+                                        <h3 class="m-0 text-white fw-bold fs">Our Location</h3>
+                                    <p class="m-0 text-secondary">123 Gaming Street, Esports City, EC 12345</p>
+                                </div>
+                            </div>
+                            <div class="contact_card p-5 d-flex align-items-center justify-content-start gap-4 rounded-4">
+                                <div class="contact_icon">
+                                    <i class="fa-solid fa-phone fs-4 p-4 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                </div>
+                                <div class="contact_text">
+                                        <h3 class="m-0 text-white fw-bold fs">Phone Number</h3>
+                                    <p class="m-0 text-secondary">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="contact_card p-5 d-flex align-items-center justify-content-start gap-4 rounded-4">
+                                <div class="contact_icon">
+                                    <i class="fa-solid fa-envelope fs-4 p-4 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                </div>
+                                <div class="contact_text">
+                                        <h3 class="m-0 text-white fw-bold fs">Email Address</h3>
+                                    <p class="m-0 text-secondary">contact@gamearena.com</p>
+                                </div>
+                            </div>
+                            <div class="join_community_card p-4 rounded-4">
+                                <h3 class="fw-bold mb-3">Join Our Community</h3>
+                                <p>Connect with us on social media for the latest updates</p>
+                                <div class="social_media d-flex gap-2">
+                                    <i class="fa-brands fa-discord p-3 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                    <i class="fa-brands fa-x-twitter p-3 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                    <i class="fa-brands fa-instagram p-3 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                    <i class="fa-brands fa-youtube p-3 rounded-circle d-flex align-items-center justify-content-center"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

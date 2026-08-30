@@ -21,6 +21,12 @@ img {
     --green-border: #0ADF72;
     --card-background: #1A1A1A;
     --icon-background: #1E2939;
+    --contact-background: #0D121C;
+    --card_contact_background: #1E2939;
+}
+
+section {
+    scroll-margin-top: 90px;
 }
 
 .my-navbar {
@@ -31,17 +37,18 @@ img {
     color: var(--main-color);
 }
 
-.my-navbar .nav-link {
+.navbar .nav-link {
     color: white;
+}
+
+.navbar .nav-link.active {
+    color: var(--main-color);
 }
 
 .my-navbar .nav-link:hover {
     color: var(--main-color);
 }
 
-.my-navbar .nav-link.active {
-    color: var(--main-color);
-}
 
 .my-navbar .navbar-brand {
     color: var(--main-color);
@@ -881,3 +888,36 @@ box-shadow: 0 0px 8px #CBFE1C;
     -o-transition: all 0.3s ease;
 }
 
+/* contact_section style  */
+
+
+.contact_section {
+    background-color: var(--contact-background);
+}
+
+.contact_card {
+    background-color: var(--card_contact_background);
+}
+
+.contact_icon i {
+    background-color: var(--main-color);
+    color: black;
+    width: 55px;
+    height: 55px;
+}
+
+.join_community_card {
+    background: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--green-border)
+    );
+    ;
+}
+
+.social_media i {
+    background-color: black;
+    color: var(--main-color);
+    width: 40px;
+    height: 40px;
+}
