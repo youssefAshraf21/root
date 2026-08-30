@@ -14,6 +14,8 @@ img {
     --main-color: #CBFE1C;
     --border-color: #1E2939;
     --green-border: #0ADF72;
+    --card-background: #1A1A1A;
+    --icon-background: #1E2939;
 }
 
 .my-navbar {
@@ -495,59 +497,152 @@ reason i did it with css
 }
 
 
+/* what_we_do_section style  */
 
 
+/* header style */
 
 
-
-
-
-
-
-
-
-/* tablet*/
-
-@media (max-width: 991.98px) {
-
-    #mySlider .col-4 {
-        padding: 8px;
-    }
-
-    #mySlider .col-4 img {
-        height: 250px;
-    }
-
+.what_we_do_section {
+    background-color: var(--main-background);
 }
 
 
-/* mobile*/
+.header_title{
+    font-size: 55px;
+}
 
-@media (max-width: 767.98px) {
-    #mySlider .col-4 {
-        padding: 5px;
+.header_subtitle {
+    font-size:47px
+}
+
+@media (max-width: 768px) {
+    .header_title{
+        font-size: 24px;
     }
-
-    #mySlider .col-4 img {
-        height: 180px;
-        border-radius: 10px;
+    .header_subtitle {
+    font-size: 20px;
     }
+}
 
-    .slider_buttons {
-        margin-top: 20px;
-        gap: 10px;
+
+/* cards style  */
+
+
+.card_wrapper .card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+}
+
+.card_content i {
+    color: var(--main-color);
+    background-color: var(--icon-background);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card_content i {
+        font-size: 16px;
     }
-
-    .slider_buttons .carousel-control-prev,
-    .slider_buttons .carousel-control-next {
-        width: 40px;
-        height: 40px;
+}
+@media (min-width: 768px) {
+    .card_content i {
+        font-size: 24px;
     }
+}
 
-    .slider_buttons .carousel-control-prev-icon,
-    .slider_buttons .carousel-control-next-icon {
-        width: 15px;
-        height: 15px;
-    }
 
+.card_wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.triangle_top_1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    border-style: inset;
+    border-color: transparent transparent var(--main-color) transparent;
+    border-width: 0px 15px 15px 15px;
+    transform: translateX(-70%) translateY(-20px) rotate(-45deg);
+    -webkit-transform: translateX(-70%) translateY(-20px) rotate(-45deg);
+    -moz-transform: translateX(-70%) translateY(-20px) rotate(-45deg);
+    -ms-transform: translateX(-70%) translateY(-20px) rotate(-45deg);
+    -o-transform: translateX(-70%) translateY(-20px) rotate(-45deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.triangle_bottom_1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0;
+    border-style: inset;
+    border-color: transparent transparent var(--main-color) transparent;
+    border-width: 0px 15px 15px 15px;
+    transform: translateX(70%) translateY(20px) rotate(-220deg);
+    -webkit-transform: translateX(70%) translateY(20px) rotate(-220deg);
+    -moz-transform: translateX(70%) translateY(20px) rotate(-220deg);
+    -ms-transform: translateX(70%) translateY(20px) rotate(-220deg);
+    -o-transform: translateX(70%) translateY(20px) rotate(-220deg);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.card_wrapper:hover .triangle_top_1 {
+    opacity: 1;
+    top: 35px;
+    left: 25px;
+}
+
+
+.card_wrapper:hover .triangle_bottom_1 {
+    opacity: 1;
+    bottom: 35px;
+    right: 25px;
+}
+
+
+.card_wrapper:hover {
+    border: 2px solid var(--main-color);
+}
+
+.card_wrapper:hover i {
+    color: black;
+    background-color: var(--main-color);
+}
+
+.section_bottom {
+    width:50%;
+    height: 2px;
+    background: linear-gradient(
+    to right,
+    black 0%,
+    var(--main-color) 5%,
+    var(--main-color) 95%,
+    black 100%
+);
+box-shadow: 0 0px 8px #CBFE1C;
 }
