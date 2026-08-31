@@ -28,10 +28,6 @@ img {
     --white-color-inputs: #D1D5DC;
 }
 
-section {
-    scroll-margin-top: 0;
-}
-
 .my-navbar {
     background-color: var(--main-background);
 }
