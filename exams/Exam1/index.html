@@ -11,14 +11,149 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- main syle sheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body> 
     
-
-
+    <header class="nav_and_hero">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bolder" href="#">EliteHomes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>   
+                </button>
+                <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 navbar_links">
+                    <li class="nav-item">
+                    <a class="nav-link active fw-bolder" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Properties
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                    <!-- the properties dropdown menu -->
+                    
+                    <div class="dropdown-menu properties_dropdown p-5 position-absolute ">
+                        <div class="properties_container d-flex justify-content-between align-items-start gap-5">
+                            <div class="properties_feature w-100 d-flex flex-column gap-4">
+                                <h3 class="fs-5 fw-bold">Featured Properties</h3>
+                                <div class="properties_feature_content d-flex flex-column gap-5">
+                                    <div class="properties_feature_item d-flex align-items-center gap-2">
+                                        <img src="img/luxury-villa.jpeg" alt="luxury villa" class="object-fit-cover rounded-3" width="70" height="70">
+                                        <div class="property_feature_item_info">
+                                            <h4 class="m-0">Luxury Villa</h4>
+                                            <span class="fw-medium">$2.5M • 5 beds • 4 baths</span>
+                                        </div>
+                                    </div>
+                                    <div class="properties_feature_item d-flex align-items-center gap-2">
+                                        <img src="img/modern-apartment.jpeg" alt="luxury villa" class="object-fit-cover rounded-3" width="70" height="70">
+                                        <div class="property_feature_item_info">
+                                            <h4 class="m-0">Modern Apartment</h4>
+                                            <span class="fw-medium">$850K • 2 beds • 2 baths</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="property_types w-100">
+                                <h3>Property Types</h3>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-house"></i>
+                                        <a href="#">Single Family Homes</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-building"></i>
+                                        <a href="#">Apartments</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-warehouse"></i>
+                                        <a href="#">condominiums</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-store"></i>
+                                        <a href="#">Commercial</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-tree"></i>
+                                        <a href="#">Land & Lots</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="property_location w-100">
+                                <h3>Popular Locations</h3>
+                                <div class="new_york_card">
+                                    <h3>New York</h3>
+                                    <span>2,145 Properties</span>
+                                </div>
+                                <div class="los_angeles_card">
+                                    <h3>Los Angeles</h3>
+                                    <span>1,873 Properties</span>
+                                </div>
+                                <div class="miami_card">
+                                    <h3>Miami</h3>
+                                    <span>1,526 Properties</span>
+                                </div>
+                            </div>
+                            <div class="property_resources w-100">
+                                <h3>Resources</h3>
+                                <div class="resources_card">
+                                    <div class="resources_card_header">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <h3>Buying Guide</h3>
+                                    </div>
+                                    <p>Essential tips and strategies for first-timehomebuyers</p>
+                                    <div class="learn_more">
+                                        <a href="#">Learn More</a>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="resources_card">
+                                    <div class="resources_card_header">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <h3>Selling Guide</h3>
+                                    </div>
+                                    <p>Essential tips and strategies for first-time sellers</p>
+                                    <div class="learn_more">
+                                        <a href="#">Learn More</a>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                                <div class="resources_card">
+                                    <div class="resources_card_header">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <h3>Market Reports</h3>
+                                    </div>
+                                    <p>Stay informed with the latest real estate market trends and insights</p>
+                                    <div class="learn_more">
+                                        <a href="#">Learn More</a>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link fw-medium" href="#">Contact</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+    </header>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

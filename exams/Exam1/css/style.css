@@ -9,3 +9,148 @@ img {
     display: block;
 }
 
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primary-color: #7F22FE;
+    --primary-background: #F5F3FF;
+    --logo-color: #1D293D;
+    --links-color: #334155;
+    --green-color: #00A63E;
+    --green-background: #DBFCE7;
+    --orange-color: #E17100;
+    --mustard-color: #D08700;
+    --mustard-background: #FEF9C2;
+    --main-blue: #4F39F6;
+    --blue-background: #E0E7FF;
+    --gray-color: #99A1AF;
+}
+
+
+/* fix the width of the navbar and be responsive */  
+
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1520px;
+    }
+}
+
+
+/* nav bar style  */
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: white !important;  /* i take it from bootsrtab */
+}
+    
+
+
+.navbar-brand {
+    color: var(--logo-color);
+    font-size: 23px; /* cant do it with bootsrtab */
+
+}
+
+.navbar-brand:hover {
+    color: var(--logo-color);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--primary-color);
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-top: 2px;
+}
+
+
+.nav-link {
+    color: var(--links-color);
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary-color)
+}
+
+
+@media (max-width: 1025px) {
+
+    .navbar-nav .nav-link,
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        color: var(--links-color);
+        background-color: transparent;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: var(--primary-color);
+        background-color: var(--primary-background);
+        border-radius: 5px;
+    }
+
+    .navbar-nav .nav-link::after,
+    .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+    .container {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+
+
+
+    .navbar_links {
+        border-top: 1px solid #ccc;
+        width: 100%;
+        padding-top: 10px;  
+    }
+}
+
+/* dropdown  */
+
+.properties_dropdown {
+    left: 50%;
+    transform: translateX(-65%);
+    width: 1150px;
+    border:1px solid #951f1f;
+    -webkit-transform: translateX(-65%);
+    -moz-transform: translateX(-65%);
+    -ms-transform: translateX(-65%);
+    -o-transform: translateX(-65%);
+}
+
+.property_feature_item_info h4 {
+    font-size: 13px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.property_feature_item_info span {
+    font-size: 12px;
+    width: 100%;
+    color: var(--gray-color);
+}
