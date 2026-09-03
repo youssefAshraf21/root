@@ -26,6 +26,7 @@ body {
     --main-blue: #4F39F6;
     --blue-background: #E0E7FF;
     --gray-color: #99A1AF;
+    --gray-background: #F9FAFB;
 }
 
 
@@ -144,13 +145,66 @@ body {
 }
 
 .property_feature_item_info h4 {
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 600;
     width: 100%;
+}
+
+.properties_feature_item {
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.properties_feature_item:hover {
+    background-color: var(--gray-background);
 }
 
 .property_feature_item_info span {
     font-size: 12px;
     width: 100%;
     color: var(--gray-color);
+}
+
+.property_types ul li a {
+    color: #4A5565;
+    font-weight: 400;
+    transition: color 0.2   s ease;
+    -webkit-transition: color 0.2   s ease;
+    -moz-transition: color 0.2   s ease;
+    -ms-transition: color 0.2   s ease;
+    -o-transition: color 0.2   s ease;
+}
+
+.property_types ul li i {
+    color: var(--gray-color);
+}
+
+.property_types ul li:hover a {
+    color: var(--primary-color);
+}
+
+
+.new_york_card {
+    background-color: var(--second-background);
+    background-image: url(../img/new-york.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.new_york_card > div {
+    background-color: rgb(127, 34, 254,0.3);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    position: relative;
+    z-index: 1;
 }
