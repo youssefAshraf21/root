@@ -13,8 +13,16 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+::selection {
+    background-color: var(--selecting-color);
+    color: white;
+}
+
 :root {
     --primary-color: #7F22FE;
+    --primary-hover: #7F00DD;
+    --secondary-color: #ddd6fe;
+    --selecting-color: #A684FF;
     --primary-background: #F5F3FF;
     --logo-color: #1D293D;
     --links-color: #334155;
@@ -47,7 +55,9 @@ body {
     background-color: white !important;  /* i take it from bootsrtab */
 }
     
-
+.navbar {
+    z-index: 1030; /* Bootstrap's default fixed-top z-index, keep navbar above hero */
+}
 
 .navbar-brand {
     color: var(--logo-color);
@@ -133,16 +143,19 @@ body {
 
 /* dropdown  */
 
-.properties_dropdown {
-    left: 50%;
-    transform: translateX(-65%);
-    width: 1150px;
-    border:1px solid #951f1f;
-    -webkit-transform: translateX(-65%);
-    -moz-transform: translateX(-65%);
-    -ms-transform: translateX(-65%);
-    -o-transform: translateX(-65%);
+@media (min-width: 992px) {
+    .properties_dropdown {
+        left: 50%;
+        transform: translateX(-65%);
+        width: 1150px;
+        border: none;
+        -webkit-transform: translateX(-65%);
+        -moz-transform: translateX(-65%);
+        -ms-transform: translateX(-65%);
+        -o-transform: translateX(-65%);
+    }
 }
+
 
 .property_feature_item_info h4 {
     font-size: 18px;
@@ -192,19 +205,299 @@ body {
     background-image: url(../img/new-york.jpeg);
     background-size: cover;
     background-position: center;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
 }
 
-.new_york_card > div {
-    background-color: rgb(127, 34, 254,0.3);
+.los_angeles_card {
+    background-color: var(--second-background);
+    background-image: url(../img/los-angeles.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.miami_card {
+    background-color: var(--second-background);
+    background-image: url(../img/miami.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.new_york_card:hover > div,
+.los_angeles_card:hover > div,
+.miami_card:hover > div {
+    background-color: rgba(70, 15, 130, 0.7);
+}
+
+
+
+.new_york_card > div,
+.los_angeles_card > div,
+.miami_card > div {
+    background-color: rgba(70, 15, 130, 0.6);
     border-radius: 5px;
     padding: 10px;
     color: white;
     position: relative;
     z-index: 1;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.new_york_card span,
+.los_angeles_card span,
+.miami_card span {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+
+.resources_card {
+    border: 1px solid rgb(127, 34, 254,0.2);
+}
+
+@media (min-width: 992px) {
+    .resources_card {
+        width: 110%;
+    }
+}
+
+.puble {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: -35px;
+    background-color: rgb(127, 34, 254,0.1);
+}
+
+.resources_card_header i {
+    color: var(--primary-color);
+    background-color:  var(--primary-background);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.resources_card p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.learn_more a {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.learn_more i {
+    color: var(--primary-color);
+    font-size: 16px;
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+}
+
+.learn_more:hover i {
+    transform: translateX(5px);
+}
+
+.resources_card_header .resource_card_icon_2 {
+    color: var(--green-color);
+    background-color:  var(--green-background);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.resources_card .puble_2 {
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    right: -35px;
+    background-color: var(--green-background);
+}
+
+.learn_more_green a {
+    color: var(--green-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.learn_more_green i {
+    color: var(--green-color);
+    font-size: 16px;
+    transition: transform 0.2s ease;
+    -webkit-transition: transform 0.2s ease;
+    -moz-transition: transform 0.2s ease;
+    -ms-transition: transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+}
+
+.learn_more_green:hover i {
+    transform: translateX(5px);
+}
+
+
+.hero_section {
+    min-height: 100vh;
+    background-image: url(../img/hero-bg-img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero_overlay {
+    background: linear-gradient(to right, #4d179acc, #59168bcc);
+}
+
+
+.hero_header p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.search_bar {
+    width: fit-content;
+}
+
+.location_input i {
+    color: var(--gray-color);
+}
+
+.location_input input {
+    background-color: transparent;
+    border-color: var(--gray-color);
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.location_input input {
+    width: 100%;
+    min-width: 300px;
+    outline: none;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.search_btn {
+    background-color: var(--primary-color);
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.search_bar {
+    max-width: 900px;
+    width: 100%;
+}
+
+.search_btn:hover {
+    background-color: var(--primary-hover);
+}
+
+
+
+.hero_section {
+    position: relative;
+    z-index: 1; /* keep hero below the navbar stacking context */
+}
+
+.hero_overlay,
+.hero_header {
+    z-index: 1; /* was z-2 relative to hero_section — fine as long as hero_section itself is z:1 */
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .navbar_links {
+        width: 100%;
+    }
+
+    .properties_dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 1.5rem;
+    }
+
+    .properties_container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .property_types ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .property_location {
+        flex-direction: column;
+    }
+
+    .properties_feature_content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .properties_feature_item {
+        width: 100%;
+    }
+}
+
+
+/* safety net: nothing on the page should ever cause horizontal scroll */
+html, body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 767.98px) {
+    .location_input input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero_stats {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        column-gap: 2rem !important;
+    }
+
+    .hero_stats > div {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        max-height: calc(100dvh - 70px); /* dvh accounts for mobile browser UI, unlike vh */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
