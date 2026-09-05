@@ -44,6 +44,11 @@ html, body {
     --gray-color: #99A1AF;
     --gray-background: #F9FAFB;
     --red-color: #FB2C36;
+    --second-purple: #9810FA;
+    --second-purple-background: #F3E8FF;
+    --blue-color: #4F39F6;
+    --blue-background: #E0E7FF;
+    --testimonails-color: #58168C;
 }
 
 
@@ -772,7 +777,7 @@ input.border-text-secondary:focus {
     -o-border-radius: 0;
 }
 .nav-pills .nav-item:hover .nav-link:not(.active) {
-    border-bottom: 1px solid #cfadff;
+    border-bottom: 2px solid #cfadff;
 }
 
 .buying_description {
@@ -798,6 +803,10 @@ input.border-text-secondary:focus {
     -o-transition: all 0.1s ease;
 }
 
+.search_prop > div span {
+    font-size: 14px;
+}
+
 .start_search:hover {
     background-color: #7621ec;
 }
@@ -807,4 +816,139 @@ input.border-text-secondary:focus {
     height: 384px;
     object-fit: cover;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.percentage_success {
+    bottom: -20px;
+    left: -15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.percentage_success > :first-child {
+    color: var(--primary-color)
+}
+
+
+.selling_prop i {
+    color: var(--green-color);
+    background-color: var(--green-background);
+}
+
+.selling_prop > div span {
+    font-size: 14px;
+}
+
+.get_home {
+    background-color: var(--green-color);
+}
+
+
+.avg_time > :first-child {
+    color: var(--green-color)
+}
+.avg_time {
+    right: -30px;
+    bottom: -25px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+}
+
+.renting > :first-child {
+    color: var(--second-purple)
+}
+
+.rental_prop i {
+    color: var(--second-purple);
+    background-color: var(--second-purple-background);
+}
+
+.rental_prop > div span {
+    font-size: 14px;
+}
+
+.get_home:hover {
+    background-color: #00963c;
+}
+
+.browse_rent {
+    background-color: var(--second-purple);
+}
+.browse_rent:hover {
+    background-color: #6d28d9;
+}
+
+.invest_prop i {
+    color: var(--mustard-color);
+    background-color: var(--mustard-background);
+}
+
+.invest_prop > div span {
+    font-size: 14px;
+}
+
+.annual_time > :first-child {
+    color: var(--mustard-color)
+}
+
+.explore_invest {
+    background-color: var(--mustard-color);
+}
+.explore_invest:hover {
+    background-color: #ac7001;
+}
+
+.real_estate i {
+    color: var(--blue-color);
+    background-color: var(--blue-background);
+}
+
+.real_estate > div span {
+    font-size: 14px;
+}
+
+.commercial_percentage > :first-child {
+    color: var(--blue-color)
+}
+
+.view_commercial {
+    background-color: var(--blue-color);
+}
+.view_commercial:hover {
+    background-color: #003c9e;
+}
+
+
+/* testimonails section  */
+
+
+.testimonials {
+    background-color: var(--testimonails-color);
+
+}
+
+
+
+
+
+.sec_line_start {
+    height: 2px;
+    width: 70px;
+    background: linear-gradient(to right, transparent, #fee822);
+}
+
+
+.sec_line_end {
+    height: 2px;
+    width: 70px;
+        background: linear-gradient(
+        to right,
+        #fee822 0%,
+        #fee822 5%,
+        #ce22fe 50%,
+        transparent 100%
+    );
+}
+
+.sec_line_start:last-of-type {
+    background: linear-gradient(to left, transparent, #564f0f);
 }

@@ -144,10 +144,10 @@
                     </div>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link fw-medium" href="#">Services</a>
+                    <a class="nav-link fw-medium" href="#whatWeOffer">Services</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link fw-medium" href="#">Testimonials</a>
+                    <a class="nav-link fw-medium" href="#testimonials">Testimonials</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link fw-medium" href="#">FAQ</a>
@@ -430,7 +430,7 @@
                 </div>
             </div>
         </section>
-        <section class="what_we_offer_section py-5">
+        <section class="what_we_offer_section py-5" id="whatWeOffer">
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12">
@@ -447,7 +447,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-12 w-75 mx-auto">
                         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -469,13 +469,13 @@
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link fw-semibold px-4 py-3" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                <button class="nav-link fw-semibold px-4 py-3" id="pills-investment-tab" data-bs-toggle="pill" data-bs-target="#pills-investment" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                                     <i class="fa-solid fa-align-left me-1"></i>
                                     Investing
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link fw-semibold px-4 py-3" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                <button class="nav-link fw-semibold px-4 py-3" id="pills-commercial-tab" data-bs-toggle="pill" data-bs-target="#pills-commercial" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                                     <i class="fa-solid fa-building me-1"></i>
                                     Commercial
                                 </button>
@@ -483,7 +483,7 @@
                         </ul>
                         <div class="tab-content w-100" id="pills-tabContent">
                             <div class="tab-pane fade show active w-100" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                                <div class="row">
+                                <div class="row g-4">
                                     <div class="col-12 col-md-6 mx-auto">
                                         <h3 class="mt-4 fw-bold ">Home Buying Made Simple</h3>
                                         <p class=" mt-4 buying_description">Our expert team guides you through every step of the home buying  process, from initial search to closing day.</p>
@@ -491,41 +491,237 @@
                                             <div class="d-flex align-items-center gap-4 mt-3 search_prop">
                                                 <i class="fa-solid fa-magnifying-glass py-3 rounded-2"></i>
                                                 <div class="d-flex flex-column gap-1">
-                                                    <h4 class="fs-5 fw-semibold">Property Search</h4>
+                                                    <h4 class="fs-5 fw-bold">Property Search</h4>
                                                     <span class="fw-medium">Access exclusive listings and get notified of new properties that match your criteria.</span>
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center gap-4 mt-3 search_prop">
                                                 <i class="fa-solid fa-calculator py-3 rounded-2"></i>
                                                 <div class="d-flex flex-column gap-1">
-                                                    <h4 class="fs-5 fw-semibold">Property Search</h4>
-                                                    <span class="fw-medium">Access exclusive listings and get notified of new properties that match your criteria.</span>
+                                                    <h4 class="fs-5 fw-bold">Financial Planning</h4>
+                                                    <span class="fw-medium">Get pre-approved for mortgages and understand your budget with our financial experts.</span>
                                                 </div>
                                             </div>
                                             <div class="d-flex align-items-center gap-4 mt-3 search_prop">
                                                 <i class="fa-solid fa-handshake py-3 rounded-2"></i>
                                                 <div class="d-flex flex-column gap-1">
-                                                    <h4 class="fs-5 fw-semibold">Property Search</h4>
-                                                    <span class="fw-medium">Access exclusive listings and get notified of new properties that match your criteria.</span>
+                                                    <h4 class="fs-5 fw-bold">Negotiation Support</h4>
+                                                    <span class="fw-medium">Our skilled negotiators ensure you get the best possible deal on your dream home.</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="start_search text-center mt-5 d-flex justify-content-start align-items-center rounded-2">
+                                        <div class="start_search text-center mt-4 d-flex justify-content-start align-items-center rounded-2 mb-5 mb-md-0">
                                             <a href="#" class="btn text-white fw-bold px-4 py-3">Start Your Search
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 my-auto">
+                                    <div class="col-12 col-md-6 my-auto px-0">
                                         <div class="position-relative">
                                             <img src="img/buying-img.png" class="buying_img rounded-4" alt="">
+                                            <div class="percentage_success d-flex flex-column justify-content-start bg-white position-absolute z-2 px-3 py-4 rounded-2">
+                                                <span class="fw-bold fs-5">98%</span>
+                                                <span class="fs-6">Success Rate</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <h3 class="mt-4 fw-bold ">Maximize Your Home's Value</h3>
+                                        <p class=" mt-4 buying_description">Sell your property quickly and for the best price with our comprehensive marketing strategy and expert guidance.</p>
+                                        <div class="buying_props d-flex flex-column gap-4">
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop selling_prop">
+                                                <i class="fa-solid fa-chart-line py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Market Analysis</h4>
+                                                    <span class="fw-medium">Get a comprehensive market analysis to price your home competitively.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop selling_prop">
+                                                <i class="fa-solid fa-camera py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Professional Marketing</h4>
+                                                    <span class="fw-medium">High-quality photography, virtual tours, and multi-channel marketing campaigns.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop selling_prop">
+                                                <i class="fa-solid fa-users py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Buyer Screening</h4>
+                                                    <span class="fw-medium">We pre-qualify buyers to ensure serious inquiries and smooth transactions.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="start_search get_home text-center mt-4 d-flex justify-content-start align-items-center rounded-2 mb-5 mb-md-0">
+                                            <a href="#" class="btn text-white fw-bold px-4 py-3">Get Home Valuation
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 my-auto px-0">
+                                        <div class="position-relative">
+                                            <img src="img/selling-img.png" class="buying_img rounded-4" alt="">
+                                            <div class="avg_time d-flex flex-column justify-content-start bg-white position-absolute z-2 px-3 py-4 rounded-2">
+                                                <span class="fw-bold fs-5">21 days</span>
+                                                <span class="fs-6">Avg. Time to Sell</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <h3 class="mt-4 fw-bold ">Premium Rental Properties</h3>
+                                        <p class=" mt-4 buying_description">Find your perfect rental home with our extensive portfolio of quality properties and personalized service.</p>
+                                        <div class="buying_props d-flex flex-column gap-4">
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop rental_prop">
+                                                <i class="fa-solid fa-map-location-dot py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Prime Locations</h4>
+                                                    <span class="fw-medium">Access rentals in the most desirable neighborhoods and communities.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop rental_prop">
+                                                <i class="fa-solid fa-camera py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Verified Properties</h4>
+                                                    <span class="fw-medium">All our rental properties are thoroughly inspected and verified for quality.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop rental_prop">
+                                                <i class="fa-solid fa-users py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">24/7 Support</h4>
+                                                    <span class="fw-medium">Round-the-clock maintenance and tenant support services.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="start_search browse_rent text-center mt-4 d-flex justify-content-start align-items-center rounded-2 mb-5 mb-md-0">
+                                            <a href="#" class="btn text-white fw-bold px-4 py-3">Get Home Valuation
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 my-auto px-0">
+                                        <div class="position-relative">
+                                            <img src="img/selling-img.png" class="buying_img rounded-4" alt="">
+                                            <div class="percentage_success renting d-flex flex-column justify-content-start bg-white position-absolute z-2 px-3 py-4 rounded-2">
+                                                <span class="fw-bold fs-5">5,000+</span>
+                                                <span class="fs-6">Available Rentals</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-investment" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <h3 class="mt-4 fw-bold ">Real Estate Investment</h3>
+                                        <p class=" mt-4 buying_description">Build wealth through strategic real estate investments with our expert guidance and market insights.</p>
+                                        <div class="buying_props d-flex flex-column gap-4">
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop invest_prop">
+                                                <i class="fa-solid fa-chart-pie py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Portfolio Analysis</h4>
+                                                    <span class="fw-medium">Comprehensive analysis of investment opportunities and portfolio optimization.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop invest_prop">
+                                                <i class="fa-solid fa-money-bill-wave py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">ROI Projections</h4>
+                                                    <span class="fw-medium">Detailed return on investment calculations and market forecasting.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop invest_prop">
+                                                <i class="fa-solid fa-gear py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Property Management</h4>
+                                                    <span class="fw-medium">Full-service property management for hands-off investment experience.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="start_search explore_invest text-center mt-4 d-flex justify-content-start align-items-center rounded-2 mb-5 mb-md-0">
+                                            <a href="#" class="btn text-white fw-bold px-4 py-3">   Explore Investments
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 my-auto px-0">
+                                        <div class="position-relative">
+                                            <img src="img/insvesting-img.png" class="buying_img rounded-4" alt="">
+                                            <div class="avg_time annual_time d-flex flex-column justify-content-start bg-white position-absolute z-2 px-3 py-4 rounded-2">
+                                                <span class="fw-bold fs-5">15%</span>
+                                                <span class="fs-6">Avg. Annual ROI</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-commercial" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-6 mx-auto">
+                                        <h3 class="mt-4 fw-bold ">Commercial Real Estate</h3>
+                                        <p class=" mt-4 buying_description">Expert commercial real estate services for businesses, investors, and developers.</p>
+                                        <div class="buying_props d-flex flex-column gap-4">
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop real_estate">
+                                                <i class="fa-solid fa-building py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Office Spaces</h4>
+                                                    <span class="fw-medium">Prime office locations for businesses of all sizes and industries.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop real_estate">
+                                                <i class="fa-solid fa-warehouse py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Industrial Properties</h4>
+                                                    <span class="fw-medium">Warehouses, manufacturing facilities, and distribution centers.</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-4 mt-3 search_prop real_estate">
+                                                <i class="fa-solid fa-store py-3 rounded-2"></i>
+                                                <div class="d-flex flex-column gap-1">
+                                                    <h4 class="fs-5 fw-bold">Retail Spaces</h4>
+                                                    <span class="fw-medium">High-traffic retail locations and shopping center opportunities.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="start_search view_commercial text-center mt-4 d-flex justify-content-start align-items-center rounded-2 mb-5 mb-md-0">
+                                            <a href="#" class="btn text-white fw-bold px-4 py-3">View Commercial Properties
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 my-auto px-0">
+                                        <div class="position-relative">
+                                            <img src="img/commercial-img.png" class="buying_img rounded-4" alt="">
+                                            <div class="percentage_success commercial_percentage  d-flex flex-column justify-content-start bg-white position-absolute z-2 px-3 py-4 rounded-2">
+                                                <span class="fw-bold fs-5">$2.5B</span>
+                                                <span class="fs-6">Commercial Volume</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials py-5" id="testimonials">
+            <div calss="container">
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="feature_header text-center mt-5 d-flex flex-column align-items-center justify-content-center gap-4">
+                            <div class="subtitle_container d-flex justify-content-center align-items-center gap-3">
+                                <span class="sec_line_start"></span>
+                                <span class="fw-bold fs-6 px-3 py-2 rounded-5 premium_subtitle">Client Stories</span>
+                                <span class="sec_line_end"></span>
+                            </div>
+                            <div class="feature_title">
+                                <h2 class=" display-4 fw-bold">What Our Clients Say</h2>
+                            </div>
+                            <p class="text-center d-block">Discover our handpicked selection of premium properties in the most desirable locations</p>
                         </div>
                     </div>
                 </div>
