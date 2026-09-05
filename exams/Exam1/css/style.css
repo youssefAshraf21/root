@@ -1076,14 +1076,27 @@ input.border-text-secondary:focus {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
+    
 
 .accordion-button {
     border: none;
     box-shadow: none;
     background-color: #fff;
     border-radius: 12px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
+
+.accordion-button:hover {
+    background-color: #f2f2f2;
+}
+
+
 
 .accordion-button:not(.collapsed) {
     color: inherit;
@@ -1100,4 +1113,270 @@ input.border-text-secondary:focus {
 .accordion-body {
     border: none;
     background-color: #fff;
+}
+
+
+/* contact_section  */
+
+
+.contact_container {
+    max-width: 1300px;
+}
+
+.contact_section {
+background-color: white;
+}
+
+/* Filled blurred blobs */
+.decor-circle {
+    width: 384px;
+    height: 384px;
+    opacity: 0.5;
+}
+
+.decor-1 {
+    top: -160px;
+    right: -160px;
+    background-color: #ede9fe; /* violet-100 */
+}
+
+.decor-2 {
+    bottom: -160px;
+    left: -160px;
+    background-color: #f3e8ff; /* purple-100 */
+}
+
+/* Centered wrapper for the outlined circles */
+.decor-outline-wrapper {
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+/* Outlined (ring) circles */
+.decor-outline {
+    border-style: solid;
+    border-width: 4px;
+}
+
+.decor-outline-1 {
+    top: 80px;
+    right: 80px;
+    width: 128px;
+    height: 128px;
+    border-color: #ddd6fe; /* violet-200 */
+}
+
+.decor-outline-2 {
+    bottom: 128px;
+    left: 128px;
+    width: 96px;
+    height: 96px;
+    border-color: #e9d5ff; /* purple-200 */
+}
+
+.call_us_wrapper i {
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.call_us_card {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.call_us_wrapper {
+    border: 2px solid rgb(241, 241, 241);
+    transition:all 0.3s ease;
+    -webkit-transition:all 0.3s ease;
+    -moz-transition:all 0.3s ease;
+    -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+}
+
+.call_us_wrapper span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.call_us_wrapper a {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.call_us_wrapper a:hover {
+    color: #670ce6
+}
+
+
+
+
+.call_us_card:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.call_us_wrapper:hover i {
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+}
+
+.email_icon  i{
+    background-color: var(--second-purple);
+}
+
+.email_icon .email_link {
+    color: var(--second-purple);
+}
+
+.call_us_card:hover .email_icon {
+    border: 2px solid var(--second-purple);
+}
+
+.location_icon i{
+    background: linear-gradient(to bottom right, #d946ef, #f59e0b);
+}
+.sub_loc {
+    color: #E60076;
+}
+
+.call_us_card:hover .location_icon {
+    border: 2px solid #F6BCFF;
+}
+
+.message_icon i {
+    background: var(--blue-color);
+}
+
+.sub_message {
+    color: var(--blue-color);
+}
+
+
+.call_us_card:hover .message_icon {
+    border: 2px solid var(--blue-color);
+}
+
+.contact_information {
+    background-color: var(--gray-background);
+}
+
+
+.loc_det_sub {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sub-titles-color);
+}
+
+
+.loc_contact i {
+    color: var(--primary-color);
+}
+
+.call_contact i {
+    color: var(--second-purple);
+}
+
+.email_contact i {
+    color: #E60076;
+}
+
+.clock_contact i {
+    color: var(--blue-color);
+}
+
+.connect_card {
+    background: linear-gradient(135deg, var(--primary-color), var(--second-purple));
+}
+
+.social_icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.connect_card p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+.social_icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+}
+
+.custom_input {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    width: 100%;
+}
+
+.custom_input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--primary-color);
+    outline: none;
+}
+
+.custom_check {
+    background-color: #f5f3ff;
+}
+
+.send_btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--second-purple));
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.send_btn:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+
+.contact_form_card P {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #e5e7eb;
 }
