@@ -49,6 +49,7 @@ html, body {
     --blue-color: #4F39F6;
     --blue-background: #E0E7FF;
     --testimonails-color: #58168C;
+    --violet-200: #DDD6FF;
 }
 
 
@@ -922,7 +923,8 @@ input.border-text-secondary:focus {
 
 
 .testimonials {
-    background-color: var(--testimonails-color);
+    background: linear-gradient(to right, #4c1d95, #581c87);
+
 
 }
 
@@ -951,4 +953,151 @@ input.border-text-secondary:focus {
 
 .sec_line_start:last-of-type {
     background: linear-gradient(to left, transparent, #564f0f);
+}
+
+.feature_header .subtitles_testmonials {
+    color: var(--violet-200);
+    font-size: 16px;
+}
+
+
+.testimonials_card {
+    max-width: 700px;
+    padding: 3rem;
+    min-height: 320px;
+}
+
+.rate i {
+    color: #FFC107;
+    font-size: 1.1rem;
+}
+
+.rate_text {
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.testimonials_card {
+    width: 100%;
+    max-width: 900px;
+    min-height: 300px;
+    padding: 40px;
+}
+
+.carousel-control-prev {
+    left: 15%;
+}
+
+.carousel-control-next {
+    right: 15%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: white;
+    background-color: #FFFFFF33 ;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+
+.carousel-control-prev i:hover,
+.carousel-control-next i:hover {
+    background-color: #FFFFFF4D ;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+
+.carousel-indicators {
+    position: static;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50% ;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    -webkit-border-radius: 50% ;
+    -moz-border-radius: 50% ;
+    -ms-border-radius: 50% ;
+    -o-border-radius: 50% ;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #fff !important;
+}
+
+.carousel-indicators button:hover {
+    background-color: #fff !important;
+}
+
+.help_title {
+    color: var(--primary-color);
+}
+
+
+/* FAQ section  */
+
+.faq_section {
+    background-color: var(--gray-background);
+}
+
+
+.accordion-item {
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.accordion-button {
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.accordion-body {
+    border: none;
+    background-color: #fff;
 }
