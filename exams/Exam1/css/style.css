@@ -65,9 +65,8 @@ html, body {
 
 /* nav bar style  */
 
-.bg-body-tertiary {
-    --bs-bg-opacity: 1;
-    background-color: white !important;  /* i take it from bootsrtab */
+.navbar {
+    background-color: white;  
 }
     
 .navbar {
@@ -104,6 +103,10 @@ html, body {
     color: var(--links-color);
     font-size: 15px;
     transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
 }
 
 
@@ -113,7 +116,11 @@ html, body {
     width: 0;
     height: 2px;
     background-color: var(--primary-color);
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .nav-link:hover::after {
@@ -181,11 +188,11 @@ html, body {
 }
 
 .properties_feature_item {
-    transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .properties_feature_item:hover {
@@ -201,11 +208,11 @@ html, body {
 .property_types ul li a {
     color: #4A5565;
     font-weight: 400;
-    transition: color 0.2   s ease;
-    -webkit-transition: color 0.2   s ease;
-    -moz-transition: color 0.2   s ease;
-    -ms-transition: color 0.2   s ease;
-    -o-transition: color 0.2   s ease;
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
 }
 
 .property_types ul li i {
@@ -312,15 +319,19 @@ html, body {
 .learn_more i {
     color: var(--primary-color);
     font-size: 16px;
-    transition: transform 0.2s ease;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
-    -ms-transition: transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
 
 .learn_more:hover i {
     transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
 }
 
 .resources_card_header .resource_card_icon_2 {
@@ -348,15 +359,19 @@ html, body {
 .learn_more_green i {
     color: var(--green-color);
     font-size: 16px;
-    transition: transform 0.2s ease;
-    -webkit-transition: transform 0.2s ease;
-    -moz-transition: transform 0.2s ease;
-    -ms-transition: transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
 }
 
 .learn_more_green:hover i {
     transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
 }
 
 
@@ -430,19 +445,19 @@ label {
 .form-field input:focus,
 select.border-text-secondary:focus,
 input.border-text-secondary:focus {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .form-field:focus-within {
-  border-color: #7F22FE !important;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #7F22FE;
+    border-color: #7F22FE !important;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #7F22FE;
 }
 
 select.border-text-secondary:focus,
 input.border-text-secondary:focus {
-  border-color: #7F22FE !important;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #7F22FE;
+    border-color: #7F22FE !important;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #7F22FE;
 }
 
 .search_btn:hover {
@@ -475,18 +490,18 @@ input.border-text-secondary:focus {
         position: static;
         width: 100%;
         box-shadow: none;
-        padding: 1.5rem;
+        padding: 24px;
     }
 
     .properties_container {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 24px;
     }
 
     .property_types ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        gap: 16px;
     }
 
     .property_location {
@@ -496,7 +511,7 @@ input.border-text-secondary:focus {
     .properties_feature_content {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 16px;
     }
 
     .properties_feature_item {
@@ -513,8 +528,8 @@ input.border-text-secondary:focus {
 
     .hero_stats {
         flex-wrap: wrap;
-        row-gap: 1.5rem;
-        column-gap: 2rem !important;
+        row-gap: 24px;
+        column-gap: 32px !important;
     }
 
     .hero_stats > div {
@@ -596,7 +611,7 @@ input.border-text-secondary:focus {
 }
 
 .card-body {
-    padding: 1.75rem;
+    padding: 28px;
 }
 
 
@@ -744,7 +759,24 @@ input.border-text-secondary:focus {
 
 }
 
+/* some fixes in responsive  */
 
+.feature_properties_section .row {
+    align-items: stretch;
+}
+
+.img-wrapper {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.camera_icon {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
 /* what we offer section  */
 
@@ -922,6 +954,20 @@ input.border-text-secondary:focus {
     background-color: #003c9e;
 }
 
+.buying_img {
+    width: 100%;
+    height: 384px;
+    object-fit: cover;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+@media (max-width: 991.98px) {
+    .buying_img {
+        height: 280px;
+    }
+}
+
 
 /* testimonails section  */
 
@@ -967,19 +1013,19 @@ input.border-text-secondary:focus {
 
 .testimonials_card {
     max-width: 700px;
-    padding: 3rem;
+    padding: 48px;
     min-height: 320px;
 }
 
 .rate i {
     color: #FFC107;
-    font-size: 1.1rem;
+    font-size: 18px;
 }
 
 .rate_text {
     color: #6c757d;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 16px;
 }
 
 .testimonials_card {
@@ -1029,7 +1075,7 @@ input.border-text-secondary:focus {
 
 .carousel-indicators {
     position: static;
-    margin-top: 2rem;
+    margin-top: 32px;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -1039,7 +1085,7 @@ input.border-text-secondary:focus {
     width: 10px;
     height: 10px;
     border-radius: 50% ;
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(255, 255, 255, 0.5);
     opacity: 1;
     box-sizing: border-box;
     border: none;
@@ -1056,11 +1102,11 @@ input.border-text-secondary:focus {
 }
 
 .carousel-indicators .active {
-    background-color: #fff !important;
+    background-color: #fff;
 }
 
 .carousel-indicators button:hover {
-    background-color: #fff !important;
+    background-color: #fff;
 }
 
 .help_title {
@@ -1081,6 +1127,10 @@ input.border-text-secondary:focus {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
     transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
     
 
@@ -1094,6 +1144,10 @@ input.border-text-secondary:focus {
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 .accordion-button:hover {
@@ -1131,33 +1185,37 @@ input.border-text-secondary:focus {
 background-color: white;
 }
 
-/* Filled blurred blobs */
 .decor-circle {
     width: 384px;
     height: 384px;
     opacity: 0.5;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .decor-1 {
     top: -160px;
     right: -160px;
-    background-color: #ede9fe; /* violet-100 */
+    background-color: var(--violet-200);
 }
 
 .decor-2 {
     bottom: -160px;
     left: -160px;
-    background-color: #f3e8ff; /* purple-100 */
+    background-color: #f3e8ff; 
 }
 
-/* Centered wrapper for the outlined circles */
 .decor-outline-wrapper {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
-/* Outlined (ring) circles */
 .decor-outline {
     border-style: solid;
     border-width: 4px;
@@ -1168,7 +1226,7 @@ background-color: white;
     right: 80px;
     width: 128px;
     height: 128px;
-    border-color: #ddd6fe; /* violet-200 */
+    border-color: var(--violet-200); 
 }
 
 .decor-outline-2 {
@@ -1176,7 +1234,7 @@ background-color: white;
     left: 128px;
     width: 96px;
     height: 96px;
-    border-color: #e9d5ff; /* purple-200 */
+    border-color: #e9d5ff;
 }
 
 .call_us_wrapper i {
@@ -1224,7 +1282,9 @@ background-color: white;
     color: #670ce6
 }
 
-
+.call_us_card:hover .call_us_wrapper {
+    border: 2px solid var(--primary-color);
+}
 
 
 .call_us_card:hover {
@@ -1359,6 +1419,10 @@ background-color: white;
     background: linear-gradient(90deg, var(--primary-color), var(--second-purple));
     border: none;
     transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
 }
 
 .send_btn:hover {
@@ -1383,4 +1447,52 @@ background-color: white;
 .form-check-input:focus {
     box-shadow: none;
     border-color: #e5e7eb;
+}
+
+/* footer  */
+.footer {
+    background-color: var(--testimonails-color);
+    color: #fff;
+}
+
+.footer h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer .copyright {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.social_icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff26;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.social_icon:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ffffff33;
+}
+
+.made-with {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.made-with .heart {
+    color: #ff4d6d;
 }
