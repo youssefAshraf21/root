@@ -1186,22 +1186,22 @@ background-color: white;
 }
 
 .decor-circle {
-    width: 384px;
-    height: 384px;
+    width: 340px;
+    height: 340px;
     opacity: 0.5;
     opacity: 0.5;
     pointer-events: none;
 }
 
 .decor-1 {
-    top: -160px;
-    right: -160px;
+    top: -140px;
+    right: -140px;
     background-color: var(--violet-200);
 }
 
 .decor-2 {
-    bottom: -160px;
-    left: -160px;
+    bottom: -130px;
+    left: -130px;
     background-color: #f3e8ff; 
 }
 
