@@ -1625,15 +1625,16 @@ img {
 .back {
     background-color: #0b1424;
     transform: rotateY(180deg);
-
     display: flex;
     flex-direction: column;
-
     padding: 20px 16px;
     gap: 8px;
-
     border-radius: 12px;
     box-sizing: border-box;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
 }
 
 .magnetic_stripe {
