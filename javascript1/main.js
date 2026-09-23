@@ -10,12 +10,25 @@ console.log("Hello " + userName + "!" + " You are " + age + " years old " + "and
 
 //2. Currency Converter
 
-var hour ;
-if (hour <= 11) {
-console.log("Good morning!")
-}
-else if (hour >= 12 && hour <= 17) {
-console.log("Good afternoon!")
+// var hour ;
+// if (hour <= 11) {
+// console.log("Good morning!")
+// }
+// else if (hour >= 12 && hour <= 17) {
+// console.log("Good afternoon!")
+// }else {
+// console.log("Good evening!")
+// }
+
+var hours = prompt("enter hours")
+var rate = prompt("enter hours rate")
+var overTime
+var total
+if(hours > 40){
+overTime = rate* 1.5;
 }else {
-console.log("Good evening!")
+overTime = 0;
 }
+total = (hours * rate) + overTime;
+console.log(total);
+console.log(overTime);
