@@ -33,7 +33,52 @@ body {
     color: var(--hover-color);
 }
 
+/* main section style  */
+
 .main_section {
     background-color: #FEFBE9;
     max-height: 100vh;
+}
+
+.left_img {
+    height: 720px ;
+    overflow: hidden;
+}
+
+.left_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rate_badge {
+    top: 20px;
+    left: 20px;
+}
+
+.count_reviews {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-color);
+    margin-left: 5px;
+}
+
+
+.recipe-stats{
+    width: 90%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.prep_time {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-color);
 }
