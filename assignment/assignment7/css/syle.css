@@ -4,6 +4,8 @@ body {
 
 :root {
     --gray-color: #6b7280;
+    --background-color: #FEFBE9;
+    --hover-color: #F54900;
 }
 
 .navbar {
@@ -16,4 +18,22 @@ body {
     font-weight: 400;
     margin: 0;
     color: #6b7280;
+}
+
+.right_nav_links i {
+    color: var(--gray-color);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.right_nav_links i:hover {
+    color: var(--hover-color);
+}
+
+.main_section {
+    background-color: #FEFBE9;
+    max-height: 100vh;
 }
