@@ -8,4 +8,12 @@ body {
 
 .navbar {
     padding: 16px 0;
+    border-bottom: 2px solid #E7E1D5;
+}
+
+.logo_title p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #6b7280;
 }
