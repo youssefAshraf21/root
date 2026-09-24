@@ -1,0 +1,11 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --gray-color: #6b7280;
+}
+
+.navbar {
+    padding: 16px 0;
+}
