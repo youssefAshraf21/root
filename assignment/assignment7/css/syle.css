@@ -6,6 +6,8 @@ body {
     --gray-color: #6b7280;
     --background-color: #FEFBE9;
     --hover-color: #F54900;
+    --main-color: #FF6900;
+    --orange-background: #FFEDD4;
 }
 
 .navbar {
@@ -43,14 +45,30 @@ body {
 .left_img {
     height: 720px ;
     overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top: 1px solid #FFEDD4;
+    border-left: 1px solid #FFEDD4;
+    border-bottom: 1px solid #FFEDD4;
+
+}
+
+.right_side {
+    height: 720px;
+    overflow-y: scroll;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 1px solid #FFEDD4;
+    border-right: 1px solid #FFEDD4;
+    border-bottom: 1px solid #FFEDD4;
 }
 
 .left_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .rate_badge {
@@ -81,4 +99,47 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: var(--gray-color);
+}
+
+.badge_level_of_recepie span {
+    font-size: 12px;
+}
+
+.save_icon,
+.share_icon {
+    color: var(--main-color);
+    background-color: var(--orange-background);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.save_icon:hover,
+.share_icon:hover {
+    background-color: #FFD6A7;
+}
+
+.recepi_des {
+    color: var(--gray-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.recepi_warning {
+    background-color: #FEF2F2;
+    border-left: 4px solid #FB2C36;
+}
+
+.extended_time {
+    color: #9F0712;
+}
+
+.extended_time_des {
+    color:#E7000B;
+}
+
+.recepi_warning i {
+    color: #FB2C36;
 }
