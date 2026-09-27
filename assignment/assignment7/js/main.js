@@ -300,6 +300,19 @@ var recipes = [
             "Don't overcook - vegetables should stay slightly crisp"
         ]
     }
-];
+];  
+
+
+var btn = document.getElementById("random_btn");
+
+function random() {
+    var randomRecepi = Math.trunc(Math.random() * recipes.length);
+    var recipe = recipes[randomRecepi];
+    return recipe 
+}
+
+
+console.log(random());
+
 
 
