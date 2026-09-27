@@ -8,6 +8,8 @@ body {
     --hover-color: #F54900;
     --main-color: #FF6900;
     --orange-background: #FFEDD4;
+    --beige-background: #FFFBEB;
+    --mustard-color: #FFB900;
 }
 
 .navbar {
@@ -64,6 +66,33 @@ body {
     border-bottom: 1px solid #FFEDD4;
 }
 
+/* fix the mobile */
+
+@media (max-width: 991.98px) {
+
+    .main_section {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .left_img {
+        height: 500px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .left_img img {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .right_side {
+        height: 500px;
+        overflow-y: scroll;
+
+        scrollbar-width: auto;
+        scrollbar-color: #FFDBD2 transparent;
+    }
+
+}
 .left_img img {
     width: 100%;
     height: 100%;
@@ -172,6 +201,11 @@ body {
     height: 400px;
 }
 
+.instructions {
+    overflow-y: scroll;
+    height: 400px;
+}
+
 .steps_number {
     width: 20px;
     height: 20px;
@@ -213,7 +247,7 @@ body {
 }
 
 .right_side::-webkit-scrollbar-track {
-    background: white;
+    background: transparent;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -227,5 +261,104 @@ body {
 }
 
 .right_side::-webkit-scrollbar-thumb:hover {
-    background: #5b16b8;
+    background: #B46653;
+}
+.ingredients::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ingredients::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.ingredients::-webkit-scrollbar-thumb {
+    background: #FFDBD2;
+    border-radius: 10px;
+}
+
+.ingredients::-webkit-scrollbar-thumb:hover {
+    background: #B46653;
+}
+
+.btn {
+    border: none;
+}
+
+
+.instructions_steps {
+    background-color: var(--main-color);
+    font-size: 20px;
+}
+
+.instructions_des {
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.nutrition {
+    background-color: #F9FAFB;
+}
+
+.nutrition_value {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.nutrition_icon_title i {
+    color: var(--main-color);
+    background-color: var(--orange-background);
+}
+
+.nutrition_icon_title span {
+    color: var(--gray-color);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.nutrition_icon_title .carbohydrates {
+    color: #D08700;
+    background-color: #FEF9C2;
+}
+
+.nutrition_icon_title .fiber {
+    color: #00A63E;
+    background-color: #DBFCE7;
+}
+
+.nutrition_icon_title .protein {
+    color: #155DFC;
+    background-color: #DBEAFE;
+}
+
+.nutrition_icon_title .fat {
+    color: #E7000B;
+    background-color: #FFDBD2;
+}
+
+.nutrition_icon_title .sodium {
+    color: #E60076;
+    background-color: #FCE7F3;
+}
+
+
+.chef_tips {
+    background-color: var(--beige-background);
+    border-left: 4px solid var(--mustard-color);
+}
+
+.chef_tips i {
+    color:#E17100;
+    font-size: 20px;
+}
+
+.chef_tips span {
+    font-weight: 300;
+    font-size: 16px;
 }
