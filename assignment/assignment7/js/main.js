@@ -1,53 +1,10 @@
 var recipes = [
     {
-        name: "Greek Moussaka",
-        image: "img/greekMoussaka.jfif",
-        rate: 4.8,
-        prepTime: "30 min",
-        cookTime: "60 min",
-        servings: "4 people",
-        padgeOne: "Intermediate",
-        padgeTwo: "Mediterranean",
-        recipeDes: "Traditional layered eggplant casserole with lamb",
-        ingredients: [
-            "3 large eggplants, sliced",
-            "500g ground lamb",
-            "400g canned tomatoes",
-            "1 onion, diced",
-            "3 cloves garlic, minced",
-            "500ml bechamel sauce",
-            "100g parmesan cheese",
-            "Cinnamon and oregano",
-            "Olive oil"
-        ],
-        instructions: [
-            "Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.",
-            "Brush eggplant slices with olive oil, grill or bake until softened.",
-            "Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.",
-            "Preheat oven to 180°C (350°F).",
-            "Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with bechamel and parmesan.",
-            "Bake for 45 minutes until golden. Let rest 15 minutes before serving."
-        ],
-        nurtition: [
-            "380 kcal",
-            "28g",
-            "0g",
-            "35g",
-            "14g",
-            "720mg"
-        ],
-        chefTrips: [
-            "Salt eggplant to remove bitterness",
-            "Don't skip the resting time - it helps set the layers",
-            "Use ground beef if lamb is unavailable",
-            "Make ahead and reheat for easier serving"
-        ]
-    },
-    {
         name: "Pad Thai",
-        image: "img/padThai.jfif",
+        image: "img/padtahi.jpg",
         rate: 4.8,
-        prepTime: "20 min",
+        review: "(120 reviews)",
+        prepTime: 60,
         cookTime: "15 min",
         servings: "2 people",
         padgeOne: "Intermediate",
@@ -89,9 +46,10 @@ var recipes = [
     },
     {
         name: "Chicken Tikka Masala",
-        image: "img/chickenTikkaMasala.jfif",
+        image: "img/tika.jpg",
         rate: 4.7,
-        prepTime: "25 min",
+        review: "(344 reviews)",
+        prepTime: 25,
         cookTime: "35 min",
         servings: "4 people",
         padgeOne: "Intermediate",
@@ -133,9 +91,10 @@ var recipes = [
     },
     {
         name: "Beef Tacos",
-        image: "img/beefTacos.jfif",
+        image: "img/beefTacos.jpg",
         rate: 4.6,
-        prepTime: "15 min",
+        review: "(80 reviews)",
+        prepTime: 45,
         cookTime: "20 min",
         servings: "3 people",
         padgeOne: "Easy",
@@ -176,9 +135,10 @@ var recipes = [
     },
     {
         name: "Margherita Pizza",
-        image: "img/margheritaPizza.jfif",
+        image: "img/pizza.jpg",
         rate: 4.9,
-        prepTime: "20 min",
+        review: "(190 reviews)",
+        prepTime: 50,
         cookTime: "15 min",
         servings: "2 people",
         padgeOne: "Easy",
@@ -217,9 +177,10 @@ var recipes = [
     },
     {
         name: "Caesar Salad",
-        image: "img/caesarSalad.jfif",
+        image: "img/seacer.jpg",
         rate: 4.5,
-        prepTime: "15 min",
+        review: "(396 reviews)",
+        prepTime: 15,
         cookTime: "10 min",
         servings: "2 people",
         padgeOne: "Easy",
@@ -258,9 +219,10 @@ var recipes = [
     },
     {
         name: "Vegetable Stir Fry",
-        image: "img/vegetableStirFry.jfif",
+        image: "img/vegetable.jpg",
         rate: 4.4,
-        prepTime: "15 min",
+        review: "(277 reviews)",
+        prepTime: 15,
         cookTime: "10 min",
         servings: "3 people",
         padgeOne: "Easy",
@@ -303,16 +265,55 @@ var recipes = [
 ];  
 
 
-var btn = document.getElementById("random_btn");
 
-function random() {
+function randomm() {
     var randomRecepi = Math.trunc(Math.random() * recipes.length);
     var recipe = recipes[randomRecepi];
-    return recipe 
+
+    document.getElementById("recipeName").innerHTML = recipe.name;
+    document.getElementById("recipeImage").src = recipe.image;
+    document.getElementById("rate").innerHTML = recipe.rate;
+    document.getElementById("count_reviews").innerHTML = recipe.review;
+    document.getElementById("prep_time").innerHTML = recipe.prepTime;
+    document.getElementById("cook_time").innerHTML = recipe.cookTime;
+    document.getElementById("serveng").innerHTML = recipe.servings;
+    document.getElementById("padgeOne").innerHTML = recipe.padgeOne;
+    document.getElementById("padgeTwo").innerHTML = recipe.padgeTwo;
+    document.getElementById("recipeDes").innerHTML = recipe.recipeDes;
+    var recepi_warning = document.getElementById("recepi_warning");
+
+    if (recipe.prepTime >= 45) {
+        recepi_warning.classList.remove("d-none");
+    }
+    else {
+        recepi_warning.classList.add("d-none");
+    }
+
+    var ingredients = document.getElementsByClassName("ingredient_text");
+    var instructions = document.getElementsByClassName("instructions_text");
+    var nurtition = document.getElementsByClassName("nurtition_text");
+    var chefTrips = document.getElementsByClassName("chefTrips_text");
+    var ingredients = document.getElementsByClassName("ingredient_text");
+
+for (var i = 0; i < ingredients.length; i++) {
+    ingredients[i].innerHTML = recipe.ingredients[i];
+}
+
+for (var i = 0; i < instructions.length; i++) {
+    instructions[i].innerHTML = recipe.instructions[i];
+}
+
+for (var i = 0; i < nurtition.length; i++) {
+    nurtition[i].innerHTML = recipe.nurtition[i];
+}
+
+for (var i = 0; i < chefTrips.length; i++) {
+    chefTrips[i].innerHTML = recipe.chefTrips[i];
+}
 }
 
 
-console.log(random());
 
+// console.log(random());
 
 

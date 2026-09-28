@@ -61,27 +61,30 @@
                     <div class="row g-0">
                         <div class="col-lg-5 col-12">
                             <div class="left_img position-relative">
-                                <img src="img/greekMoussaka.jfif" class=" img-fluid" alt="greekMoussaka">
+                                <img src="img/greekMoussaka.jfif" id="recipeImage" class=" img-fluid" alt="greekMoussaka">
                                 <div class="rate_badge position-absolute d-flex justify-content-center align-items-center gap-1 bg-white py-2 px-3 rounded-5">
                                     <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
-                                    <span class="fw-bold fs-6">4.8</span>
-                                    <span class="count_reviews">(234 reviews)</span>
+                                    <span class="fw-bold fs-6" id="rate">4.8</span>
+                                    <span class="count_reviews" id="count_reviews">(234 reviews)</span>
                                 </div>
                                 <div class="recipe-stats position-absolute d-flex justify-content-around align-items-center bg-body-secondary px-3 py-4 rounded-4">
                                     <div class="time d-flex flex-column justify-content-center align-items-center gap-1">
                                         <i class="fa-solid fa-clock fs-4" style="color: #ff6900;"></i>
                                         <span class="prep_time">Prep Time</span>
-                                        <span class="fw-bold">30 min</span>
+                                        <div class="d-flex gap-1">
+                                        <span class="fw-bold" id="prep_time">30</span>
+                                        <span class="fw-bold">min</span>
+                                        </div>
                                     </div>
                                     <div class="time d-flex flex-column justify-content-center align-items-center gap-1">
                                         <i class="fa-solid fa-fire-burner fs-4" style="color: #fb2c36;"></i>
                                         <span class="prep_time">Cook Time</span>
-                                        <span class="fw-bold">60 min</span>
+                                        <span class="fw-bold" id="cook_time">60 min</span>
                                     </div>
                                     <div class="time d-flex flex-column justify-content-center align-items-center gap-1">
                                         <i class="fa-solid fa-users fs-4" style="color: #2b7fff;"></i>
                                         <span class="prep_time">Servings</span>
-                                        <span class="fw-bold">4 people</span>
+                                        <span class="fw-bold" id="serveng">4 people</span>
                                     </div>
                                 </div>
                             </div>
@@ -89,22 +92,22 @@
                         <div class="col-lg-7 col-12">
                             <div class="right_side bg-white p-5">
                                 <div class="badge_level_of_recepie d-flex justify-content-start align-items-center gap-3">
-                                    <span class="fw-semibold bg-primary-subtle py-1 px-2 text-primary rounded-5">Intermediate</span>
-                                    <span class="fw-semibold bg-success-subtle py-1 px-2 text-success rounded-5">Mediterranean</span>
+                                    <span class="fw-semibold bg-primary-subtle py-1 px-2 text-primary rounded-5" id="padgeOne">Intermediate</span>
+                                    <span class="fw-semibold bg-success-subtle py-1 px-2 text-success rounded-5" id="padgeTwo">Mediterranean</span>
                                 </div>
                                 <div class="recepi_name mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h1 class="fw-bold">Greek Moussaka</h1>
+                                        <h1 class="fw-bold" id="recipeName">Greek Moussaka</h1>
                                         <div class="d-flex align-items-center gap-3">
                                             <i class="fa-solid fa-bookmark save_icon d-flex justify-content-center align-items-center p-3 rounded-3 fs-6"></i>
                                             <i class="fa-solid fa-share-nodes share_icon d-flex justify-content-center align-items-center p-3 rounded-3 fs-6"></i>
                                         </div>
                                     </div>
                                     <div class="recepi_des">
-                                        <p>Traditional layered eggplant casserole with lamb</p>
+                                        <p id="recipeDes">Traditional layered eggplant casserole with lamb</p>
                                     </div>
                                 </div>
-                                <div class="recepi_warning mt-4 py-3 rounded-3">
+                                <div class="recepi_warning mt-4 py-3 rounded-3 d-none" id="recepi_warning">
                                     <div class="d-flex align-items-center justify-content-start gap-3 ms-3">
                                         <i class="fa-solid fa-triangle-exclamation fs-5 "></i>
                                         <div class="d-flex flex-column">
@@ -132,66 +135,66 @@
                                         <div class="tab-pane fade show active ingredients rounded-4 py-3 mb-5" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">1</span>
-                                                <span class="steps_des fw-semibold">3 large eggplants, sliced</span>
+                                                <span class="steps_des fw-semibold ingredient_text">3 large eggplants, sliced</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">2</span>
-                                                <span class="steps_des fw-semibold">500g ground lamb</span>
+                                                <span class="steps_des fw-semibold ingredient_text">500g ground lamb</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">3</span>
-                                                <span class="steps_des fw-semibold">400g canned tomatoes</span>
+                                                <span class="steps_des fw-semibold ingredient_text">400g canned tomatoes</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">4</span>
-                                                <span class="steps_des fw-semibold">1 onion, diced</span>
+                                                <span class="steps_des fw-semibold ingredient_text">1 onion, diced</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">5</span>
-                                                <span class="steps_des fw-semibold">3 cloves garlic, minced</span>
+                                                <span class="steps_des fw-semibold ingredient_text">3 cloves garlic, minced</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">6</span>
-                                                <span class="steps_des fw-semibold">500ml béchamel sauce</span>
+                                                <span class="steps_des fw-semibold ingredient_text">500ml béchamel sauce</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">7</span>
-                                                <span class="steps_des fw-semibold">100g parmesan cheese</span>
+                                                <span class="steps_des fw-semibold ingredient_text">100g parmesan cheese</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">8</span>
-                                                <span class="steps_des fw-semibold">Cinnamon and oregano</span>
+                                                <span class="steps_des fw-semibold ingredient_text">Cinnamon and oregano</span>
                                             </div>
                                             <div class="steps d-flex align-items-center gap-3 mt-3 ms-4 mb-4">
                                                 <span class="steps_number text-white rounded-circle p-3  d-flex justify-content-center align-items-center">9</span>
-                                                <span class="steps_des fw-semibold">Olive oil</span>
+                                                <span class="steps_des fw-semibold ingredient_text">Olive oil</span>
                                             </div>
                                         </div>
                                         <div class="tab-pane fade instructions py-3 mb-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                                             <div class="d-flex flex-column gap-4">
                                                 <div class="d-flex justify-content-start align-items-center gap-3">
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">1</span>
-                                                    <span class="instructions_des">Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.</span>
+                                                    <span class="instructions_des instructions_text">Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.</span>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center gap-3">
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">2</span>
-                                                    <span class="instructions_des">Brush eggplant slices with olive oil, grill or bake until softened.</span>
+                                                    <span class="instructions_des instructions_text">Brush eggplant slices with olive oil, grill or bake until softened.</span>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center gap-3">
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">3</span>
-                                                    <span class="instructions_des">Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.</span>
+                                                    <span class="instructions_des instructions_text">Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.</span>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center gap-3">
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">4</span>
-                                                    <span class="instructions_des">Preheat oven to 180°C (350°F).</span>
+                                                    <span class="instructions_des instructions_text">Preheat oven to 180°C (350°F).</span>
                                                 </div>
                                                 <div class="d-flex justify-content-start align-items-center gap-3">
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">5</span>
-                                                    <span class="instructions_des">Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with béchamel and parmesan.</span>
+                                                    <span class="instructions_des instructions_text">Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with béchamel and parmesan.</span>
                                                 </div>
-                                                <div class="d-flex justify-content-start align-items-center gap-3">
+                                                <div class="d-flex justify-content-start align-items-center gap-3" >
                                                     <span class="fw-bold text-white instructions_steps px-3 py-2 rounded-4">6</span>
-                                                    <span class="instructions_des">Bake for 45 minutes until golden. Let rest 15 minutes before serving.</span>
+                                                    <span class="instructions_des instructions_text">Bake for 45 minutes until golden. Let rest 15 minutes before serving.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,21 +206,21 @@
                                                             <i class="fa-solid fa-fire p-3 rounded-3"></i>
                                                             <span>Calories</span>
                                                         </div>
-                                                        <span class="nutrition_value">580 kcal</span>
+                                                        <span class="nutrition_value nurtition_text">580 kcal</span>
                                                     </div>
                                                     <div class="nutrition d-flex justify-content-between align-items-center px-4 py-3 rounded-3 mb-3">
                                                         <div class="d-flex justify-content-start align-items-center gap-3 nutrition_icon_title">
                                                             <i class="fa-solid fa-wheat-awn p-3 rounded-3 carbohydrates"></i>
                                                             <span>Carbohydrates</span>
                                                         </div>
-                                                        <span class="nutrition_value">32g</span>
+                                                        <span class="nutrition_value nurtition_text">32g</span>
                                                     </div>
                                                     <div class="nutrition d-flex justify-content-between align-items-center px-4 py-3 rounded-3 mb-3">
                                                         <div class="d-flex justify-content-start align-items-center gap-3 nutrition_icon_title">
                                                             <i class="fa-solid fa-seedling p-3 rounded-3 fiber"></i>
                                                             <span>Fiber</span>
                                                         </div>
-                                                        <span class="nutrition_value">8g</span>
+                                                        <span class="nutrition_value nurtition_text">8g</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-12">
@@ -226,21 +229,21 @@
                                                             <i class="fa-solid fa-dumbbell p-3 rounded-3 protein"></i>
                                                             <span>Protein</span>
                                                         </div>
-                                                        <span class="nutrition_value">36g</span>
+                                                        <span class="nutrition_value nurtition_text">36g</span>
                                                     </div>
                                                     <div class="nutrition d-flex justify-content-between align-items-center px-4 py-3 rounded-3 mb-3">
                                                         <div class="d-flex justify-content-start align-items-center gap-3 nutrition_icon_title">
                                                             <i class="fa-solid fa-droplet p-3 rounded-3 fat"></i>
                                                             <span>Fat</span>
                                                         </div>
-                                                        <span class="nutrition_value">32g</span>
+                                                        <span class="nutrition_value nurtition_text">32g</span>
                                                     </div>
                                                     <div class="nutrition d-flex justify-content-between align-items-center px-4 py-3 rounded-3 mb-3">
                                                         <div class="d-flex justify-content-start align-items-center gap-3 nutrition_icon_title">
                                                             <i class="fa-solid fa-cube p-3 rounded-3 sodium"></i>
                                                             <span>Sodium</span>
                                                         </div>
-                                                        <span class="nutrition_value">820mg</span>
+                                                        <span class="nutrition_value nurtition_text">820mg</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,19 +254,19 @@
                                                     <div class="d-flex flex-column gap-3">
                                                         <div class="px-4 py-3 chef_tips d-flex justify-content-start align-items-center gap-3 rounded-3">
                                                             <i class="fa-solid fa-circle-check"></i>
-                                                            <span>Salt eggplant to remove bitterness</span>
+                                                            <span class="chefTrips_text">Salt eggplant to remove bitterness</span>
                                                         </div>
                                                         <div class="px-4 py-3 chef_tips d-flex justify-content-start align-items-center gap-3 rounded-3">
                                                             <i class="fa-solid fa-circle-check"></i>
-                                                            <span>Don't skip the resting time - it helps set the layers</span>
+                                                            <span class="chefTrips_text">Don't skip the resting time - it helps set the layers</span>
                                                         </div>
                                                         <div class="px-4 py-3 chef_tips d-flex justify-content-start align-items-center gap-3 rounded-3">
                                                             <i class="fa-solid fa-circle-check"></i>
-                                                            <span>Use ground beef if lamb is unavailable</span>
+                                                            <span class="chefTrips_text">Use ground beef if lamb is unavailable</span>
                                                         </div>
                                                         <div class="px-4 py-3 chef_tips d-flex justify-content-start align-items-center gap-3 rounded-3">
                                                             <i class="fa-solid fa-circle-check"></i>
-                                                            <span>Make ahead and reheat for easier serving</span>
+                                                            <span class="chefTrips_text">Make ahead and reheat for easier serving</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,7 +275,7 @@
                                     </div>
                                 </div>
                                 <div class="try_button mt-5 rounded-3 py-1 px-3">
-                                    <button id="random_btn" onclick="random()" type="button" class="btn text-white fw-semibold"><i class="fa-solid fa-rotate me-2 text-white"></i>Try Another Recipe</button>
+                                    <button id="random_btn" onclick="randomm()" type="button" class="btn text-white fw-semibold"><i class="fa-solid fa-rotate me-2 text-white"></i>Try Another Recipe</button>
                                 </div>
                             </div>
                         </div>
