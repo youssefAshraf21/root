@@ -1,0 +1,25 @@
+body {
+    font-family: "Alan Sans", sans-serif;
+}
+
+
+.header {
+    box-shadow:  8px 8px 10px #c2c2c2;
+}
+
+.form-control {
+    border: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    border-bottom: 2px solid #0D6EFD;
+}
+
+.form-control:focus {
+    border-radius: unset;
+    box-shadow: unset;
+}
+
+
+.form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 2.1rem;
+}
