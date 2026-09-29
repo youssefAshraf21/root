@@ -1,3 +1,4 @@
+
 var recipes = [
     {
         name: "Pad Thai",
@@ -265,9 +266,8 @@ var recipes = [
 ];  
 
 
-
 function randomm() {
-    var randomRecepi = Math.trunc(Math.random() * recipes.length);
+    var randomRecepi = Math.trunc(Math.random() * recipes.length); //100
     var recipe = recipes[randomRecepi];
 
     document.getElementById("recipeName").innerHTML = recipe.name;
