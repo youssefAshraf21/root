@@ -3,12 +3,15 @@ var productPrice = document.getElementById("productPrice");
 var productCategory = document.getElementById("productCategory");
 var productDescription = document.getElementById("productDescription");
 var productPadge = document.getElementById("productPadge");
+var productCount = document.getElementById("productCount");
 var productList = [];
 
 if(localStorage.getItem("productArr") != null) {
     productList = JSON.parse(localStorage.getItem("productArr"));
-    displayProduct();   
+    displayProduct(productList);   
 }
+
+
 
 
 function addProduct() {
@@ -22,8 +25,8 @@ function addProduct() {
     productList.push(product);
     localStorage.setItem("productArr", JSON.stringify(productList));
 
-    // clearInputs()
-    displayProduct()
+    clearInputs()
+    displayProduct(productList)
 }
 
 
@@ -34,21 +37,22 @@ function clearInputs() {
     productDescription.value = "";
 }
 
-function displayProduct() {
+function displayProduct(arr) {
     var cartona = "";
-    for(var i = 0; i < productList.length; i++) {
+    for(var i = 0; i < arr.length; i++) {
+        productCount.innerHTML = `${arr.length} product`
         cartona += `<div class="col-lg-4">
                         <div class="card">
                         <img src="img/iPhone18.png" class="card-img-top position-relative" alt="...">
-                        <span id="productPadge" class="text-bg-primary padge position-absolute px-3 py-1 rounded-5">${productList[i].padge}</span>
+                            <span class="badge ${getBadgeClass(arr[i].category)} position-absolute top-0 end-0 m-2 px-3 py-1 rounded-5">${arr[i].category}</span>
                             <div class="card-body">
-                                <h5 class="card-title">${productList[i].name}</h5>
-                                <p class="card-text">${productList[i].description}</p>
+                                <h5 class="card-title">${arr[i].name}</h5>
+                                <p class="card-text">${arr[i].description}</p>
                             </div>
                             <div class="d-flex align-items-center justify-content-between p-3">
-                                <h3 class="text-primary fw-bold m-0">${productList[i].price}</h3>
+                                <h3 class="text-primary fw-bold m-0">${arr[i].price}</h3>
                                 <div class="d-flex align-items-center ">
-                                    <button class="btn btn-outline-danger rounded-end-0"><i class="fa-regular fa-trash-can"></i></button>
+                                    <button onclick="deletProduct(${i})" id="deletProduct" class="btn btn-outline-danger rounded-end-0"><i class="fa-regular fa-trash-can"></i></button>
                                     <button class="btn btn-outline-warning rounded-start-0"><i class="fa-solid fa-pencil"></i></button>
                                 </div>
                             </div>
@@ -56,24 +60,27 @@ function displayProduct() {
                     </div>`
     }
     document.getElementById("productCards").innerHTML = cartona
-    
-
 }
 
-// var cartona = `<div class="col-lg-4">
-//                         <div class="card">
-//                         <img src="img/iPhone18.png" class="card-img-top position-relative" alt="...">
-//                         <span class="text-bg-primary padge position-absolute px-3 py-1 rounded-5">mobile</span>
-//                             <div class="card-body">
-//                                 <h5 class="card-title">iPhone 16</h5>
-//                                 <p class="card-text">Latest iPhone with advanced features and improved camera system.</p>
-//                             </div>
-//                             <div class="d-flex align-items-center justify-content-between p-3">
-//                                 <h3 class="text-primary fw-bold m-0">₹50,000</h3>
-//                                 <div class="d-flex align-items-center ">
-//                                     <button class="btn btn-outline-danger rounded-end-0"><i class="fa-regular fa-trash-can"></i></button>
-//                                     <button class="btn btn-outline-warning rounded-start-0"><i class="fa-solid fa-pencil"></i></button>
-//                                 </div>
-//                             </div>
-//                         </div>
-//                     </div>`
+
+function deletProduct(index){
+    productList.splice(index, 1);
+    localStorage.setItem("productArr", JSON.stringify(productList));
+    displayProduct(productList);
+}
+
+
+function getBadgeClass(category) {
+    category = category.toLowerCase();
+
+    if (category == "tv") {
+        return "text-bg-success";
+    } else if (category == "mobile") {
+        return "text-bg-primary";
+    } else if (category == "laptop") {
+        return "text-bg-warning";
+    } else {
+        return "text-bg-secondary";
+    }
+
+}
