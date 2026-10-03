@@ -4,6 +4,8 @@ var productCategory = document.getElementById("productCategory");
 var productDescription = document.getElementById("productDescription");
 var productPadge = document.getElementById("productPadge");
 var productCount = document.getElementById("productCount");
+var productImage = document.getElementById("productImage");
+var productSearch = document.getElementById("productSearch");
 var productList = [];
 
 if(localStorage.getItem("productArr") != null) {
@@ -12,15 +14,16 @@ if(localStorage.getItem("productArr") != null) {
 }
 
 
-
-
 function addProduct() {
     var product = {
         name: productName.value,
         price: productPrice.value,
         category: productCategory.value,
         description: productDescription.value,
-        padge: productCategory.value
+        padge: productCategory.value,
+        img: productImage.files[0]
+    ? `./img/${productImage.files[0].name}`
+    : "./img/img1.jpg"
     }
     productList.push(product);
     localStorage.setItem("productArr", JSON.stringify(productList));
@@ -30,12 +33,7 @@ function addProduct() {
 }
 
 
-function clearInputs() {
-    productName.value = "";
-    productPrice.value = "";
-    productCategory.value = "";
-    productDescription.value = "";
-}
+
 
 function displayProduct(arr) {
     var cartona = "";
@@ -43,7 +41,7 @@ function displayProduct(arr) {
         productCount.innerHTML = `${arr.length} product`
         cartona += `<div class="col-lg-4">
                         <div class="card">
-                        <img src="img/iPhone18.png" class="card-img-top position-relative" alt="...">
+                        <img id="productImage" src="${arr[i].img}" class="card-img-top position-relative" alt="...">
                             <span class="badge ${getBadgeClass(arr[i].category)} position-absolute top-0 end-0 m-2 px-3 py-1 rounded-5">${arr[i].category}</span>
                             <div class="card-body">
                                 <h5 class="card-title">${arr[i].name}</h5>
@@ -62,6 +60,13 @@ function displayProduct(arr) {
     document.getElementById("productCards").innerHTML = cartona
 }
 
+
+function clearInputs() {
+    productName.value = "";
+    productPrice.value = "";
+    productCategory.value = "";
+    productDescription.value = "";
+}
 
 function deletProduct(index){
     productList.splice(index, 1);
@@ -83,4 +88,16 @@ function getBadgeClass(category) {
         return "text-bg-secondary";
     }
 
+}
+
+
+function searchProduct() {
+    var searchValue = productSearch.value.toLowerCase();
+    var searchArr = [];
+    for(var i = 0; i< productList.length; i++) {
+        if(productList[i].name.trim().toLowerCase().includes(searchValue)){
+            searchArr.push(productList[i]);
+        }
+    }
+    displayProduct(searchArr);
 }

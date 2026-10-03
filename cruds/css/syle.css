@@ -32,3 +32,9 @@ body {
     font-weight: 500;
 
 }
+
+
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
