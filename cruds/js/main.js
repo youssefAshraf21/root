@@ -13,6 +13,8 @@ var productPriceError = document.getElementById("productPriceError");
 var updateIndex; 
 var productList = [];
 
+
+
 if(localStorage.getItem("productArr") != null) {
     productList = JSON.parse(localStorage.getItem("productArr"));
     displayProduct(productList);   
