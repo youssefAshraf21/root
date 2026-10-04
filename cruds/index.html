@@ -36,31 +36,35 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-floating mb-3">
-                                <input id="productName" type="text" class="form-control" id="productName" placeholder="product Name">
+                                <input oninput="validateProductName()" id="productName" type="text" class="form-control" id="productName" placeholder="product Name">
                                 <label for="productName"><i class="fa-solid fa-tag"></i> Product Name</label>
+                                <p class="alert alert-danger d-none mt-2" id="productNameError">name must be atleast 4 charecters starting with Capital letter</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-floating mb-3">
-                                <input id="productPrice" type="number" class="form-control" id="productPrice" placeholder="product Name">
+                                <input oninput="validatePrice()" id="productPrice" type="number" class="form-control" id="productPrice" placeholder="product Name">
                                 <label for="productPrice"><i class="fa-solid fa-dollar"></i> Product Price</label>
+                                <p class="alert alert-danger d-none mt-2" id="productPriceError">Please enter a valid price.</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-floating mb-3">
-                                <input id="productCategory" list="prodCat" class="form-control" id="productCategory" placeholder="product Category">
+                                <input oninput="validateCategory()" id="productCategory" list="prodCat" class="form-control" id="productCategory" placeholder="product Category">
                                 <label for="productCategory"><i class="fa-solid fa-table-cells-large"></i> Product Category</label>
                                 <datalist id="prodCat">
                                     <option value="TV"></option>
                                     <option value="Mobile"></option>
                                     <option value="Laptop"></option>
                                 </datalist>
+                                <p class="alert alert-danger d-none mt-2" id="productCategoryError">Please choose a valid category</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-floating mb-3">
-                                <input type="file" class="form-control" id="productImage" placeholder="product Image">
+                                <input onchange="productImg()" type="file" class="form-control" id="productImage" placeholder="product Image">
                                 <label for="productImage" class=""><i class="fa-regular fa-image"></i> Product Image</label>
+                                <p class="alert alert-danger d-none mt-2" id="productImageError">Please upload a valid image file (jpg, jpeg, png, gif)</p>
                             </div>
                         </div>
                         <div class="col-lg-12">

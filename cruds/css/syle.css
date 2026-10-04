@@ -38,3 +38,11 @@ body {
     height: 300px;
     object-fit: cover;
 }
+
+
+.form-control.is-valid:focus {
+    box-shadow: unset;
+}
+.form-control.is-invalid:focus {
+    box-shadow: unset;
+}

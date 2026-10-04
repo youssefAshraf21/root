@@ -8,6 +8,8 @@ var productImage = document.getElementById("productImage");
 var productSearch = document.getElementById("productSearch");
 var updateBtn = document.getElementById("updateBtn");
 var addBtn = document.getElementById("addBtn");
+var productNameError = document.getElementById("productNameError");
+var productPriceError = document.getElementById("productPriceError");
 var updateIndex; 
 var productList = [];
 
@@ -19,7 +21,8 @@ if(localStorage.getItem("productArr") != null) {
 
 
 function addProduct() {
-    var product = {
+    if(validateProductName() == true) {
+        var product = {
         name: productName.value,
         price: productPrice.value,
         category: productCategory.value,
@@ -33,6 +36,10 @@ function addProduct() {
 
     clearInputs()
     displayProduct(productList)
+    }else {
+        alert("Please enter a valid product name. It must be at least 4 characters long and start with a capital letter.");
+    }
+
 }
 
 
@@ -132,4 +139,68 @@ function getProductToUpdate(index) {
         clearInputs();
         addBtn.classList.remove("d-none");
         updateBtn.classList.add("d-none");
+}
+
+
+function validateProductName() {
+    var productNameRegex = /^[A-Z]\w{3,}$/;
+    if(productNameRegex.test(productName.value)) {
+        productName.classList.add("is-valid");
+        productName.classList.remove("is-invalid");
+        productNameError.classList.add("d-none");
+        return true;
+    } else {
+        productNameError.classList.remove("d-none");
+        productName.classList.remove("is-valid");
+        productName.classList.add("is-invalid");
+        return false;
     }
+}
+
+
+function validatePrice() {
+    var productPriceRegex = /^(?!0+(?:\.0{1,2})?$)\d+(?:\.\d{1,2})?$/;
+    if(productPriceRegex.test(productPrice.value)) {
+        productPrice.classList.add("is-valid");
+        productPrice.classList.remove("is-invalid");
+        productPriceError.classList.add("d-none");
+        return true;
+    } else {
+        productPrice.classList.remove("is-valid");
+        productPrice.classList.add("is-invalid");
+        productPriceError.classList.remove("d-none");
+        return false;
+    }
+}
+
+
+function validateCategory() {
+    var productCategoryRegex = /^(TV|Mobile|Laptop)$/i;
+    if(productCategoryRegex.test(productCategory.value)) {
+        productCategory.classList.add("is-valid");
+        productCategory.classList.remove("is-invalid");
+        productCategoryError.classList.add("d-none");
+        return true;
+    } else {
+        productCategory.classList.remove("is-valid");
+        productCategory.classList.add("is-invalid");
+        productCategoryError.classList.remove("d-none");
+        return false;
+    }
+}
+
+
+function productImg() {
+    var productImageRegex = /^.+\.(jpg|jpeg|png|gif)$/i;
+    if(productImageRegex.test(productImage.value)) {
+        productImage.classList.add("is-valid");
+        productImage.classList.remove("is-invalid");
+        productImageError.classList.add("d-none");
+        return true;
+    } else {
+        productImage.classList.remove("is-valid");
+        productImage.classList.add("is-invalid");
+        productImageError.classList.remove("d-none");
+        return false;
+    }
+}
