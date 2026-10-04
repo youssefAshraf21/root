@@ -6,6 +6,9 @@ var productPadge = document.getElementById("productPadge");
 var productCount = document.getElementById("productCount");
 var productImage = document.getElementById("productImage");
 var productSearch = document.getElementById("productSearch");
+var updateBtn = document.getElementById("updateBtn");
+var addBtn = document.getElementById("addBtn");
+var updateIndex; 
 var productList = [];
 
 if(localStorage.getItem("productArr") != null) {
@@ -14,13 +17,13 @@ if(localStorage.getItem("productArr") != null) {
 }
 
 
+
 function addProduct() {
     var product = {
         name: productName.value,
         price: productPrice.value,
         category: productCategory.value,
         description: productDescription.value,
-        padge: productCategory.value,
         img: productImage.files[0]
     ? `./img/${productImage.files[0].name}`
     : "./img/img1.jpg"
@@ -37,8 +40,8 @@ function addProduct() {
 
 function displayProduct(arr) {
     var cartona = "";
+    productCount ? productCount.innerHTML = `${arr.length} product` : productCount.innerHTML = `0 product`;
     for(var i = 0; i < arr.length; i++) {
-        productCount.innerHTML = `${arr.length} product`
         cartona += `<div class="col-lg-4">
                         <div class="card">
                         <img id="productImage" src="${arr[i].img}" class="card-img-top position-relative" alt="...">
@@ -51,7 +54,7 @@ function displayProduct(arr) {
                                 <h3 class="text-primary fw-bold m-0">${arr[i].price}</h3>
                                 <div class="d-flex align-items-center ">
                                     <button onclick="deletProduct(${i})" id="deletProduct" class="btn btn-outline-danger rounded-end-0"><i class="fa-regular fa-trash-can"></i></button>
-                                    <button class="btn btn-outline-warning rounded-start-0"><i class="fa-solid fa-pencil"></i></button>
+                                    <button onclick="getProductToUpdate(${i})" class="btn btn-outline-warning rounded-start-0"><i class="fa-solid fa-pencil"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -101,3 +104,32 @@ function searchProduct() {
     }
     displayProduct(searchArr);
 }
+
+
+function getProductToUpdate(index) {
+    updateIndex = index;
+
+    addBtn.classList.add("d-none");
+    updateBtn.classList.remove("d-none");
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    productName.value = productList[index].name;
+    productPrice.value = productList[index].price;
+    productCategory.value = productList[index].category;
+    productDescription.value = productList[index].description;
+}
+
+
+    function updateProduct() {
+        console.log(updateIndex);
+        productList[updateIndex].name = productName.value;
+        productList[updateIndex].price = productPrice.value;
+        productList[updateIndex].category = productCategory.value;
+        productList[updateIndex].description = productDescription.value;
+        localStorage.setItem("productArr", JSON.stringify(productList));
+        displayProduct(productList);
+        clearInputs();
+        addBtn.classList.remove("d-none");
+        updateBtn.classList.add("d-none");
+    }
