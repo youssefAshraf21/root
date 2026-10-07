@@ -102,6 +102,11 @@ background-clip: text;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.form_inputs input,
+.form_inputs textarea {
+    color: white !important;
+}
+
 .form-floating > label {
     color: rgb(162, 162, 162);
     background: transparent;
@@ -271,4 +276,10 @@ background-clip: text;
 
 .favorite_item:hover {
     color: #CC6A76;
+}
+
+
+.update_button {
+    background: linear-gradient(135deg, #fb6a65 0%, #ff9f72 50%, #fbea6a 100%);
+    border: none;
 }
