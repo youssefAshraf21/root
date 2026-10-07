@@ -6,6 +6,8 @@ var productImage = document.getElementById("productImage");
 var addProductBtn = document.getElementById("addProductBtn");
 var updateProductBtn = document.getElementById("updateProductBtn");
 var productsAmount = document.getElementById("productsAmount");
+var categoriesAmount = document.getElementById("categoriesAmount");
+var favoriteIcon = document.getElementById("favoriteIcon");
 
 var productsArray = [];
 
@@ -39,8 +41,7 @@ function displayProduct(productList) {
         box += `<div class="col-lg-4 g-3">
                                     <div class="card">
                                         <img src="img/3867702.jpg" class="card-img-top position-relative" alt="...">
-                                        <i class="fa-regular fa-heart p-2 rounded-circle position-absolute favorite_item"></i>
-                                        <div class="card-body"> 
+                                        <i onclick="addToFavorites(${i}, this)" class="fa-regular fa-heart p-2 rounded-circle position-absolute favorite_item"></i>                                        <div class="card-body"> 
                                             <div class="d-flex flex-column justify-content-center align-items-center">
                                                 <span class="text-white fw-bold px-3 py-1 rounded-4 id_of_product">ID: ${productList[i].id}</span>
                                                 <h4 class=" m-0 fw-bold text-white mt-3 mb-4">${productList[i].name}</h4>
@@ -60,6 +61,7 @@ function displayProduct(productList) {
     }
     document.getElementById("productCards").innerHTML = box
     document.getElementById("productsAmount").innerHTML = productsArray.length
+    document.getElementById("categoriesAmount").innerHTML = productsArray.length
 }
 
 function deleteInputs() {
@@ -75,4 +77,11 @@ function deleteProduct(index) {
     productsArray.splice(index, 1);
     localStorage.setItem("products", JSON.stringify(productsArray));
     displayProduct(productsArray);
+}
+
+
+function addToFavorites(index, icon) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
+    icon.classList.add("text-danger");
 }
