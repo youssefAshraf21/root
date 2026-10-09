@@ -8,6 +8,8 @@ var updateProductBtn = document.getElementById("updateProductBtn");
 var productsAmount = document.getElementById("productsAmount");
 var categoriesAmount = document.getElementById("categoriesAmount");
 var favoriteIcon = document.getElementById("favoriteIcon");
+var searchProduct = document.getElementById("searchProduct");
+var totalPrice;
 var getIndex;
 
 
@@ -37,9 +39,9 @@ function addProduct() {
     console.log(product.id);
 }
 
-function displayProduct(productList) {
+function displayProduct(productList) {  
     var box = "";
-    for(var i = 0; i < productsArray.length; i++) {
+    for(var i = 0; i < productList.length; i++) {
         box += `<div class="col-lg-4 g-3">
                                     <div class="card">
                                         <img src="img/3867702.jpg" class="card-img-top position-relative" alt="...">
@@ -62,8 +64,8 @@ function displayProduct(productList) {
                                 </div>`
     }
     document.getElementById("productCards").innerHTML = box
-    document.getElementById("productsAmount").innerHTML = productsArray.length
-    document.getElementById("categoriesAmount").innerHTML = productsArray.length
+    document.getElementById("productsAmount").innerHTML = productList.length
+    document.getElementById("categoriesAmount").innerHTML = productList.length
 }
 
 function deleteInputs() {
@@ -103,4 +105,18 @@ function updateProduct() {
         deleteInputs();
         addProductBtn.classList.remove("d-none");
         updateProductBtn.classList.add("d-none");
+}
+
+
+function searchOfProduct() {
+    var searchValue = searchProduct.value.toLowerCase();
+    var searchArr = [];
+    for( var i = 0; i < productsArray.length; i++) {
+        if(productsArray[i].name.trim().toLowerCase().includes(searchValue)) {
+            searchArr.push(productsArray[i]);
+        }
+    }
+
+    console.log(searchArr);
+    displayProduct(searchArr);
 }
