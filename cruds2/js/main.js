@@ -8,6 +8,8 @@ var updateProductBtn = document.getElementById("updateProductBtn");
 var productsAmount = document.getElementById("productsAmount");
 var categoriesAmount = document.getElementById("categoriesAmount");
 var favoriteIcon = document.getElementById("favoriteIcon");
+var getIndex;
+
 
 var productsArray = [];
 
@@ -51,7 +53,7 @@ function displayProduct(productList) {
                                                 <div class="buttons mt-2">
                                                     <div class="d-flex align-items-center mt-4 gap-4">
                                                         <button onclick="deleteProduct(${i})"class="btn btn-outline-danger me-3 "><i class="fa-regular fa-trash-can"></i></button>
-                                                        <button  class="btn btn-outline-warning"><i class="fa-solid fa-pencil"></i></button>
+                                                        <button onclick="getDataToInputs(${i})" class="btn btn-outline-warning"><i class="fa-solid fa-pencil"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -80,8 +82,25 @@ function deleteProduct(index) {
 }
 
 
-function addToFavorites(index, icon) {
-    icon.classList.remove("fa-regular");
-    icon.classList.add("fa-solid");
-    icon.classList.add("text-danger");
+function getDataToInputs(index) {
+    getIndex = index;
+    productName.value = productsArray[index].name;
+    productPrice.value = productsArray[index].price;
+    productCategory.value = productsArray[index].category;
+    productDescription.value = productsArray[index].description; 
+    addProductBtn.classList.add("d-none");
+    updateProductBtn.classList.remove("d-none");
+}
+
+
+function updateProduct() {
+        productsArray[getIndex].name = productName.value;
+        productsArray[getIndex].price = productPrice.value;
+        productsArray[getIndex].category = productCategory.value;
+        productsArray[getIndex].description = productDescription.value;
+        localStorage.setItem("products", JSON.stringify(productsArray));
+        displayProduct(productsArray);
+        deleteInputs();
+        addProductBtn.classList.remove("d-none");
+        updateProductBtn.classList.add("d-none");
 }
