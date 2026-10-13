@@ -39,7 +39,7 @@ function addProduct() {
     console.log(product.id);
 }
 
-function displayProduct(productList) {  
+function displayProduct(productList) {   
     var box = "";
     for(var i = 0; i < productList.length; i++) {
         box += `<div class="col-lg-4 g-3">
