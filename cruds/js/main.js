@@ -10,6 +10,7 @@ var updateBtn = document.getElementById("updateBtn");
 var addBtn = document.getElementById("addBtn");
 var productNameError = document.getElementById("productNameError");
 var productPriceError = document.getElementById("productPriceError");
+var contactCardContainer = document.getElementById("contactCardContainer");
 var updateIndex; 
 var productList = [];
 
