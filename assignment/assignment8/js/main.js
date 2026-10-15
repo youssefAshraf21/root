@@ -15,6 +15,7 @@ var closeModalBtn = document.getElementById("closeModalBtn");
 var submitModalBtn = document.getElementById("submitModalBtn");
 var totalContacts = document.getElementById("totalContacts");
 var cancelModalBtn = document.getElementById("cancelModalBtn");
+var starIcon = document.getElementById("starIcon");
 var contactList = [];
 var favList = [];
 
@@ -25,6 +26,12 @@ if(localStorage.getItem("contactList") != null) {
     displayContact(contactList);
 }
 
+
+
+if (localStorage.getItem("favList") != null) {
+    favList = JSON.parse(localStorage.getItem("favList"));
+    displayFavContact(favList);
+}
 
 // open the menu when click on add contact btn 
 
@@ -77,6 +84,54 @@ function addContact() {
 submitModalBtn.addEventListener("click", addContact);
 
 
+// addFavCONTACT function
+
+function addFavContact(index) {
+function addFavContact(index) {
+    var favContact = contactList[index];
+
+    if (favList.includes(favContact)) {
+        favList.splice(favList.indexOf(favContact), 1);
+    } else {
+        favList.push(favContact);
+    }
+
+    localStorage.setItem("favList", JSON.stringify(favList));
+    displayFavContact(favList);
+    displayContact(contactList);
+}
+
+}
+
+
+
+
+
+
+
+// display the favorites contacts
+
+
+function displayFavContact(favArr) {
+    var favBox = "";
+    for(var i = 0; i < favArr.length; i++) {
+        favBox += `<div class="d-flex align-items-center justify-content-between px-3 py-2 rounded-3 mb-2 fav-card">
+                                            <div class="d-flex align-items-center justify-content-start gap-3">
+                                                <img src="img/avatar-2.jpg" width="40px" height="40px" class="rounded-3" alt="">
+                                                <div class="d-flex flex-column justify-content-start align-items-start">
+                                                    <p class="fw-bold text-dark mb-0">${favArr[i].name}</p>
+                                                    <p class="text-muted small mb-0">${favArr[i].phone}</p>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-phone text-success px-3 py-2 bg-success-subtle rounded-3 d-flex align-items-center justify-content-center" ></i>
+                                        </div>`
+    }
+
+    document.getElementById("emptyStateFav").innerHTML = favBox;
+}
+
+
+
 
 
 // display contact to show the contact 
@@ -114,7 +169,7 @@ function displayContact(arr) {
                                             </div>
                                             <div
                                                 class="badge-icon badge-star d-flex justify-content-center align-items-center rounded-circle">
-                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star" id="starIcon"></i>
                                             </div>
                                         </div>
                                         <div class="flex-1 min-w-0 pt-1">
@@ -162,8 +217,8 @@ function displayContact(arr) {
                                         </a>
                                     </div>
                                     <div class="action-buttons-right">
-                                        <button class="action-button favorite" id="favBtn" title="Favorite">
-                                            <i class="far fa-star"></i>
+                                        <button class="action-button favorite" id="favBtn" title="Favorite"  onclick="addFavContact(${i})">
+                                            <i class="${favList.includes(arr[i]) ? 'fas' : 'far'} fa-star"></i>
                                         </button>
                                         <button class="action-button emergency"id="emergncyBtn" title="Emergency">
                                             <i class="far fa-heart"></i>

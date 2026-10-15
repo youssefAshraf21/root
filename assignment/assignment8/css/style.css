@@ -686,3 +686,9 @@ textarea {
 .swal-container {
   z-index: 9999 !important;
 }
+
+
+
+.fav-card {
+  background-color: var(--gray-100);
+}
