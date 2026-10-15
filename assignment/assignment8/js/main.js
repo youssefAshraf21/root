@@ -86,7 +86,7 @@ submitModalBtn.addEventListener("click", addContact);
 
 // addFavCONTACT function
 
-function addFavContact(index) {
+
 function addFavContact(index) {
     var favContact = contactList[index];
 
@@ -101,7 +101,6 @@ function addFavContact(index) {
     displayContact(contactList);
 }
 
-}
 
 
 
