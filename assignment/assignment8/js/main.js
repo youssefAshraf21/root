@@ -16,8 +16,16 @@ var submitModalBtn = document.getElementById("submitModalBtn");
 var totalContacts = document.getElementById("totalContacts");
 var cancelModalBtn = document.getElementById("cancelModalBtn");
 var starIcon = document.getElementById("starIcon");
+var totalFavContacts = document.getElementById("totalFavContacts");
+var noFavorits = document.getElementById("noFavorits");
+var emptyStateEmergency = document.getElementById("emptyStateEmergency");
+var totalEmergContacts = document.getElementById("totalEmergContacts");
+var noEmergncy = document.getElementById("noEmergncy");
 var contactList = [];
 var favList = [];
+var emergancyList = [];
+var contactDeleted;
+
 
 
 
@@ -32,6 +40,12 @@ if (localStorage.getItem("favList") != null) {
     favList = JSON.parse(localStorage.getItem("favList"));
     displayFavContact(favList);
 }
+
+if (localStorage.getItem("emergancyList") != null) {
+    emergancyList = JSON.parse(localStorage.getItem("emergancyList"));
+}
+
+displayEmergancyContact(emergancyList);
 
 // open the menu when click on add contact btn 
 
@@ -83,9 +97,48 @@ function addContact() {
 }
 submitModalBtn.addEventListener("click", addContact);
 
+function addEmergancyContact(index) {
+    var EmergancyContact = contactList[index];
+
+    if (emergancyList.includes(EmergancyContact)) {
+        emergancyList.splice(emergancyList.indexOf(EmergancyContact), 1);
+    } else {
+        emergancyList.push(EmergancyContact);
+    }
+
+    localStorage.setItem("emergancyList", JSON.stringify(emergancyList));
+    displayEmergancyContact(emergancyList);
+    displayContact(contactList);
+}
+
+
+function displayEmergancyContact(emergArr) {
+    var emergBox = "";
+    totalEmergContacts.innerHTML = emergArr.length;
+    if (emergArr.length === 0) {
+    noEmergncy.classList.remove("d-none");
+    } else {
+        noEmergncy.classList.add("d-none");
+    }
+    for(var i = 0; i < emergArr.length; i++) {
+        emergBox += `<div class="d-flex align-items-center justify-content-between px-3 py-2 rounded-3 mb-2 fav-card">
+                                            <div class="d-flex align-items-center justify-content-start gap-3">
+                                                <img src="img/avatar-3.jpg" width="40px" height="40px" class="rounded-3" alt="">
+                                                <div class="d-flex flex-column justify-content-start align-items-start">
+                                                    <p class="fw-bold text-dark mb-0">${emergArr[i].name}</p>
+                                                    <p class="text-muted small mb-0">${emergArr[i].phone}</p>
+                                                </div>
+                                            </div>
+                                            <i class="fa-solid fa-phone text-danger px-3 py-2 bg-danger-subtle rounded-3 d-flex align-items-center justify-content-center" ></i>
+                                        </div>`
+    }
+    emptyStateEmergency.innerHTML = emergBox;
+}
+
+
+
 
 // addFavCONTACT function
-
 
 function addFavContact(index) {
     var favContact = contactList[index];
@@ -103,16 +156,16 @@ function addFavContact(index) {
 
 
 
-
-
-
-
-
 // display the favorites contacts
-
 
 function displayFavContact(favArr) {
     var favBox = "";
+    totalFavContacts.innerHTML = favArr.length;
+    if(favArr.length === 0) {
+        noFavorits.classList.remove("d-none");
+    }else {
+        noFavorits.classList.add("d-none");
+    }
     for(var i = 0; i < favArr.length; i++) {
         favBox += `<div class="d-flex align-items-center justify-content-between px-3 py-2 rounded-3 mb-2 fav-card">
                                             <div class="d-flex align-items-center justify-content-start gap-3">
@@ -219,8 +272,8 @@ function displayContact(arr) {
                                         <button class="action-button favorite" id="favBtn" title="Favorite"  onclick="addFavContact(${i})">
                                             <i class="${favList.includes(arr[i]) ? 'fas' : 'far'} fa-star"></i>
                                         </button>
-                                        <button class="action-button emergency"id="emergncyBtn" title="Emergency">
-                                            <i class="far fa-heart"></i>
+                                        <button class="action-button emergency"id="emergncyBtn" title="Emergency" onclick="addEmergancyContact(${i})">
+                                            <i class="${emergancyList.includes(arr[i]) ? 'fas' : 'far'} fa-heart"></i>
                                         </button>
                                         <button class="action-button edit" id="editBtn" title="Edit">
                                             <i class="fas fa-pen"></i>
@@ -265,6 +318,22 @@ function deleteContact(index) {
     confirmButtonText: "Yes, delete it!"
     }).then((result) => {
     if (result.isConfirmed) {
+            for(var i = 0; i < favList.length; i++) {
+                if(favList[i].phone == contactList[index].phone) {
+                    favList.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem("favList", JSON.stringify(favList));
+            displayFavContact(favList);
+            for(var i = 0; i < emergancyList.length; i++){
+                if(emergancyList[i].phone == contactList[index].phone) {
+                    emergancyList.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem("emergancyList", JSON.stringify(emergancyList));
+            displayEmergancyContact(emergancyList);
             contactList.splice(index, 1);
             localStorage.setItem("contactList", JSON.stringify(contactList));
             displayContact(contactList);
