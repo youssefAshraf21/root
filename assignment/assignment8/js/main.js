@@ -22,6 +22,9 @@ var emptyStateEmergency = document.getElementById("emptyStateEmergency");
 var totalEmergContacts = document.getElementById("totalEmergContacts");
 var noEmergncy = document.getElementById("noEmergncy");
 var updateModalBtn = document.getElementById("updateModalBtn");
+var heartIconOnImg = document.getElementById("heartIconOnImg");
+var starIconOnImg = document.getElementById("starIconOnImg");
+var searchInput = document.getElementById("searchInput");
 var contactList = [];
 var favList = [];
 var emergancyList = [];
@@ -87,6 +90,16 @@ function addContact() {
         category: contactGroup.value
     }
     contactList.push(contact);
+    if (contactFavorite.checked) {
+        favList.push(contact);
+        localStorage.setItem("favList", JSON.stringify(favList));
+        displayFavContact(favList);
+    }
+    if (contactEmergency.checked) {
+        emergancyList.push(contact);
+        localStorage.setItem("emergancyList", JSON.stringify(emergancyList));
+        displayEmergancyContact(emergancyList);
+    }
     localStorage.setItem("contactList", JSON.stringify(contactList));
     contactModal.classList.add("d-none");
     Swal.fire({
@@ -218,11 +231,13 @@ function displayContact(arr) {
                                             <img src="./img/avatar-1.jpg" alt="sssss"
                                                 class="contact-card-avatar object-fit-cover">
                                             <div
-                                                class="badge-icon badge-heart d-flex justify-content-center align-items-center rounded-circle">
-                                                <i class="fas fa-heart-pulse"></i>
+                                                id="heartIconOnImg"
+                                                class="badge-icon badge-heart d-flex justify-content-center align-items-center rounded-circle d-none">
+                                                <i class="fas fa-heart-pulse" ></i>
                                             </div>
                                             <div
-                                                class="badge-icon badge-star d-flex justify-content-center align-items-center rounded-circle">
+                                                id="starIconOnImg"
+                                                class="badge-icon badge-star d-flex justify-content-center align-items-center rounded-circle d-none">
                                                 <i class="fas fa-star" id="starIcon"></i>
                                             </div>
                                         </div>
@@ -305,6 +320,8 @@ function clearInputs() {
     contactEmail.value = "";
     contactAddress.value = "";
     contactGroup.value = "";
+    contactFavorite.checked = false;
+    contactEmergency.checked = false;
 }
 
 
@@ -367,15 +384,35 @@ function getDataFromCard(index) {
 }
 
 function updateContact() {
+    var oldPhone = contactList[upadeIndex].phone; 
+
     contactList[upadeIndex].name = contactName.value;
     contactList[upadeIndex].phone = contactPhone.value;
     contactList[upadeIndex].email = contactEmail.value;
     contactList[upadeIndex].address = contactAddress.value;
     contactList[upadeIndex].category = contactGroup.value;
     localStorage.setItem("contactList", JSON.stringify(contactList));
-    displayContact(contactList);
+
+    for(var i = 0; i < favList.length; i++) {
+        if(favList[i].phone == oldPhone) {
+            favList[i].phone = contactPhone.value;
+            localStorage.setItem("favList", JSON.stringify(favList));
+            break;
+        }
+    }
+    for(var i = 0; i < emergancyList.length; i++){
+        if(emergancyList[i].phone == oldPhone) {
+            emergancyList[i].phone = contactPhone.value;
+            localStorage.setItem("emergancyList", JSON.stringify(emergancyList));
+            break;
+        }
+    }
+    localStorage.setItem("favList", JSON.stringify(favList));
+    localStorage.setItem("emergancyList", JSON.stringify(emergancyList));
     displayFavContact(favList);
     displayEmergancyContact(emergancyList);
+
+    displayContact(contactList);
     contactModal.classList.add("d-none");
     updateModalBtn.classList.add("d-none");
     submitModalBtn.classList.remove("d-none");
@@ -384,4 +421,20 @@ function updateContact() {
     icon: "success",
     draggable: true
     });
+}
+
+
+// search function
+
+
+function searchContact() {
+    var searchResult = searchInput.value.toLowerCase();
+    var searchResultArr = [];
+
+    for(var i = 0; i < contactList.length ; i++) {
+        if(contactList[i].name.trim().toLowerCase().includes(searchResult) || contactList[i].phone.trim().toLowerCase().includes(searchResult) || contactList[i].email.trim().toLowerCase().includes(searchResult)) {
+            searchResultArr.push(contactList[i]);
+        }
+    }
+    displayContact(searchResultArr);
 }
