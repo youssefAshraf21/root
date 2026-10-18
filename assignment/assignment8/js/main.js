@@ -21,9 +21,11 @@ var noFavorits = document.getElementById("noFavorits");
 var emptyStateEmergency = document.getElementById("emptyStateEmergency");
 var totalEmergContacts = document.getElementById("totalEmergContacts");
 var noEmergncy = document.getElementById("noEmergncy");
+var updateModalBtn = document.getElementById("updateModalBtn");
 var contactList = [];
 var favList = [];
 var emergancyList = [];
+var upadeIndex;
 var contactDeleted;
 
 
@@ -275,7 +277,7 @@ function displayContact(arr) {
                                         <button class="action-button emergency"id="emergncyBtn" title="Emergency" onclick="addEmergancyContact(${i})">
                                             <i class="${emergancyList.includes(arr[i]) ? 'fas' : 'far'} fa-heart"></i>
                                         </button>
-                                        <button class="action-button edit" id="editBtn" title="Edit">
+                                        <button class="action-button edit" id="editBtn" title="Edit" onclick="getDataFromCard(${i})">
                                             <i class="fas fa-pen"></i>
                                         </button>
                                         <button onclick="deleteContact(${i})" class="action-button delete"id="deleteBtn" title="Delete">
@@ -346,3 +348,40 @@ function deleteContact(index) {
     });
 }
 
+
+
+// edite function 
+
+function getDataFromCard(index) {
+    upadeIndex = index;
+    contactName.value = contactList[index].name;
+    contactPhone.value = contactList[index].phone;
+    contactEmail.value = contactList[index].email;
+    contactAddress.value = contactList[index].address;
+    contactGroup.value = contactList[index].category;
+    contactModal.classList.remove("d-none");
+    updateModalBtn.classList.remove("d-none");
+    submitModalBtn.classList.add("d-none");
+
+
+}
+
+function updateContact() {
+    contactList[upadeIndex].name = contactName.value;
+    contactList[upadeIndex].phone = contactPhone.value;
+    contactList[upadeIndex].email = contactEmail.value;
+    contactList[upadeIndex].address = contactAddress.value;
+    contactList[upadeIndex].category = contactGroup.value;
+    localStorage.setItem("contactList", JSON.stringify(contactList));
+    displayContact(contactList);
+    displayFavContact(favList);
+    displayEmergancyContact(emergancyList);
+    contactModal.classList.add("d-none");
+    updateModalBtn.classList.add("d-none");
+    submitModalBtn.classList.remove("d-none");
+    Swal.fire({
+    title: "Updated Successfully",
+    icon: "success",
+    draggable: true
+    });
+}
