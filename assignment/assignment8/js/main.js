@@ -25,6 +25,8 @@ var updateModalBtn = document.getElementById("updateModalBtn");
 var heartIconOnImg = document.getElementById("heartIconOnImg");
 var starIconOnImg = document.getElementById("starIconOnImg");
 var searchInput = document.getElementById("searchInput");
+var contactName = document.getElementById("contactName");
+var contactNameError = document.getElementById("contactNameError");
 var contactList = [];
 var favList = [];
 var emergancyList = [];
@@ -437,4 +439,16 @@ function searchContact() {
         }
     }
     displayContact(searchResultArr);
+}
+
+
+// validation 
+
+function validatName() {
+    var nameRegex = /^[A-Za-z\u0600-\u06FF ]{2,50}$/;
+    if(nameRegex.test(contactName.value)) {
+        contactNameError.classList.remove("d-none");
+        contactNameError.classList.remove("invalid-feedback")
+        contactNameError.classList.add("valid-feedback")
+    }
 }
