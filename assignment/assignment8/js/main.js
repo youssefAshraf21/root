@@ -27,6 +27,10 @@ var starIconOnImg = document.getElementById("starIconOnImg");
 var searchInput = document.getElementById("searchInput");
 var contactName = document.getElementById("contactName");
 var contactNameError = document.getElementById("contactNameError");
+var contactPhone = document.getElementById("contactPhone");
+var contactPhoneError = document.getElementById("contactPhoneError");
+var contactEmail = document.getElementById("contactEmail");
+var contactEmailError = document.getElementById("contactEmailError");
 var contactList = [];
 var favList = [];
 var emergancyList = [];
@@ -91,6 +95,64 @@ function addContact() {
         address: contactAddress.value,
         category: contactGroup.value
     }
+        if (contactName.value.trim() === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill the name input"
+        });
+
+        return;
+    }
+
+
+        if (contactPhone.value.trim() === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill the phone input"
+        });
+
+        return;
+    }
+
+
+        if (contactEmail.value.trim() === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill the email input"
+        });
+
+        return;
+    }
+
+        if (contactAddress.value.trim() === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill the address input"
+        });
+
+        return;
+    }
+
+    if (contactName.classList.contains("is-invalid") || contactPhone.classList.contains("is-invalid") || contactEmail.classList.contains("is-invalid") || contactAddress.classList.contains("is-invalid")) {
+    return;
+}
+
+    for(var i = 0; i < contactList.length; i++) {
+        if(contactList[i].phone == contactPhone.value || contactList[i].email == contactEmail.value) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "This phone number or Email already exists"
+            });
+            return;
+        }
+    }
+
+
     contactList.push(contact);
     if (contactFavorite.checked) {
         favList.push(contact);
@@ -111,6 +173,9 @@ function addContact() {
     });
     clearInputs();
     displayContact(contactList);
+
+
+
 }
 submitModalBtn.addEventListener("click", addContact);
 
@@ -445,10 +510,60 @@ function searchContact() {
 // validation 
 
 function validatName() {
+
     var nameRegex = /^[A-Za-z\u0600-\u06FF ]{2,50}$/;
-    if(nameRegex.test(contactName.value)) {
+
+    if (nameRegex.test(contactName.value.trim())) {
+        contactName.classList.add("is-valid");
+        contactName.classList.remove("is-invalid");
+
+        contactNameError.classList.add("d-none");
+    } else {
+        contactName.classList.add("is-invalid");
+        contactName.classList.remove("is-valid");
+
         contactNameError.classList.remove("d-none");
-        contactNameError.classList.remove("invalid-feedback")
-        contactNameError.classList.add("valid-feedback")
     }
 }
+contactName.addEventListener("input", validatName);
+
+
+function validatePhone() {
+    var phoneRegex = /^01[0125][0-9]{8}$/;
+
+    if(phoneRegex.test(contactPhone.value.trim())) {
+        contactPhone.classList.add("is-valid");
+        contactPhone.classList.remove("is-invalid");
+
+        contactPhoneError.classList.add("d-none")
+    }else {
+        contactPhone.classList.add("is-invalid");
+        contactPhone.classList.remove("is-valid");
+
+        contactPhoneError.classList.remove("d-none");
+    }
+}
+
+contactPhone.addEventListener("input", validatePhone);
+
+
+function validateEmail() {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(emailRegex.test(contactEmail.value.trim())) {
+        contactEmail.classList.add("is-valid");
+        contactEmail.classList.remove("is-invalid");
+
+        contactEmailError.classList.add("d-none");
+    }else {
+        contactEmail.classList.add("is-invalid");
+        contactEmail.classList.remove("is-valid");
+
+        contactEmailError.classList.remove("d-none");
+    }
+}
+
+contactEmail.addEventListener("input", validateEmail);
+
+
+
