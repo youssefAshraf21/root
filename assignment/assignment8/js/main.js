@@ -209,7 +209,12 @@ function displayEmergancyContact(emergArr) {
     for(var i = 0; i < emergArr.length; i++) {
         emergBox += `<div class="d-flex align-items-center justify-content-between px-3 py-2 rounded-3 mb-2 fav-card">
                                             <div class="d-flex align-items-center justify-content-start gap-3">
-                                                <img src="img/avatar-3.jpg" width="40px" height="40px" class="rounded-3" alt="">
+                                                ${emergArr[i].img
+                                                    ? `<img src="${emergArr[i].img}" width="40" height="40" class="rounded-3 object-fit-cover" alt="${emergArr[i].name}">`
+                                                    : `<div class="avatar-placeholder rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                        ${emergArr[i].name.substring(0, 2).toUpperCase()}
+                                                    </div>`
+                                                }
                                                 <div class="d-flex flex-column justify-content-start align-items-start">
                                                     <p class="fw-bold text-dark mb-0">${emergArr[i].name}</p>
                                                     <p class="text-muted small mb-0">${emergArr[i].phone}</p>
@@ -255,7 +260,12 @@ function displayFavContact(favArr) {
     for(var i = 0; i < favArr.length; i++) {
         favBox += `<div class="d-flex align-items-center justify-content-between px-3 py-2 rounded-3 mb-2 fav-card">
                                             <div class="d-flex align-items-center justify-content-start gap-3">
-                                                <img src="img/avatar-2.jpg" width="40px" height="40px" class="rounded-3" alt="">
+                                                ${favArr[i].img
+                                                    ? `<img src="${favArr[i].img}" width="40" height="40" class="rounded-3 object-fit-cover" alt="${favArr[i].name}">`
+                                                    : `<div class="avatar-placeholder rounded-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                        ${favArr[i].name.substring(0, 2).toUpperCase()}
+                                                    </div>`
+                                                }
                                                 <div class="d-flex flex-column justify-content-start align-items-start">
                                                     <p class="fw-bold text-dark mb-0">${favArr[i].name}</p>
                                                     <p class="text-muted small mb-0">${favArr[i].phone}</p>
