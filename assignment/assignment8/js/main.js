@@ -31,13 +31,14 @@ var contactPhone = document.getElementById("contactPhone");
 var contactPhoneError = document.getElementById("contactPhoneError");
 var contactEmail = document.getElementById("contactEmail");
 var contactEmailError = document.getElementById("contactEmailError");
+var avatarInput = document.getElementById("avatarInput");
 var contactList = [];
 var favList = [];
 var emergancyList = [];
 var upadeIndex;
 var contactDeleted;
 
-
+console.log(avatarInput.files);
 
 
 if(localStorage.getItem("contactList") != null) {
@@ -93,7 +94,10 @@ function addContact() {
         phone: contactPhone.value,
         email: contactEmail.value,
         address: contactAddress.value,
-        category: contactGroup.value
+        category: contactGroup.value,
+        img: avatarInput.files[0]
+        ? `./img/${avatarInput.files[0].name}`
+        : null
     }
         if (contactName.value.trim() === "") {
         Swal.fire({
@@ -288,15 +292,25 @@ function displayContact(arr) {
     }else {
 
     for (var i = 0; i < arr.length; i++) {
-        
+        var avatar;
+        if (arr[i].img) {
+            avatar = `<img src="${arr[i].img}" class="contact-card-avatar object-fit-cover" alt="${arr[i].name}">`;
+        } else {
+            var initials = arr[i].name.substring(0, 2).toUpperCase();
+
+            avatar = `
+                <div class="contact-card-avatar avatar-placeholder">
+                    ${initials}
+                </div>
+            `;
+        }
         cartona += `<div  class="col-md-6 col-lg-12 col-xl-6 mb-4">
                             <div class="contact-card">
                             
                                 <div class="contact-card-header">
                                     <div class="d-flex align-items-start justify-content-start gap-3">
                                         <div class="position-relative flex-shrink-0  ">
-                                            <img src="./img/avatar-1.jpg" alt="sssss"
-                                                class="contact-card-avatar object-fit-cover">
+                                            ${avatar}
                                             <div
                                                 id="heartIconOnImg"
                                                 class="badge-icon badge-heart d-flex justify-content-center align-items-center rounded-circle d-none">

@@ -131,6 +131,7 @@ function getProductToUpdate(index) {
 }
 
 
+
     function updateProduct() {
         productList[updateIndex].name = productName.value;
         productList[updateIndex].price = productPrice.value;
