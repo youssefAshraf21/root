@@ -5,7 +5,6 @@ var contactAddress = document.getElementById("contactAddress");
 var contactGroup = document.getElementById("contactGroup");
 var addContactBtn = document.getElementById("addContactBtn");
 var contactFavorite = document.getElementById("contactFavorite");
-var contactFavorite = document.getElementById("contactFavorite");
 var contactEmergency = document.getElementById("contactEmergency");
 var editBtn = document.getElementById("editBtn");
 var emergncyBtn = document.getElementById("emergncyBtn");
@@ -38,7 +37,6 @@ var emergancyList = [];
 var upadeIndex;
 var contactDeleted;
 
-console.log(avatarInput.files);
 
 
 if(localStorage.getItem("contactList") != null) {
