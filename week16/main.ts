@@ -142,15 +142,60 @@ let user : User = {
 }
 
 // make obj with type
+// 1-dont take space
+// 2- no merging
+type details = {
+    img? : string
+}
 
-type Product = {
+type Product = details & {  // & ==> itesiction 
     name : string
     price : number
-    category : string
+    readonly category : string
 }
 
 let product : Product = {
     name : "laptop",
     price : 1000,
-    category : "electronics"
+    category : "electronics", 
+    img : "img1"
 }
+
+
+let products : (Product & details)[] = [
+    {name : "laptop",price : 1000,category : "electronics", img : "img1"},
+    {name : "laptop",price : 1000,category : "electronics", img : "img1"},
+    {name : "laptop",price : 1000,category : "electronics", img : "img1"}
+]// as (Product & details)[]
+
+
+let input = document.querySelector("input")!//==>non nullish operator  // or use this  ==> as HTMLInputElement
+
+input.value = "youssef"
+
+
+//enum enemoration
+
+enum Role {
+    USER = 10,
+    ADMIN,
+    SUPER_ADMIN
+}
+
+let ahmed = Role.ADMIN
+console.log(ahmed)
+
+//generics  ==> resuable code and flexabile
+// <>
+
+function printNumberList(list: number[])  : number[] {
+    return list
+}
+
+function printList<T>(list:T[]) : T[] {
+    return list
+}
+
+printList<string>(["youssef", "ahmed", "ali"])
+printList<number>([10, 20, 30])
+printList<number | string>([10, 20, 30, "youssef"])

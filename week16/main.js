@@ -107,5 +107,33 @@ let user = {
 let product = {
     name: "laptop",
     price: 1000,
-    category: "electronics"
+    category: "electronics",
+    img: "img1"
 };
+let products = [
+    { name: "laptop", price: 1000, category: "electronics", img: "img1" },
+    { name: "laptop", price: 1000, category: "electronics", img: "img1" },
+    { name: "laptop", price: 1000, category: "electronics", img: "img1" }
+]; // as (Product & details)[]
+let input = document.querySelector("input"); //==>non nullish operator  // or use this  ==> as HTMLInputElement
+input.value = "youssef";
+//enum enemoration
+var Role;
+(function (Role) {
+    Role[Role["USER"] = 10] = "USER";
+    Role[Role["ADMIN"] = 11] = "ADMIN";
+    Role[Role["SUPER_ADMIN"] = 12] = "SUPER_ADMIN";
+})(Role || (Role = {}));
+let ahmed = Role.ADMIN;
+console.log(ahmed);
+//generics  ==> resuable code and flexabile
+// <>
+function printNumberList(list) {
+    return list;
+}
+function printList(list) {
+    return list;
+}
+printList(["youssef", "ahmed", "ali"]);
+printList([10, 20, 30]);
+printList([10, 20, 30, "youssef"]);
