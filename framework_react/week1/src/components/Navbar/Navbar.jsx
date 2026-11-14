@@ -32,7 +32,6 @@ export default function Navbar() {
                     </ul>
                 </div>
 
-                {/* Actions */}
                 <div className="flex items-center gap-3">
                     <button className="bg-white text-amber-950 px-4 py-2 rounded-xl font-semibold hover:bg-amber-200 transition duration-300">
                         Login

@@ -13,7 +13,7 @@ export default function Card({productName, productPrice, productDescription, img
         <>
         <div className="card w-96 bg-base-100 shadow-xl container mx-auto mb-5 border-2 border-amber-300 p-4 rounded-2xl">
             <div className="card-body">
-                <img src={imgCard} alt="" />
+                <img src={imgCard} className="hover:scale-105 transform duration-300" alt="" />
                 <h2 className="card-title text-center mt-5 text-xl text-amber-950 font-bold">{productName.split(" ").splice(0, 3).join(" ")}</h2>
                 <p className="text-amber-950 mt-2 truncate cursor-wait" title={productDescription}>{productDescription}</p>
                 <p className="font-bold text-2xl">{productPrice} EGP</p>
