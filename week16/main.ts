@@ -186,7 +186,7 @@ let ahmed = Role.ADMIN
 console.log(ahmed)
 
 //generics  ==> resuable code and flexabile
-// <>
+// <> 
 
 function printNumberList(list: number[])  : number[] {
     return list
