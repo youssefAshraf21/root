@@ -9,11 +9,12 @@ export default function Navbar() {
                 </div>
                 <div>
                     <ul className="flex gap-5">
-                        <li className="font-semibold text-amber-950">Home</li>
-                        <li className="font-semibold text-amber-950">Products</li>
-                        <li className="font-semibold text-amber-950">About</li>
-                        <li className="font-semibold text-amber-950">Contact</li>
-                        <li className="font-semibold text-amber-950">Login</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">Home</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">About</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">Contact</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">Docs</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">Blog</li>
+                        <li className="font-semibold text-amber-950 hover:text-amber-600 transform duration-300 cursor-pointer">Pricing</li>
                     </ul>
                 </div>
             </div>
