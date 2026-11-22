@@ -1,7 +1,7 @@
 import Card from "../components/Card/Card"
 import Navbar from "../components/Navbar/Navbar"
 import Loader from "../components/Loader/Loader"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
     const [products, setProducts] = useState([]);
@@ -25,6 +25,7 @@ export default function Home() {
     getProducts()
     
 
+    
     return (
         <>
         <Navbar />
