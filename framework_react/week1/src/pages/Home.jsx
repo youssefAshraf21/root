@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
     const [products, setProducts] = useState([]);
+    const [showCard, setShowCards] = useState(true)
 
     function deleteProduct(id) {
         // let newProducts = structuredClone(products);
@@ -17,29 +18,51 @@ export default function Home() {
         setProducts(filterArr)
     }
 
-    async function getProducts() {
+    useEffect(() => {
+        async function getProducts() {
         const response = await fetch("https://fakestoreapi.com/products")
         const data = await response.json()
         setProducts(data)
     }
-
-    useEffect(() => {
         getProducts()
     },[])
 
+    useEffect(()=> {
+
+        return () => {
+            console.log("the cards unamounted")
+        }
+    },[])
 
     return (
         <>
         <Navbar />
+        <button className="bg-red-600 hover:bg-red-900 transition-all duration-300 text-white font-medium p-3 rounded-lg"
+        onClick={() => {
+            setShowCards(!showCard)
+        }}>
+            Hide All Cards
+        </button>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-        {products == 0 ? <Loader /> :products.map((product , index)=>{
-            return (
-                <Card key={product.id} productName={product.title}
-                productPrice={product.price} productDescription={product.description} 
-                imgCard={product.image} deleteProductFn={deleteProduct} index={index} 
-                id={product.id}/> 
-            )
-        })}
+        
+            {products.length === 0 ? (
+                <Loader />
+            ) : showCard === true ? (
+                products.map((product, index) => {
+                    return (
+                        <Card
+                            key={product.id}
+                            productName={product.title}
+                            productPrice={product.price}
+                            productDescription={product.description}
+                            imgCard={product.image}
+                            deleteProductFn={deleteProduct}
+                            index={index}
+                            id={product.id}
+                        />
+                    )
+                })
+            ) : null}
         </div>
         </>
     )
