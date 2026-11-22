@@ -2,36 +2,31 @@ import Card from "../components/Card/Card"
 import Navbar from "../components/Navbar/Navbar"
 import Loader from "../components/Loader/Loader"
 import { useState, useEffect } from "react";
+import axios from "axios"
 
 export default function Home() {
-    const [products, setProducts] = useState([]);
+    const [movies, setMovies] = useState([]);
     const [showCard, setShowCards] = useState(true)
 
-    function deleteProduct(id) {
-        // let newProducts = structuredClone(products);
-        // newProducts.splice(index, 1);
-        // setProducts(newProducts);
-        //delete by fillter array method
-        let filterArr = products.filter((prod)=> {
-            return prod.id != id
-        })
-        setProducts(filterArr)
-    }
+    // function deleteProduct(id) {
+    //     // let newProducts = structuredClone(products);
+    //     // newProducts.splice(index, 1);
+    //     // setProducts(newProducts);
+    //     //delete by fillter array method
+    //     let filterArr = products.filter((prod)=> {
+    //         return prod.id != id
+    //     })
+    //     setProducts(filterArr)
+    // }
 
     useEffect(() => {
-        async function getProducts() {
-        const response = await fetch("https://fakestoreapi.com/products")
-        const data = await response.json()
-        setProducts(data)
+        async function getMovies() {
+        const API_KEY = "714310e2d80eb3f2425bc9b02a028e0c"
+        const {data} = await axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
+        console.log(data.results)
+        setMovies(data.results)
     }
-        getProducts()
-    },[])
-
-    useEffect(()=> {
-
-        return () => {
-            console.log("the cards unamounted")
-        }
+        getMovies()
     },[])
 
     return (
@@ -45,20 +40,20 @@ export default function Home() {
         </button>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         
-            {products.length === 0 ? (
+            {movies.length === 0 ? (
                 <Loader />
             ) : showCard === true ? (
-                products.map((product, index) => {
+                movies.map((movie, index) => {
                     return (
                         <Card
-                            key={product.id}
-                            productName={product.title}
-                            productPrice={product.price}
-                            productDescription={product.description}
-                            imgCard={product.image}
-                            deleteProductFn={deleteProduct}
+                            key={movie.id}
+                            movieName={movie.title}
+                            movieVoteAvg={movie.vote_average}
+                            movieDescription={movie.overview}
+                            imgMovie={movie.backdrop_path}
+                            releaseDate={movie.release_date}
                             index={index}
-                            id={product.id}
+                            id={movie.id}
                         />
                     )
                 })
