@@ -1,5 +1,5 @@
 import {useState} from 'react'
-export default function Card({productName, productPrice, productDescription, imgCard,deleteProductFn, index}) {
+export default function Card({productName, productPrice, productDescription, imgCard,deleteProductFn,  id}) {
 
     const [count, setCount] = useState(0);
 
@@ -11,12 +11,16 @@ export default function Card({productName, productPrice, productDescription, img
     }
     return (
         <>
-        <div className="card w-96 bg-base-100 shadow-xl container mx-auto mb-5 border-2 border-amber-300 p-4 rounded-2xl">
-            <div className="card-body">
+        <div className="card w-96 bg-base-100 shadow-xl container mx-auto mb-5 border-2 border-amber-300 p-4 rounded-2xl relative">
+            <div className="card-body ">
+                {productPrice > 100 && 
+                <span className='bg-red-600 text-white rounded-3xl p-2 font-bold absolute top-2.5 right-2.5'>
+                    20%OFF
+                </span>}
                 <img src={imgCard} className="hover:scale-105 transform duration-300" alt="" />
                 <h2 className="card-title text-center mt-5 text-xl text-amber-950 font-bold">{productName.split(" ").splice(0, 3).join(" ")}</h2>
                 <p className="text-amber-950 mt-2 truncate cursor-wait" title={productDescription}>{productDescription}</p>
-                <p className="font-bold text-2xl">{productPrice} EGP</p>
+                <p className="font-bold text-2xl">{productPrice}</p>
                 <div className="flex justify-between align-items-center my-4">
                     <span onClick={increasCount} className="font-bold bg-amber-100 px-3 py-2 rounded-lg hover:bg-amber-500 transform duration-300 cursor-pointer">+</span>
                     <span className="font-bold">{count}</span>
@@ -25,7 +29,7 @@ export default function Card({productName, productPrice, productDescription, img
                 <div className="card-actions justify-end">
                     <button onClick={
                         () => {
-                            deleteProductFn(index);
+                            deleteProductFn(id);
                         }
                     } className="btn bg-red-600 text-white px-3 py-2 rounded-lg w-full font-semibold hover:bg-red-900 transform duration-300">Delete</button>
                 </div>
