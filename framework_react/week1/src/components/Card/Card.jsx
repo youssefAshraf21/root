@@ -9,6 +9,7 @@ export default function Card({productName, productPrice, productDescription, img
     function decreasCount() {
         setCount(count - 1);
     }
+    
     return (
         <>
         <div className="card w-96 bg-base-100 shadow-xl container mx-auto mb-5 border-2 border-amber-300 p-4 rounded-2xl relative">

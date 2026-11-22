@@ -22,10 +22,12 @@ export default function Home() {
         const data = await response.json()
         setProducts(data)
     }
-    getProducts()
-    
 
-    
+    useEffect(() => {
+        getProducts()
+    },[])
+
+
     return (
         <>
         <Navbar />
