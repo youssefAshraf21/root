@@ -1,10 +1,13 @@
+    import { useNavigate } from "react-router";
     export default function Card({
     movieName,
     movieVoteAvg,
     movieDescription,
     imgMovie,
     releaseDate,
+    id,
     }) {
+    const navigate = useNavigate();
     const base = "https://image.tmdb.org/t/p";
 
     return (
@@ -29,6 +32,12 @@
             </h2>
             <p className="text-sm text-gray-500">{releaseDate}</p>
             <p className="mt-2 line-clamp-3 text-sm text-gray-600">{movieDescription}</p>
+            <button
+                onClick={() => navigate(`/details/${id}`)}
+                className="bg-blue-400 hover:bg-blue-500 transition-all duration-300 mt-5 p-3 rounded-lg text-white font-medium"
+            >
+                More Details
+            </button>
         </div>
         </div>
     );

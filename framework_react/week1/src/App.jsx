@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Notfound from "./pages/Notfound";
 import Trending from "./pages/Trending";
+import Details from "./pages/Details";
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
     {path: "/about", element:<Trending />},
     {path: "/contact", element:<Contact />},
     {path: "/login", element:<Login />},
-    {path: "/*", element:<Notfound />}
+    {path: "/*", element:<Notfound />},
+    {path: "/details/:id", element:<Details />}
 
   ])
 

@@ -9,7 +9,7 @@ export default function Trending() {
   useEffect(()=> {
     async function getTrendMovies(){
       const API_KEY = "714310e2d80eb3f2425bc9b02a028e0c"
-      const {data} = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`)
+      const {data} = await axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
       console.log(data.results)
       settrendMovies(data.results)
     }
@@ -27,11 +27,12 @@ export default function Trending() {
             
             <Card 
               key={movie.id}
-            movieName={movie.title}
-            movieVoteAvg={movie.vote_average}
-            movieDescription={movie.overview}
-            imgMovie={movie.poster_path}
-            releaseDate={movie.release_date}
+              id={movie.id}
+              movieName={movie.title}
+              movieVoteAvg={movie.vote_average}
+              movieDescription={movie.overview}
+              imgMovie={movie.poster_path}
+              releaseDate={movie.release_date}
             />
           )
         })}
