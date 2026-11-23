@@ -11,7 +11,7 @@ export default function Navbar() {
             : "text-amber-950 hover:text-amber-600"
     }`;
     return (
-        <nav className="container mx-auto mt-5 px-4">
+        <nav className="container sticky top-0 z-50 w-full mx-auto mt-5 px-4" >
             <div className="flex items-center justify-between bg-amber-100 rounded-2xl shadow-md px-6 py-4">
 
                 <div>
@@ -28,7 +28,7 @@ export default function Navbar() {
 
                         <li>
                             <NavLink to="/about" className={navLinkClass}>
-                                About
+                                Trending
                             </NavLink>
                         </li>
 

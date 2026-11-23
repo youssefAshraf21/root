@@ -6,7 +6,7 @@ import axios from "axios"
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
-    const [showCard, setShowCards] = useState(true)
+    // const [showCard, setShowCards] = useState(true)
 
     // function deleteProduct(id) {
     //     // let newProducts = structuredClone(products);
@@ -32,17 +32,20 @@ export default function Home() {
     return (
         <>
         <Navbar />
-        <button className="bg-red-600 hover:bg-red-900 transition-all duration-300 text-white font-medium p-3 rounded-lg"
+        {/* <button className="bg-red-600 hover:bg-red-900 transition-all duration-300 text-white font-medium p-3 rounded-lg"
         onClick={() => {
             setShowCards(!showCard)
         }}>
             Hide All Cards
-        </button>
+        </button> */}
+        <div className="text-center text-5xl font-bold text-amber-200 border-2 mx-5 py-3 mt-5">
+            <h2>All Avilable Movies</h2>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         
             {movies.length === 0 ? (
                 <Loader />
-            ) : showCard === true ? (
+            ) : 
                 movies.map((movie, index) => {
                     return (
                         <Card
@@ -56,8 +59,8 @@ export default function Home() {
                             id={movie.id}
                         />
                     )
-                })
-            ) : null}
+                }
+            )}
         </div>
         </>
     )
