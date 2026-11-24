@@ -1,8 +1,11 @@
 
+import React from 'react'
+
 export default function Blogdetails() {
   return (
     <>
-      <h1>blog deatails page </h1> 
+     <h1>blog details </h1>  
     </>
   )
 }
+

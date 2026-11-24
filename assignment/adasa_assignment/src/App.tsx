@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router"
 import Home from "./pages/Home"
 import Blog from "./pages/Blog"
 import About from "./pages/About"
+import Blogdetails from "./pages/Blogdetails"
 import Layout from "./Layout/Layout"
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       {index:true, element: <Navigate to={"/home"} />},
       {path: "home", element:<Home />},
       {path: "blog", element:<Blog />},
+      {path: "blog/:id", element:<Blogdetails />},
       {path: "about", element:<About />}
     ]}
 
