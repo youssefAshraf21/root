@@ -7,6 +7,7 @@ import HeroExtras from "../components/Hero/Extrahero";
 import { FaSun, FaCamera, FaMountainSun, FaMobileScreen } from "react-icons/fa6";
 import CategoryCard from "../components/Categorycard/Categorycard";
 import { IoSettings } from "react-icons/io5";
+import Subscripe from "../components/Subscripe/Subscripe";
 
 const categories = [
   { title: "إضاءة", count: 3, icon: FaSun },
@@ -85,11 +86,16 @@ export default function Home() {
               key={c.title}
               title={c.title}
               icon={c.icon}
+              to={`/blog?category=${c.title}`}
               count={data.posts.filter((p) => p.category === c.title).length}
             />
           ))}
         </div>
       </div>
+    </section>
+
+    <section className="bg-[#111111]">
+      <Subscripe />
     </section>
     </>
   );
