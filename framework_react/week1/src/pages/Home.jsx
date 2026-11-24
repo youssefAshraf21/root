@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar"
 import Loader from "../components/Loader/Loader"
 import { useState, useEffect } from "react";
 import axios from "axios"
+import Search from "../components/Seach/Search";
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
@@ -32,6 +33,7 @@ export default function Home() {
     return (
         <>
         <Navbar />
+        <Search />
         {/* <button className="bg-red-600 hover:bg-red-900 transition-all duration-300 text-white font-medium p-3 rounded-lg"
         onClick={() => {
             setShowCards(!showCard)

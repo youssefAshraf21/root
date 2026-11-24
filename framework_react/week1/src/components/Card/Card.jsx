@@ -19,7 +19,7 @@
             sizes="320px"
             alt={movieName}
             loading="lazy"
-            className="aspect-[2/3] w-full object-cover"
+            className="aspect-2/3 w-full object-cover"
             />
             <span className="absolute right-2 top-2 rounded-md bg-black/75 px-2 py-1 text-sm font-bold text-amber-300">
             ★ {movieVoteAvg.toFixed(1)}
