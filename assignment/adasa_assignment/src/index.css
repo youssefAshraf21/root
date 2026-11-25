@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+a.active {
+  color: white;
+  background-color: #ED5D0E;
+}
+
+
+body {
+  background: #0a0a0a;
+  font-family: "Cairo", sans-serif;
+}
+
+/* Grid + orange glow background */
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(237, 93, 14, 0.25), transparent 70%);
+  pointer-events: none;
+}
+
+/* Orange gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff8a1f, #ed5d0e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Badge */
+.section-label {
+  padding: 6px 16px;
+  border-radius: 9999px;
+  border: 1px solid rgba(237, 93, 14, 0.4);
+  background: rgba(237, 93, 14, 0.1);
+}
+
+/* Stat cards */
+.glass-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #ff8a1f, #ed5d0e);
+  transition: opacity 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
