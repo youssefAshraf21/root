@@ -24,9 +24,9 @@ export type Post = {
 
 export type Category = {
   name: string;
-  count: number;
+  count?: number;
   color?: string;
-  icon: IconType;
+  icon?: IconType;
 };
 
 export type SiteInfo = {
