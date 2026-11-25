@@ -1,4 +1,56 @@
-export const data = 
+import type { IconType } from "react-icons";
+import { LuSun, LuUser, LuMountain, LuAperture, LuCamera } from "react-icons/lu";
+
+
+export type Post = {
+  id: number;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  author: {
+    name: string;
+    avatar: string;
+    role: string;
+  };
+  image: string;
+  date: string;
+  readTime: string;
+  featured: boolean;
+  tags: string[];
+};
+
+
+export type Category = {
+  name: string;
+  count: number;
+  color?: string;
+  icon: IconType;
+};
+
+export type SiteInfo = {
+  name: string;
+  tagline: string;
+  description: string;
+  email: string;
+  social: {
+    twitter: string;
+    github: string;
+    linkedin: string;
+    youtube: string;
+  };
+};
+
+export type Data = {
+  posts: Post[];
+  categories: Category[];
+  siteInfo: SiteInfo;
+};
+
+
+
+export const data : Data = 
     {
     "posts": [
         {
@@ -507,12 +559,12 @@ export const data =
         }
     ],
     "categories": [
-        { "name": "إضاءة", "count": 3, "color": "emerald" },
-        { "name": "بورتريه", "count": 3, "color": "purple" },
-        { "name": "مناظر طبيعية", "count": 2, "color": "blue" },
-        { "name": "تقنيات", "count": 5, "color": "orange" },
-        { "name": "معدات", "count": 3, "color": "emerald" }
-    ],
+    { "name": "إضاءة",        "count": 3, "color": "emerald", "icon": LuSun },
+    { "name": "بورتريه",      "count": 3, "color": "purple",  "icon": LuUser },
+    { "name": "مناظر طبيعية", "count": 2, "color": "blue",    "icon": LuMountain },
+    { "name": "تقنيات",       "count": 5, "color": "orange",  "icon": LuAperture },
+    { "name": "معدات",        "count": 3, "color": "emerald", "icon": LuCamera }
+],
     "siteInfo": {
         "name": "عدسة",
         "tagline": "عالم التصوير الفوتوغرافي",
