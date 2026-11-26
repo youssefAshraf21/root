@@ -13,13 +13,14 @@ import {
   LuMail,
 } from "react-icons/lu";
 import { FaXTwitter, FaWhatsapp, FaLinkedinIn } from "react-icons/fa6";
+import Maylikecard from "../components/Maylikecard/Maylikecard";
 
 
 
 export default function Blogdetails() {
   const {blogId} = useParams();
   const post = data.posts.find((p)=> p.id === Number(blogId));
-
+  const mayLike = data.posts.filter((p) => p.category && p.id !== post?.id).splice(0,3)
 
 
   const content : string[] = post?.content.split("\n\n") || []  //i do this to split the content in part then deal with it with index  
@@ -318,6 +319,30 @@ export default function Blogdetails() {
       </div>
     </div>
 
+      
+  {mayLike.length > 0 && (
+  <section className="mx-auto max-w-7xl px-4 pb-20">
+    <div className="flex items-center justify-between">
+      <h2 className="mb-8 text-2xl font-bold">
+        مقالات <span className="text-[#ED5D0E]">قد تعجبك</span>
+      </h2>
+
+      <Link
+      to="/blog"
+      className="block text-[#ED5D0E] hover:text-orange-900 duration-300  py-2.5 text-sm font-bold "
+      >
+      تصفح المزيد
+      </Link>
+
+    </div>
+
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {mayLike.map((p) => (
+        <Maylikecard key={p.id} {...p} />
+      ))}
+    </div>
+  </section>
+)}
 
 
     </>
