@@ -4,6 +4,7 @@ import type { Post } from "../../data/data";
 export default function Card(props: Post) {
   return (
     <>
+    <Link to={`/blogdetails/${props.id}`}>
     <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#161616]">
       {/* Image */}
       <div className="relative h-60">
@@ -61,7 +62,7 @@ export default function Card(props: Post) {
           </div>
 
           {/* Read more */}
-          <Link to={"/blogdetails"}
+          <Link to={`/blogdetails/${props.id}`}
             className="inline-flex items-center gap-2 text-sm font-bold text-[#ED5D0E] transition hover:gap-3"
           >
             اقرأ المقال
@@ -70,6 +71,7 @@ export default function Card(props: Post) {
         </div>
       </div>
     </article>
+    </Link>
     </>
   )
 }

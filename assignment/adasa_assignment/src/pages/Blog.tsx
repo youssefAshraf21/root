@@ -1,8 +1,8 @@
 import Heropage from "../components/Heropage/Heropage";
 import { data } from '../data/data';
-import CategoryPadge from "../components/Categorypadge/categorypadge";
 import { LuSearch } from "react-icons/lu";
 import Blogcard from "../components/Blogcard/Blogcard";
+import CategoryPadge from "../components/Categorypadge/Categorypadge";
 
 
 export default function Blog() {
@@ -36,7 +36,7 @@ export default function Blog() {
           </div>
 
           {/* Categories */}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-1">
             <CategoryPadge
               name="جميع المقالات"
             />
@@ -50,7 +50,7 @@ export default function Blog() {
         </div>
       </div>
 
-  <div className="container mx-auto px-4 mt-10">
+  <div className="container mx-auto px-4 mt-10 mb-10">
   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {data.posts.map((post) => (
       <Blogcard key={post.id} {...post} />

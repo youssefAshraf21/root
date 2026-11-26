@@ -7,7 +7,8 @@ import About from "./pages/About";
 import Layout from "./Layout/Layout";
 
 const router = createBrowserRouter([
-  {
+  { 
+    path: "",
     element: <Layout />,
     children: [
       { index: true, element: <Navigate to="/home" /> },
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "/blog", element: <Blog /> },
       { path: "/blogDetails", element: <Blogdetails /> },
       { path: "/about", element: <About /> },
+      {path: "/blogdetails/:blogId" , element: <Blogdetails />}
     ],
   },
 ]);

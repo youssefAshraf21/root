@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import { IoSearchOutline } from "react-icons/io5";
 
 
     export default function Navbar() {
@@ -57,7 +58,7 @@ import { NavLink } from "react-router";
             {/* Search + Button */}
             <div className="flex items-center gap-1.5 sm:gap-4">
             <button className="text-[10px] text-gray-400 hover:text-white sm:text-lg">
-                🔍
+                <IoSearchOutline />
             </button>
             <button className="rounded-full bg-[#ED5D0E] px-2 py-1.5 text-[10px] font-bold text-white hover:opacity-90 sm:px-6 sm:py-3 sm:text-sm">
                 ابدأ القراءة ←

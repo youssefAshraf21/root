@@ -13,6 +13,7 @@ export type Post = {
     name: string;
     avatar: string;
     role: string;
+    details: string
   };
   image: string;
   date: string;
@@ -20,7 +21,6 @@ export type Post = {
   featured: boolean;
   tags: string[];
 };
-
 
 export type Category = {
   name: string;
@@ -63,7 +63,8 @@ export const data : Data =
         "author": {
             "name": "سالم أحمد",
             "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور محترف"
+            "role": "مصور محترف",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=800&h=400&fit=crop",
         "date": "2026-01-15",
@@ -81,7 +82,8 @@ export const data : Data =
         "author": {
             "name": "محمد علي",
             "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور بورتريه"
+            "role": "مصور بورتريه",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop",
         "date": "2026-01-12",
@@ -99,7 +101,8 @@ export const data : Data =
         "author": {
             "name": "إبراهيم حسن",
             "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور طبيعة"
+            "role": "مصور طبيعة",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=400&fit=crop",
         "date": "2026-01-10",
@@ -117,7 +120,8 @@ export const data : Data =
         "author": {
             "name": "داود خالد",
             "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
-            "role": "مدرب تصوير"
+            "role": "مدرب تصوير",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=400&fit=crop",
         "date": "2026-01-08",
@@ -135,7 +139,8 @@ export const data : Data =
         "author": {
             "name": "ليث محمود",
             "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
-            "role": "فنان بصري"
+            "role": "فنان بصري",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=400&fit=crop",
         "date": "2026-01-05",
@@ -153,7 +158,8 @@ export const data : Data =
         "author": {
             "name": "جمال عبدالله",
             "avatar": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور ومراجع تقني"
+            "role": "مصور ومراجع تقني",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop",
         "date": "2026-01-03",
@@ -171,7 +177,8 @@ export const data : Data =
         "author": {
             "name": "خالد الفيصل",
             "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور فلكي"
+            "role": "مصور فلكي",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=400&fit=crop",
         "date": "2026-01-01",
@@ -189,7 +196,8 @@ export const data : Data =
         "author": {
             "name": "نادر سعيد",
             "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور شوارع"
+            "role": "مصور شوارع",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=800&h=400&fit=crop",
         "date": "2025-12-28",
@@ -207,7 +215,8 @@ export const data : Data =
         "author": {
             "name": "هاني الشمري",
             "avatar": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور طعام"
+            "role": "مصور طعام",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&h=400&fit=crop",
         "date": "2025-12-25",
@@ -225,7 +234,8 @@ export const data : Data =
         "author": {
             "name": "عمر الراشد",
             "avatar": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور حياة برية"
+            "role": "مصور حياة برية",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1549366021-9f761d450615?w=800&h=400&fit=crop",
         "date": "2025-12-22",
@@ -243,7 +253,8 @@ export const data : Data =
         "author": {
             "name": "فارس العلي",
             "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&h=100&fit=crop&crop=face",
-            "role": "فنان فوتوغرافي"
+            "role": "فنان فوتوغرافي",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=800&h=400&fit=crop",
         "date": "2025-12-20",
@@ -261,7 +272,8 @@ export const data : Data =
         "author": {
             "name": "سامي الحربي",
             "avatar": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=face",
-            "role": "خبير تعديل صور"
+            "role": "خبير تعديل صور",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=400&fit=crop",
         "date": "2025-12-18",
@@ -279,7 +291,8 @@ export const data : Data =
         "author": {
             "name": "رامي الخطيب",
             "avatar": "https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور ماكرو"
+            "role": "مصور ماكرو",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1550159930-40066082a4fc?w=800&h=400&fit=crop",
         "date": "2025-12-15",
@@ -297,7 +310,8 @@ export const data : Data =
         "author": {
             "name": "باسم المصري",
             "avatar": "https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور فني"
+            "role": "مصور فني",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&h=400&fit=crop",
         "date": "2025-12-12",
@@ -315,7 +329,8 @@ export const data : Data =
         "author": {
             "name": "منصور الزهراني",
             "avatar": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور زفاف"
+            "role": "مصور زفاف",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=400&fit=crop",
         "date": "2025-12-10",
@@ -333,7 +348,8 @@ export const data : Data =
         "author": {
             "name": "فيصل الدوسري",
             "avatar": "https://images.unsplash.com/photo-1618077360395-f3068be8e001?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور جوي"
+            "role": "مصور جوي",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&h=400&fit=crop",
         "date": "2025-12-08",
@@ -351,7 +367,8 @@ export const data : Data =
         "author": {
             "name": "لؤي الصالح",
             "avatar": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور تجاري"
+            "role": "مصور تجاري",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=400&fit=crop",
         "date": "2025-12-05",
@@ -369,7 +386,8 @@ export const data : Data =
         "author": {
             "name": "طارق النعيمي",
             "avatar": "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور معماري"
+            "role": "مصور معماري",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=400&fit=crop",
         "date": "2025-12-02",
@@ -387,7 +405,8 @@ export const data : Data =
         "author": {
             "name": "أحمد الشهري",
             "avatar": "https://images.unsplash.com/photo-1580518324671-c2f0833a3af3?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور رياضي"
+            "role": "مصور رياضي",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=400&fit=crop",
         "date": "2025-11-28",
@@ -405,7 +424,8 @@ export const data : Data =
         "author": {
             "name": "ماجد القحطاني",
             "avatar": "https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور استوديو"
+            "role": "مصور استوديو",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop",
         "date": "2025-11-25",
@@ -423,7 +443,8 @@ export const data : Data =
         "author": {
             "name": "ياسر العتيبي",
             "avatar": "https://images.unsplash.com/photo-1590086782957-93c06ef21604?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور رحالة"
+            "role": "مصور رحالة",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=400&fit=crop",
         "date": "2025-11-22",
@@ -441,7 +462,8 @@ export const data : Data =
         "author": {
             "name": "دحام الحسيني",
             "avatar": "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=100&h=100&fit=crop&crop=face",
-            "role": "فنان بصري"
+            "role": "فنان بصري",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=800&h=400&fit=crop",
         "date": "2025-11-18",
@@ -459,7 +481,8 @@ export const data : Data =
         "author": {
             "name": "نايف المطيري",
             "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور مواليد"
+            "role": "مصور مواليد",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=800&h=400&fit=crop",
         "date": "2025-11-15",
@@ -477,7 +500,8 @@ export const data : Data =
         "author": {
             "name": "عبدالله الغامدي",
             "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop&crop=face",
-            "role": "مصور عقارات"
+            "role": "مصور عقارات",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=400&fit=crop",
         "date": "2025-11-12",
@@ -495,7 +519,8 @@ export const data : Data =
         "author": {
             "name": "كريم الفهد",
             "avatar": "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?w=100&h=100&fit=crop&crop=face",
-            "role": "خبير تقني"
+            "role": "خبير تقني",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=400&fit=crop",
         "date": "2025-11-08",
@@ -513,7 +538,8 @@ export const data : Data =
         "author": {
             "name": "سلطان الراجحي",
             "avatar": "https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&crop=face",
-            "role": "فنان تصوير"
+            "role": "فنان تصوير",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&h=400&fit=crop",
         "date": "2025-11-05",
@@ -531,7 +557,8 @@ export const data : Data =
         "author": {
             "name": "فهد السبيعي",
             "avatar": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?w=100&h=100&fit=crop&crop=face",
-            "role": "مراجع معدات"
+            "role": "مراجع معدات",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1617005082133-548c4dd27f35?w=800&h=400&fit=crop",
         "date": "2025-11-02",
@@ -549,7 +576,8 @@ export const data : Data =
         "author": {
             "name": "راشد الجاسر",
             "avatar": "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?w=100&h=100&fit=crop&crop=face",
-            "role": "فنان بصري"
+            "role": "فنان بصري",
+            "details": "مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي"
         },
         "image": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=800&h=400&fit=crop",
         "date": "2025-10-28",
